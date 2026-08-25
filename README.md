@@ -31,31 +31,42 @@
 ## 現状のステータス
 
 - [x] リポジトリ作成
-- [x] 知識ベースの箱作り + 初期ノート（parameters・モデルクラス）
-- [x] 代表ユースケースのスターターリスト作成
-- [x] 一次情報の追加（Reasoning Effort: OpenAI / Anthropic / Google、Temperature）
-- [x] 一次情報の追加（SLM vs LLM 選定指針、RAG 設計指針）
+- [x] 知識ベースの箱作り
+- [x] 代表ユースケースのスターターリスト
+- [x] 一次情報（Reasoning Effort / Temperature / SLM vs LLM / RAG）
 - [x] Zenn概念マップ要約
-- [ ] Zenn用語集の主要章の詳細化（RAG・Agent・セキュリティ・運用など未着手が多い）
-- [ ] 意思決定の軸（チェック項目）の定義
+- [x] **体系的フレームワーク**（`knowledge/SYSTEMATIC-FRAMEWORK.md`）— 9次元 + 横断制約
+- [ ] 未充足次元の一次情報収集・詳細化（D3/D4/D6/D7/D8/D9 が中心）
+- [ ] 意思決定の軸（チェック項目）への落とし込み
 - [ ] スキル版の実装
 - [ ] Webアプリ版の実装
 
-## 知識の源泉
+## 知識の体系（Decision Dimensions）
 
-- [サクッと始める生成AI用語集（Zenn）](https://zenn.dev/umi_mori/books/generative-ai-glossary)
-- OpenAI / Anthropic / Google などの公式ドキュメント（Temperature, Reasoning Effort / Thinking, Effort levels など）
-- SLM/LLM選定・RAG設計に関する実務ガイド・ベストプラクティス
-- 実務で見られる代表的なユースケース（コンシューマ向けチャットボット、社内RAG、エージェント自動化など）
+詳細は [`knowledge/SYSTEMATIC-FRAMEWORK.md`](./knowledge/SYSTEMATIC-FRAMEWORK.md) を参照。
+
+| 次元 | 内容 | 状態 |
+|------|------|------|
+| D1 モデルクラス | SLM / LLM / Reasoning / Multimodal | 一次情報あり |
+| D2 生成パラメータ | Temperature / Reasoning Effort | 一次情報あり |
+| D3 コンテキスト・知識 | Context Window / カットオフ / 履歴管理 | 部分的 |
+| D4 プロンプト・対話 | Few-shot / CoT / 履歴設計 | 未充足 |
+| D5 RAG | 要否・成熟度・Chunking等 | 一次情報あり |
+| D6 エージェント | Tool Calling / Multi-Agent / HITL | 未充足 |
+| D7 Fine-tuning | 要否・蒸留 | 未充足 |
+| D8 セキュリティ | Injection / Guardrail | 未充足 |
+| D9 運用・評価 | Latency / Eval / LLMOps | 未充足 |
+| X 横断制約 | コスト・プライバシー・既存システム等 | 部分的 |
 
 ## ディレクトリ構成
 
 ```
 knowledge/
-├── zenn-glossary/     # 用語集ベースのノート（概念マップ要約済み）
-├── primary-sources/   # 公式・実務一次情報（Reasoning / Temperature / SLM-LLM / RAG）
-├── use-cases/         # 代表ユースケース
-└── decision-axes/     # 意思決定の軸（これから）
+├── SYSTEMATIC-FRAMEWORK.md  # 意思決定の次元マップ（中核）
+├── zenn-glossary/           # 用語集ベースのノート
+├── primary-sources/         # 公式・実務一次情報
+├── use-cases/               # 代表ユースケース
+└── decision-axes/           # チェック項目への落とし込み（これから）
 ```
 
 ## 関連プロジェクト
@@ -63,6 +74,7 @@ knowledge/
 - [fact-checklist](https://github.com/shuji-bonji/fact-checklist) / [factcheck-skill](https://github.com/shuji-bonji/factcheck-skill)
 - [ai-agent-architecture](https://github.com/shuji-bonji/ai-agent-architecture)
 - [media-literacycheck-skill](https://github.com/shuji-bonji/media-literacycheck-skill)
+- [Management-of-software-systems-and-services](https://github.com/shuji-bonji/Management-of-software-systems-and-services)
 
 ## License
 
