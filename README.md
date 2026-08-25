@@ -33,7 +33,8 @@
 - [x] リポジトリ作成
 - [x] 知識ベースの箱作り + 初期ノート（parameters・モデルクラス）
 - [x] 代表ユースケースのスターターリスト作成
-- [ ] 知識ベースの深化（一次情報の追加・用語集主要章の詳細化）
+- [x] 一次情報の追加（Reasoning Effort: OpenAI / Anthropic / Google、Temperature 指針）
+- [ ] 知識ベースのさらなる深化（SLM/LLM選定、RAG/Agent など）
 - [ ] 意思決定の軸（チェック項目）の定義
 - [ ] スキル版の実装
 - [ ] Webアプリ版の実装
@@ -49,7 +50,7 @@
 ```
 knowledge/
 ├── zenn-glossary/     # 用語集ベースのノート
-├── primary-sources/   # 公式ドキュメント等
+├── primary-sources/   # 公式ドキュメント等（Reasoning Effort / Temperature を追加済み）
 ├── use-cases/         # 代表ユースケース
 └── decision-axes/     # 意思決定の軸（これから）
 ```
