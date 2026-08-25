@@ -33,8 +33,10 @@
 - [x] リポジトリ作成
 - [x] 知識ベースの箱作り + 初期ノート（parameters・モデルクラス）
 - [x] 代表ユースケースのスターターリスト作成
-- [x] 一次情報の追加（Reasoning Effort: OpenAI / Anthropic / Google、Temperature 指針）
-- [ ] 知識ベースのさらなる深化（SLM/LLM選定、RAG/Agent など）
+- [x] 一次情報の追加（Reasoning Effort: OpenAI / Anthropic / Google、Temperature）
+- [x] 一次情報の追加（SLM vs LLM 選定指針、RAG 設計指針）
+- [x] Zenn概念マップ要約
+- [ ] Zenn用語集の主要章の詳細化（RAG・Agent・セキュリティ・運用など未着手が多い）
 - [ ] 意思決定の軸（チェック項目）の定義
 - [ ] スキル版の実装
 - [ ] Webアプリ版の実装
@@ -43,14 +45,15 @@
 
 - [サクッと始める生成AI用語集（Zenn）](https://zenn.dev/umi_mori/books/generative-ai-glossary)
 - OpenAI / Anthropic / Google などの公式ドキュメント（Temperature, Reasoning Effort / Thinking, Effort levels など）
+- SLM/LLM選定・RAG設計に関する実務ガイド・ベストプラクティス
 - 実務で見られる代表的なユースケース（コンシューマ向けチャットボット、社内RAG、エージェント自動化など）
 
 ## ディレクトリ構成
 
 ```
 knowledge/
-├── zenn-glossary/     # 用語集ベースのノート
-├── primary-sources/   # 公式ドキュメント等（Reasoning Effort / Temperature を追加済み）
+├── zenn-glossary/     # 用語集ベースのノート（概念マップ要約済み）
+├── primary-sources/   # 公式・実務一次情報（Reasoning / Temperature / SLM-LLM / RAG）
 ├── use-cases/         # 代表ユースケース
 └── decision-axes/     # 意思決定の軸（これから）
 ```
