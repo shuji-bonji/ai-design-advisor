@@ -31,8 +31,9 @@
 ## 現状のステータス
 
 - [x] リポジトリ作成
-- [ ] 知識ベース構築（用語集 + 一次情報）
-- [ ] 代表ユースケースの洗い出し
+- [x] 知識ベースの箱作り + 初期ノート（parameters・モデルクラス）
+- [x] 代表ユースケースのスターターリスト作成
+- [ ] 知識ベースの深化（一次情報の追加・用語集主要章の詳細化）
 - [ ] 意思決定の軸（チェック項目）の定義
 - [ ] スキル版の実装
 - [ ] Webアプリ版の実装
@@ -42,6 +43,16 @@
 - [サクッと始める生成AI用語集（Zenn）](https://zenn.dev/umi_mori/books/generative-ai-glossary)
 - OpenAI / Anthropic / Google などの公式ドキュメント（Temperature, Reasoning Effort / Thinking, Effort levels など）
 - 実務で見られる代表的なユースケース（コンシューマ向けチャットボット、社内RAG、エージェント自動化など）
+
+## ディレクトリ構成
+
+```
+knowledge/
+├── zenn-glossary/     # 用語集ベースのノート
+├── primary-sources/   # 公式ドキュメント等
+├── use-cases/         # 代表ユースケース
+└── decision-axes/     # 意思決定の軸（これから）
+```
 
 ## 関連プロジェクト
 
