@@ -7,52 +7,44 @@
 
 ## 目的
 
-- ユースケースを入力すると、推奨される設計構成（モデルクラス、パラメータ、アーキテクチャパターン、実装上の注意点など）を提示する
-- 「設計のできる人」がボトルネックになっている現場で、共通言語となる判断軸を提供する
-- 用語の理解から、実際の意思決定支援へ橋渡しする
+- ユースケースを入力すると、推奨される設計構成を提示する
+- 判断軸を共通言語とする
+- 用語の理解から意思決定支援へ
 
 ## 想定ユーザー
 
-- ドメイン知識が豊富な業務側・企画側の社員（ベンダーに依頼する側）
-- 生成AIを使ったサービス設計に関わるプロダクトマネージャーや企画担当
-- エージェント設計やLocal LLM構築の指針を素早く把握したいエンジニア
+- ベンダーに依頼する業務側・企画
+- PdM / 企画
+- 構成を素早く切りたいエンジニア
 
-## 提供形態（計画）
+## 提供形態
 
-1. **スキル版**（優先）  
-   Claude Code / エージェント向けスキル。自然言語でユースケースを投げるだけで推奨構成を返す。
+1. **スキル版**（優先）— [`skills/ai-design-advisor/SKILL.md`](./skills/ai-design-advisor/SKILL.md)
+2. **構造化チェックリスト Web**（後続）— 出力型はスキルと同一
 
-2. **構造化チェックリスト Webアプリ**（後続）  
-   fact-checklist 型のUI。カテゴリ分けされた項目をチェックしながら要件を洗い出し、リアルタイムで推奨が変わる。
+## 現状
 
-## 現状のステータス
-
-- [x] リポジトリ・知識ベースの箱・体系的フレームワーク（9次元）
-- [x] 一次情報・Zenn要約・ユースケーススターター
-- [x] **canonical ディレクトリ + 精査チェックリスト**
-- [x] **D6 ソースマッピング開始**（P0: 2リポジトリの該当ドキュメント一覧）
-- [ ] 判断に足りるまで指標収集・精査（P0: D6 → D8 → D9 を優先）
-- [ ] チェック項目への落とし込み・スキル版・Webアプリ版
+- [x] canonical（D1–D9 + X。D7 は要否のみ。手法・運用は未精査）
+- [x] スキルの出力スケルトン
+- [ ] 実ユースケースでスキルを回して調整
+- [ ] Web アプリ
 
 ## 知識の流れ
 
 ```
 Zenn / 一次情報 / understanding-llm / ai-agent-architecture
-        ↓ 精査（REVIEW-CHECKLIST）
-   knowledge/canonical/     ← スキルが根拠にする指標のみ
+        ↓ 精査
+   knowledge/canonical/
         ↓
-   decision-axes / スキル出力
+   skills/ai-design-advisor/   ← 今ここ
 ```
 
-詳細: [`knowledge/SYSTEMATIC-FRAMEWORK.md`](./knowledge/SYSTEMATIC-FRAMEWORK.md)  
-Canonical: [`knowledge/canonical/`](./knowledge/canonical/)
+- 体系: [`knowledge/SYSTEMATIC-FRAMEWORK.md`](./knowledge/SYSTEMATIC-FRAMEWORK.md)
+- 指標: [`knowledge/canonical/`](./knowledge/canonical/)
+- 出力契約: [`skills/ai-design-advisor/OUTPUT-SKELETON.md`](./skills/ai-design-advisor/OUTPUT-SKELETON.md)
 
-## 関連プロジェクト
+## 関連
 
 - [understanding-llm-through-claude-code](https://github.com/shuji-bonji/understanding-llm-through-claude-code)
 - [ai-agent-architecture](https://github.com/shuji-bonji/ai-agent-architecture)
-- [fact-checklist](https://github.com/shuji-bonji/fact-checklist) / [factcheck-skill](https://github.com/shuji-bonji/factcheck-skill)
-
-## License
-
-MIT（予定）
+- [factcheck-skill](https://github.com/shuji-bonji/factcheck-skill) / [fact-checklist](https://github.com/shuji-bonji/fact-checklist)
