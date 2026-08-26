@@ -1,0 +1,271 @@
+{
+  "source_group": "owasp-2026",
+  "retrieved_at": "2026-08-27",
+  "status": "raw",
+  "items": [
+    {
+      "id": "owasp-llm-meta-001",
+      "claim": "LLM アプリの脅威は 2026 年号の公式名で話す。古い Top 10 番号だけで話さない。",
+      "decision_points": ["input_output_guardrails"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "LLM"
+    },
+    {
+      "id": "owasp-llm-meta-002",
+      "claim": "2025→2026 で Excessive Agency は LLM06 から LLM03 へ上がり、Unbounded Consumption は LLM10 から LLM06 へ、System Prompt Leakage は Hidden Context Exposure に広がった。",
+      "decision_points": ["agent_autonomy_scope", "permission_and_audit"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D8", "D6"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "LLM"
+    },
+    {
+      "id": "owasp-llm01",
+      "claim": "LLM01:2026 Prompt Injection — 入力（ユーザ・梱索・ツール出力・画像音声・推論・メモ）が意図しない挙動を起こす。指示とデータの枠界がアーキテクチャ上ない。",
+      "decision_points": ["prompt_injection_defense"],
+      "lifecycle_phases": ["design", "implementation"],
+      "dimensions": ["D8", "D4"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "LLM"
+    },
+    {
+      "id": "owasp-llm01-m",
+      "claim": "注入は着弾する前提で設計する。権限はアプリ価に置き、出力は信頼するコードでスキーマ検証する。不可逆操作は人が本文を見て承認する。外部コンテンツに出所ラベルを付ける。",
+      "decision_points": ["prompt_injection_defense", "input_output_guardrails", "human_oversight_level"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D8", "D6"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "LLM"
+    },
+    {
+      "id": "owasp-llm02",
+      "claim": "LLM02:2026 Sensitive Information Disclosure — 対話文だけでなく、ツール引数、推論跡、梱索チャンク、ログ、埋め込み、キャッシュヒットも感知情報の出口になる。",
+      "decision_points": ["data_privacy_and_compliance"],
+      "lifecycle_phases": ["design", "operation"],
+      "dimensions": ["D8", "D3"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "LLM"
+    },
+    {
+      "id": "owasp-llm03",
+      "claim": "LLM03:2026 Excessive Agency — 機能・権限・自律の過剩で、誤応答や注入が実害行動になる。原因は hallucination でも注入でも同士エージェントでもよい。",
+      "decision_points": ["agent_autonomy_scope", "permission_and_audit"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D8", "D6"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "LLM"
+    },
+    {
+      "id": "owasp-llm03-m",
+      "claim": "ツールは最少、粒度は細かく、権限は最小、実行は利用者の権限コンテキストで。許可判定は LLM に任せない。影響の大きい操作は HITL。",
+      "decision_points": ["tool_integration_design", "human_oversight_level"],
+      "lifecycle_phases": ["design", "implementation"],
+      "dimensions": ["D6", "D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "LLM"
+    },
+    {
+      "id": "owasp-llm04",
+      "claim": "LLM04:2026 Supply Chain — モデル・データセット・アダプタ・変換パイプラインも供給網の一部。エージェント向け MCP/ツール登録は ASI04 側。",
+      "decision_points": ["vendor_and_api_selection", "connection_protocol_choice"],
+      "lifecycle_phases": ["design", "operation"],
+      "dimensions": ["D8", "D1"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "LLM"
+    },
+    {
+      "id": "owasp-llm05",
+      "claim": "LLM05:2026 Data and Model Poisoning — 事前学習だけでなく FT・埋め込み作成・RAG 抜きでも毒を使う。",
+      "decision_points": ["training_strategy", "rag_architecture"],
+      "lifecycle_phases": ["design", "operation"],
+      "dimensions": ["D8", "D7", "D5"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "LLM"
+    },
+    {
+      "id": "owasp-llm06",
+      "claim": "LLM06:2026 Unbounded Consumption — 推論・ツールループ・再生成の資源が上限なしだとコスト爆発や DoS になる。",
+      "decision_points": ["token_budget_and_cost", "scaling_and_capacity_planning"],
+      "lifecycle_phases": ["design", "operation"],
+      "dimensions": ["D9", "D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "LLM"
+    },
+    {
+      "id": "owasp-llm07",
+      "claim": "LLM07:2026 Misinformation — 流暢で確信げな誤りが判断やツール呼び出しを動かす。出力の不正と、出力の無検証流用（LLM10）は別項。",
+      "decision_points": ["hallucination_mitigation", "evaluation_design"],
+      "lifecycle_phases": ["design", "evaluation"],
+      "dimensions": ["D3", "D9", "D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "LLM"
+    },
+    {
+      "id": "owasp-llm08",
+      "claim": "LLM08:2026 Hidden Context Exposure — システムプロンプトや隠しコンテキストは漏れる前提。秘密や許可の境界にしない。",
+      "decision_points": ["prompt_structure", "permission_and_audit"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D4", "D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "LLM"
+    },
+    {
+      "id": "owasp-llm09",
+      "claim": "LLM09:2026 Vector and Embedding Weaknesses — 類似度検索の幾何側（毒・逆変換・現圧・ACL 漏れ）。検索文の注入は LLM01、メモ毒は ASI06。",
+      "decision_points": ["rag_architecture"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D5", "D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "LLM"
+    },
+    {
+      "id": "owasp-llm10",
+      "claim": "LLM10:2026 Improper Output Handling — モデル出力をそのまま後段（HTML/SQL/シェル/Markdown 画像）に流すと XSS や RCE になる。出力前にエンコードする。",
+      "decision_points": ["input_output_guardrails"],
+      "lifecycle_phases": ["implementation", "design"],
+      "dimensions": ["D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "LLM"
+    },
+    {
+      "id": "owasp-asi01",
+      "claim": "ASI01 Agent Goal Hijack — 信頼しない入力がエージェントの目標や計画を曲げる。",
+      "decision_points": ["prompt_injection_defense", "agent_autonomy_scope"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D8", "D6"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "ASI"
+    },
+    {
+      "id": "owasp-asi02",
+      "claim": "ASI02 Tool Misuse and Exploitation — 正当なツールを有害な使い方で呼ぶ（連鎖・過大拡散・破壊）。",
+      "decision_points": ["tool_integration_design"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D6", "D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "ASI"
+    },
+    {
+      "id": "owasp-asi03",
+      "claim": "ASI03 Identity and Privilege Abuse — 委譲・継承・キャッシュされた証明で権限が超える。",
+      "decision_points": ["permission_and_audit"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "ASI"
+    },
+    {
+      "id": "owasp-asi04",
+      "claim": "ASI04 Agentic Supply Chain — MCP サーバ、ツール登録、第三者エージェント、プロンプトが改ざんされて実行系に入る。",
+      "decision_points": ["connection_protocol_choice", "vendor_and_api_selection"],
+      "lifecycle_phases": ["design", "operation"],
+      "dimensions": ["D6", "D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "ASI"
+    },
+    {
+      "id": "owasp-asi05",
+      "claim": "ASI05 Unexpected Code Execution — 生成文や注入がシェル・評価・テンプレートとして走る。",
+      "decision_points": ["input_output_guardrails", "tool_integration_design"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D8", "D6"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "ASI"
+    },
+    {
+      "id": "owasp-asi06",
+      "claim": "ASI06 Memory and Context Poisoning — メモや RAG ストアへの書き込みが以後のセッションを汚す。メモ書き込みは権限操作として扱う。",
+      "decision_points": ["context_management", "rag_architecture"],
+      "lifecycle_phases": ["design", "operation"],
+      "dimensions": ["D3", "D5", "D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "ASI"
+    },
+    {
+      "id": "owasp-asi07",
+      "claim": "ASI07 Insecure Inter-Agent Communication — エージェント間のメッセージが僕や再送や改ざんになる。",
+      "decision_points": ["multi_agent_topology"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D6", "D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "ASI"
+    },
+    {
+      "id": "owasp-asi08",
+      "claim": "ASI08 Cascading Failures — 小さな誤りが複数エージェント経由で拡大する。",
+      "decision_points": ["multi_agent_topology", "observability_and_alerting"],
+      "lifecycle_phases": ["design", "operation"],
+      "dimensions": ["D6", "D9"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "ASI"
+    },
+    {
+      "id": "owasp-asi09",
+      "claim": "ASI09 Human-Agent Trust Exploitation — 信じやすい説明で人が有害操作を承認してしまう。HITL は要約でなく実際の操作を見せる。",
+      "decision_points": ["human_oversight_level"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D8", "D6"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "ASI"
+    },
+    {
+      "id": "owasp-asi10",
+      "claim": "ASI10 Rogue Agents — 攻撃者が常にいなくても、派生や崩れたエージェントが正当に見せながら有害に動く。",
+      "decision_points": ["agent_autonomy_scope", "observability_and_alerting"],
+      "lifecycle_phases": ["operation", "design"],
+      "dimensions": ["D6", "D8", "D9"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false,
+      "list": "ASI"
+    }
+  ]
+}
