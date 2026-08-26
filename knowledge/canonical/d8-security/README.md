@@ -9,5 +9,6 @@
 | [threat-landscape.md](./threat-landscape.md) | 見るべき脅威（名前で扱う） |
 | [permission-vs-authority.md](./permission-vs-authority.md) | 許可の反復か、権限の委譲か |
 | [guardrail-layers.md](./guardrail-layers.md) | 多層防御とコンシューマ向け最低ライン |
+| [legal-actors.md](./legal-actors.md) | 開発者 / 提供者 / 利用者 |
 
 OWASP の ID は年次で動くため、指標本文は ID より脅威名を優先した。

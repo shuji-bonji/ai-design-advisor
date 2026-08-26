@@ -2,8 +2,11 @@
 
 - status: canonical
 - dimensions: D7, D1, D4, D5
+- verified_clusters: C12
 - sources:
   - D4 / D5 / D1 の既存指標（先に試す段）
+  - Fowler: Fine Tuning はプロンプトと RAG で足りないときの後
+  - AWS Generative AI Lens: カスタマイズの要否を運用枠として見る
   - SYSTEMATIC-FRAMEWORK.md の D7 予定項目
   - 各社 Fine-tuning ガイド・PEFT 論文は **手法ノート側（未精査）**
 
@@ -16,7 +19,7 @@
 
 ## 推奨パターン
 
-**デフォルトは Fine-tune しない。** 先に D4（指定と例）→ D5（根拠と更新）→ D1（小さいモデルへ上げ下げ）を試す。
+**デフォルトは Fine-tune しない。** 先に D4（指定と例）→ D5（根拠と更新）→ D1（小さいモデルへ上げ下げ）を試す。Fowler / AWS Lens も同方向。
 
 | やりたいこと | 先に見る場所 | FT か |
 | --- | --- | --- |

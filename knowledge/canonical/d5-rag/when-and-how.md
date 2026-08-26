@@ -2,8 +2,10 @@
 
 - status: canonical
 - dimensions: D5, D3, D7, D8, D9
+- verified_clusters: C13
 - sources:
   - knowledge/primary-sources/rag-guidelines.md
+  - Fowler: Emerging Patterns（Direct / RAG / Hybrid / Rewrite / Rerank）
   - D3 knowledge-and-memory.md
   - D6 when-to-agentize.md（Agentic RAG は上の段）
   - 実務インタビュー: 分割・検索・並べ替え・ACL・更新削除をセットで問う
@@ -17,7 +19,7 @@
 
 ## 推奨パターン
 
-RAG が要る典型: 最新性、社内固有、根拠、Fine-tune なしのドメイン知識。
+RAG が要る典型: 最新性、社内固有、根拠、Fine-tune なしのドメイン知識。Direct Prompting だけだと知識カットオフと幻覚が残る。
 
 制御点:
 
@@ -41,6 +43,8 @@ RAG が要る典型: 最新性、社内固有、根拠、Fine-tune なしのド�
 | 5 | Agentic（多段検索）。レイテンシ増。必要が証明されてから |
 
 多くの現場は 2–3 で足りる。5 は D6 の「段を上げる」と同じ。
+
+Embeddings は非構造データの近さ用。関係データは RAG の第一手段にしない（Fowler、一源だが既存指標と敵対しない）。
 
 ## よくある失敗
 

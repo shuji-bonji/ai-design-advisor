@@ -2,9 +2,13 @@
 
 - status: canonical
 - dimensions: D3, D5, D6
+- verified_clusters: C10
 - sources:
   - understanding-llm-through-claude-code/docs/ja/02-context-window/context-budget.md
   - understanding-llm Part 3–6（常駐 / 条件付き / オンデマンド / ツール定義）
+  - 12-Factor Factor 3: Own your context window
+  - 12-Factor Factor 9: Compact errors into context
+  - Anthropic: Effective context engineering
 
 ## 判断の問い
 
@@ -16,6 +20,8 @@
 
 窓の公称サイズを使い切る設計にしない。劣化は上限より手前で始まる。
 
+**コンテキストは自分で組む。** 標準メッセージ配列に限らない。一回の入力は「今までと次の一手」である。
+
 配分の型:
 
 | 種別 | 例 | 扱い |
@@ -25,6 +31,8 @@
 | 変動費 | 会話履歴、ツール出力、ファイル全文 | 最大の消費源。圧縮・分割・退避 |
 | オンデマンド | Skill、必要時の参照 | 呼んだときだけ |
 | コンテキスト外 | Hooks、テスト、CI | 予算ゼロ。機械的なことはここに |
+
+エラーは生スタックトレースのまま積まない。**圧縮して戻し**、同じ失敗の連続には上限を置く。
 
 固定費を減らし、変動費を制御し、実作業用の余裕を残す。
 ツール定義は「接続した瞬間から毎ターン固定費」になりやすい。多いなら遅延ロードか、CLI + Skill に戻す（D6 / D8）。
@@ -41,6 +49,7 @@
 - MCP / ツールを全部常時接続する
 - 検索ヒットをコンテキストに全部貼る
 - 履歴を消さず、初期の方針が中間に沈む
+- 失敗トレースをそのまま残してループが自転する
 
 ## 代替・例外
 
