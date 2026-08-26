@@ -2,16 +2,21 @@
 
 - status: canonical
 - dimensions: D6, D8, D9
+- verified_clusters: C03
 - sources:
   - ai-agent-architecture/docs/ja/agents/subagent-quality-gate.md
   - understanding-llm: Sycophancy / Context Rot / Priority Saturation
-  - understanding-llm/docs/ja/05-on-demand-context/skill-vs-agent.md
+  - OpenAI: Plan for human intervention（失敗回数上限・高ステーク）
+  - OWASP LLM01:2026 / ASI09: 不可逆は本文を人が見る。要約だけで承認させない
+  - 12-Factor Factor 7: 人への連絡もツール呼び出し
+  - AWS Agentic Lens: autonomy levels + 影響に比例した監修
 
 ## 判断の問い
 
 - 生成した本人（同じ会話）がレビューしてよいか
 - 「合格 / 不合格」を仕組みで強制する必要があるか
 - 人間の最終承認（HITL）はどの粒度か
+- 審査者は要約ではなく、実際に走る操作を見られるか
 
 ## 推奨パターン
 
@@ -35,7 +40,12 @@ HITL の粒度:
 
 - 低リスクの定型 → 自動ゲートのみでも可
 - 顧客向け回答・課金・個人情報 → ゲート + 人間承認
-- 破壊的操作（削除、本番反映、外部送信） → 人間承認を必須
+- 破壊的操作（削除、本番反映、外部送信、返金・決済） → 人間承認を必須
+
+承認 UI は操作の本文（宛先・金額・引数）を見せる。モデルの要約だけで押すと ASI09（Human-Agent Trust Exploitation）になる。
+人への連絡は平文切り替えではなく、`request_human_input` のようなツールにすると制御フローに載る。
+
+自律度は事前に決める（AWS: observer / assistant / autonomous / orchestrator）。影響が大きいほど審査を厚くする。
 
 静的解析（lint / test）と人間レビューの**間**に、設計レベルのゲートを置くのが実務的。
 ゲートを直列に増やしすぎない。近い観点は統合し、独立な観点は並列にする。
@@ -46,6 +56,7 @@ HITL の粒度:
 - ゲートを MUST で固定せず、面倒だから自己レビューでバイパスする
 - ゲートが「すべて合格」しか返さない状態を放置する
 - ゲートを 10 個直列に並べてレイテンシだけ増やす
+- HITL に要約だけ見せて承認させる
 
 ## 代替・例外
 

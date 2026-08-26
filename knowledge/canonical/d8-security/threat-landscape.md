@@ -2,38 +2,43 @@
 
 - status: canonical
 - dimensions: D8, D6, D5
+- verified_clusters: C05, C07, C08
 - sources:
-  - OWASP Top 10 for LLM Applications 2025 / GenAI LLM Top 10 2026（一次情報）
-  - OWASP MCP Top 10（2025, Beta）
+  - OWASP GenAI LLM Top 10 2026（正本 2026/final）
+  - OWASP Top 10 for Agentic Applications（ASI01–10）
+  - OWASP MCP / 公式 Security Best Practices 2026-07-28
   - ai-agent-architecture/docs/ja/mcp/security.md（原則は採用、LLM番号対応は補正）
 
 ## 判断の問い
 
 - ユーザー入力がモデルの動作を変えうるか（チャット・RAG・ツール結果のすべて）
-- モデルがツールや書き込み権限を持つか（過剰な自律性）
+- モデルがツールや書き込み権限を持つか（過剩な自律性）
 - 社外モデルに渡してよいデータか
 - ツール／MCP／プラグインの出所は管理されているか
 
 ## 推奨パターン
 
-設計判断では、次を「必ず見る脅威」とする。番号は世代で動くので、**名前で扱う**。
+設計判断では、次を「必ず見る脅威」とする。番号は世代で動くので、**名前で扱う**。引用するときだけ `LLM01:2026` のように年号付きで書く。
 
-| 脅威（名前） | 設計で効く問い | 典型対策の置き場 |
-| --- | --- | --- |
-| Prompt Injection | 入力・検索結果・ツール出力を信頼するか | 入力分離、ツール権限縮小、出力検証 |
-| Sensitive information disclosure | プロンプト／ログ／コンテキストに秘密が乗るか | マスキング、最小投入、セッション分離 |
-| Excessive agency | モデルが「できること」が広すぎないか | 最小権限、破壊的操作は HITL |
-| Insecure / poisoned tools (MCP, plugins) | ツール定義と供給源は信頼できるか | 許可リスト、スキーマ検証 |
-| Improper output handling | モデル出力をそのまま HTML/SQL/シェルに渡すか | 出力はデータとして扱う |
-| Supply chain | モデル・MCP・依存の出所 | ロックファイル、棚卸し |
-| Unbounded consumption | 無限ループ・巨大コンテキストで枯渇しないか | 上限、タイムアウト、レート制限 |
+| 脅威（名前） | 2026 ID | 設計で効く問い | 典型対策の置き場 |
+| --- | --- | --- | --- |
+| Prompt Injection | LLM01 / ASI01 | 入力・検索結果・ツール出力を信頼するか | 入力分離、ツール権限縮小、出力検証 |
+| Sensitive information disclosure | LLM02 | プロンプト／ログ／推論跡に秘密が乗るか | マスキング、最小投入、セッション分離 |
+| Excessive agency | LLM03 | モデルが「できること」が広すぎないか | 最小権限、破壊的操作は HITL |
+| Supply chain | LLM04 / ASI04 | モデル・MCP・依存の出所 | 許可リスト、棚卸し |
+| Data / model poisoning | LLM05 | FT や RAG 抜きに毒が入るか | 出典制限、書き込み審査 |
+| Unbounded consumption | LLM06 | 無限ループ・巨大コンテキストで枯渇しないか | 上限、タイムアウト、レート制限 |
+| Misinformation | LLM07 | 流暢な誤りが判断やツールを動かすか | 評価、出典、HITL |
+| Hidden context exposure | LLM08 | 隠しプロンプトを秘密場所にしていないか | 秘密を隠さない。漏れる前提 |
+| Vector / embedding weaknesses | LLM09 | 類似度検索の幾何側を見ているか | ACL、テナント分離 |
+| Improper output handling | LLM10 | 出力を HTML/SQL/シェルに生流しするか | 出力はデータとして扱う |
 
-MCP を使うなら、アプリ側（LLM Top 10）とサーバー側（MCP Top 10）の両方を見る。
-MCP Top 10 で設計に効くもの: Token mismanagement、Privilege creep、Tool poisoning、Command injection、Shadow MCP、Context over-sharing、Audit 不足。
+**C07**: 隠しコンテキストはセキュリティ境界にしない。許可や秘密を system prompt に置かない。
+**C08**: 誤りの内容（LLM07）と出力の生流し（LLM10）は別項。
 
-**補正**: 自リポ `mcp/security.md` の「LLM08 = Excessive Agency」は古い番号。2025 年版では Excessive Agency は LLM06、2026 年版では順位が上がり上位（報道上は 3 位付近）。指標では ID より名前を使う。
+Prompt Injection は RAG や Fine-tune だけでは消えない。検索結果も攻撃面である。着弾前提で権限を狭くする。
 
-Prompt Injection は RAG や Fine-tune だけでは消えない（OWASP 2025 の記述）。検索結果も攻撃面である。
+MCP を使うならアプリ側（LLM Top 10）とサーバ側（MCP Best Practices / ASI04）の両方を見る。
 
 ## よくある失敗
 
@@ -44,5 +49,5 @@ Prompt Injection は RAG や Fine-tune だけでは消えない（OWASP 2025 の
 
 ## 代替・例外
 
-- 社内・読み取り専用・人間が最終確認するツールは、過剰な自律性のリスクが相対的に低い。それでも Injection と情報漏洩は残る。
+- 社内・読み取り専用・人間が最終確認するツールは、過剩な自律性のリスクが相対的に低い。それでも Injection と情報漏洩は残る。
 - OWASP リストは年次で入れ替わる。canonical は「名前と問い」を残し、番号は一次情報で更新する。

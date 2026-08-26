@@ -2,17 +2,22 @@
 
 - status: canonical
 - dimensions: D6, X
+- verified_clusters: C01
 - sources:
   - Anthropic: Building effective agents（単純さ優先、必要が証明されてから複雑化）
+  - OpenAI: A practical guide to building agents（単一エージェントを先に極める。複数化の失敗シグナル）
+  - AWS Agentic AI Lens: decompose into specialized bounded agents
+  - 12-Factor Agents Factor 10: Small, Focused Agents
   - ai-agent-architecture/docs/ja/faq/agent-vs-subagent-vs-skill.md
   - ai-agent-architecture/docs/ja/strategy/composition-patterns.md
-  - understanding-llm problem-countermeasure-map（独立コンテキストが効く問題）
+  - understanding-llm problem-countermeasure-map
 
 ## 判断の問い
 
 - 1回の生成で足りるか、外部の事実・操作が要るか、多段の計画と再試行が要るか
 - 失敗したときのコストは高いか（レビューなしで本番に出るか）
 - レイテンシとコストの予算はどれくらいか
+- 指示の条件分岐が育てないか、似たツールを取り違えているか（複数化の前提）
 
 ## 推奨パターン
 
@@ -29,6 +34,16 @@
 
 コンシューマ向けチャットボットの多くは、最初は 0〜2 で足りる。
 「エージェント」という言葉を先に置かない。ツール呼び出しのループが必要になってから 3 に上げる。
+
+**単一エージェントを先に極める。** 能力はエージェント増やしではなくツール足しで広げる（OpenAI、Anthropic、AWS Lens、12-Factor が同方向）。
+
+複数化してよい失敗シグナル（OpenAI）:
+
+- 指示の条件分岐が増えてテンプレートが育てない
+- ツールが似て取り違える
+- 複雑な指示に従えない
+
+複数化するときの型: Manager（中央が専門家をツール呼び出し）か handoff（制御を渡す）。初手は Manager の方が追いやすい。
 
 複合構成も同様に足す:
 
@@ -49,3 +64,4 @@
 
 - 規制・監査が強い領域では、段が低くても品質ゲート（独立コンテキスト）を早めに足してよい
 - オンデバイス SLM の場合、マルチエージェントはコストよりレイテンシが先に破綻しやすい
+- 「3–10 歩、多くて 20 歩」は 12-Factor の heuristic。閾値として転記しない

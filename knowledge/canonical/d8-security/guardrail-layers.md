@@ -2,9 +2,13 @@
 
 - status: canonical
 - dimensions: D8, D9, D6
+- verified_clusters: C05, C06
 - sources:
   - OWASP LLM / MCP Top 10
-  - ai-agent-architecture/docs/ja/mcp/security.md（チェックリストの骨格）
+  - OpenAI Practical Guide: layered guardrails
+  - Fowler: Guardrails
+  - AWS Generative AI Lens: security pillar
+  - ai-agent-architecture/docs/ja/mcp/security.md
   - D6 quality-gate-and-objectivity.md
   - understanding-llm: Hooks はコンテキスト外の機械的検証
 
@@ -28,6 +32,8 @@
 | 運用 | 検知できない逸脱 | 監査ログ、レート制限、インシデント手順、品質ゲート |
 
 機械で決められること（テスト、スキーマ、権限チェック）は Hooks / CI / ゲートウェイに置く。LLM の「気をつける」に依存しない。
+
+OpenAI が挙げる層の例（製品名ではない）: 関連性分類、安全分類（注入）、PII、モデレーション、ツール危険度、規則ベース、出力検証。**規則ベース（ブロックリスト・長さ上限・正規表現）を LLM 層と並べる。**
 
 コンシューマ向けの最低ライン:
 
@@ -54,5 +60,5 @@ MCP / ツール導入時:
 
 ## 代替・例外
 
-- オフライン SLM でも、プロンプト注入と過剰なツール権限は残る。境界がデバイス内に移るだけ。
+- オフライン SLM でも、プロンプト注入と過剩なツール権限は残る。境界がデバイス内に移るだけ。
 - 規制業種は層を厚くする前に「データを外に出さない」を先に決める（D1 / X と連携）。
