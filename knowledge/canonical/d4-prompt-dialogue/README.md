@@ -5,3 +5,4 @@
 | [placement-and-decomposition.md](./placement-and-decomposition.md) | 何を常駐／条件付き／今回に置くか |
 | [writing-and-underspecification.md](./writing-and-underspecification.md) | 軸を指定する、曖昧語を避ける |
 | [ownership-and-versioning.md](./ownership-and-versioning.md) | 自分で持ちバージョン管理する |
+| [optimization-techniques.md](./optimization-techniques.md) | 品質の手法とトークンの手法 |
