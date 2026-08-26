@@ -2,17 +2,17 @@
 
 最終更新: 2026-08-27
 
-| 次元 | 状態 | メモ |
+| 次元 | 状態 | ノート |
 |------|------|------|
-| D1 モデルクラス | 指標ノート初版 | SLM/LLM/Reasoning/量子化 |
-| D2 生成パラメータ | 指標ノート初版 | Temperature と Effort は別軸 |
-| D3 コンテキスト・知識 | 指標ノート初版 | 8制約・予算・Memory |
-| D4 プロンプト・対話 | 指標ノート初版 | 住所分解・指定欠落 |
-| D5 RAG | 指標ノート初版 | 要否・成熟度・ACL/更新 |
-| D6 エージェント | 指標ノート初版 | 4本 |
-| **D7 Fine-tuning** | **要否のみ canonical** | 手法・運用は未精査 |
-| D8 セキュリティ | 指標ノート初版 | 3本 |
-| D9 運用・評価 | 指標ノート初版 | 3本 |
-| X 横断制約 | 初版 | serving-and-cache.md |
+| D1 モデルクラス | canonical | selection.md |
+| D2 生成パラメータ | canonical | temperature-and-effort.md |
+| D3 コンテキスト・知識 | canonical | structural-constraints / context-as-budget / knowledge-and-memory |
+| D4 プロンプト・対話 | canonical | placement / writing / ownership-and-versioning / optimization-techniques |
+| D5 RAG | canonical | when-and-how.md |
+| D6 エージェント | canonical | when-to-agentize / skill-vs-subagent-vs-mcp / five-layers / quality-gate |
+| D7 Fine-tuning | 要否のみ canonical | when-to-finetune.md。手法・運用は未精査 |
+| D8 セキュリティ | canonical | threat-landscape / permission-vs-authority / guardrail-layers / legal-actors |
+| D9 運用・評価 | canonical | discovery-vs-production / hooks / loop-eval-and-stop / cost-decomposition |
+| X 横断 | canonical | serving-and-cache.md |
 
-全次元に初版がある。D7 の手法・運用だけ未精査。
+スキルは各次元 README → 上表のファイルを引く。C20–C24 はまだ一源のため推奨に使わない。

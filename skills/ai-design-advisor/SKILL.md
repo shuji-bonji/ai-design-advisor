@@ -38,22 +38,23 @@ description: >
 
 ### Step 2: 次元を順に当てる
 
-canonical を読む。ノートに無いことは書かない。
+先にその次元の `README.md` を読み、表のファイルから必要なノートだけ開く。ノートに無いことは書かない。
 
-| 順 | 次元 | 読む先 |
+| 順 | 次元 | 読む先（README が目次） |
 | --- | --- | --- |
-| D1 | モデルクラス | `knowledge/canonical/d1-model-class/selection.md` |
-| D2 | Temperature / Effort | `knowledge/canonical/d2-parameters/temperature-and-effort.md` |
-| D3 | コンテキスト・知識 | `knowledge/canonical/d3-context-knowledge/` |
-| D4 | プロンプトの住所 | `knowledge/canonical/d4-prompt-dialogue/` |
-| D5 | RAG | `knowledge/canonical/d5-rag/when-and-how.md` |
-| D6 | エージェント化 | `knowledge/canonical/d6-agent/` |
-| D7 | Fine-tune の要否 | `knowledge/canonical/d7-finetune/when-to-finetune.md` |
-| D8 | セキュリティ | `knowledge/canonical/d8-security/` |
-| D9 | 運用・評価 | `knowledge/canonical/d9-ops-eval/` |
-| X | キャッシュ・レイテンシ | `knowledge/canonical/x-cross-constraints/` |
+| D1 | モデルクラス | `d1-model-class/selection.md` |
+| D2 | Temperature / Effort | `d2-parameters/temperature-and-effort.md` |
+| D3 | コンテキスト・知識 | `d3-context-knowledge/`（制約・予算・Memory） |
+| D4 | プロンプト | `d4-prompt-dialogue/`（住所・書き方・所有・最適化） |
+| D5 | RAG | `d5-rag/when-and-how.md` |
+| D6 | エージェント化 | `d6-agent/`（要否・単位・層・ゲート） |
+| D7 | Fine-tune の要否 | `d7-finetune/when-to-finetune.md` のみ |
+| D8 | セキュリティ | `d8-security/`（脅威・許可・層・法務主体） |
+| D9 | 運用・評価・コスト | `d9-ops-eval/`（ループ・コスト分解を含む） |
+| X | キャッシュ・レイテンシ | `x-cross-constraints/serving-and-cache.md` |
 
-D7 の手法は推奨に使わない。
+パスの接頭辞は `knowledge/canonical/`。
+D7 の `methods-unreviewed.md` / `ops-unreviewed.md` は推奨に使わない。
 
 例やアンチパターンが欲しいときだけ `knowledge/zenn-glossary/GUIDELINES-MAP.md` と索引を見る。`needs_verification` の数値は使わない。AIDD / Vibe / SDD は本ツールの範囲外（DEV トラック）。
 
@@ -61,12 +62,16 @@ D7 の手法は推奨に使わない。
 
 - データを外に出せない → D1 は SLM / オンデバイス
 - 出典・更新が要る → D7 はしない。D5
-- 書き込み・課金・個人情報更新 → permission + HITL
+- 書き込み・課金・個人情報更新 → permission + HITL（承認は本文）
 - 体感が厳しい → Effort を上げない。Agentic RAG に進まない
+- コストが支配的 → `cost-decomposition.md` の5層。最大モデルで全件予約しない
+- MCP を採用 → token passthrough 禁止
+- プロンプトを短くする前 → 軸が空なら `optimization-techniques.md` の A が先
 
 ### Step 4: 出力する
 
 従う型は下記。確度は  確定 / 条件付き / 情報不足。
+次元表の「根拠」列は **canonical のファイル名** を書く。
 
 ---
 
