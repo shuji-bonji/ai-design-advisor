@@ -1,0 +1,47 @@
+{
+  "source_group": "aws-well-architected-lenses",
+  "retrieved_at": "2026-08-27",
+  "status": "raw",
+  "items": [
+    {
+      "id": "aws-cost-001",
+      "claim": "コストはモデル選定・推論形態・プロンプト・ベクトルストア・エージェント流れに分けて見る。",
+      "decision_points": ["token_budget_and_cost", "model_selection"],
+      "dimensions": ["D9", "D1"],
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "aws-cost-002",
+      "claim": "仕事が要る推論だけ払う。最悪ケースのモデルと最長コンテキストで全件予約しない。",
+      "decision_points": ["model_selection", "token_budget_and_cost"],
+      "dimensions": ["D1", "D9"],
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "aws-cost-003",
+      "claim": "消費の上限（トークン・反復・時間・並列）は境界で拒否する。",
+      "decision_points": ["token_budget_and_cost"],
+      "dimensions": ["D9", "D6"],
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "aws-cost-004",
+      "claim": "推論の前にキャッシュ（プロンプト・ツール結果・検索結果）を使う。",
+      "decision_points": ["inference_optimization"],
+      "dimensions": ["X", "D9"],
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "aws-cost-005",
+      "claim": "費やしはエージェント / テナント / セッション / ワークフローに帰属する。",
+      "decision_points": ["token_budget_and_cost", "observability_and_alerting"],
+      "dimensions": ["D9"],
+      "kind": "principle",
+      "needs_verification": false
+    }
+  ]
+}
