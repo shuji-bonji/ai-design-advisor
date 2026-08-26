@@ -4,15 +4,18 @@
 
 | 次元 | 状態 | メモ |
 |------|------|------|
-| D1 モデルクラス | 素材あり・未精査 | primary-sources/slm-vs-llm.md 等 |
+| D1 モデルクラス | 素材あり・未精査 | primary-sources/slm-vs-llm.md |
 | D2 生成パラメータ | 素材あり・未精査 | reasoning-effort.md, temperature.md |
-| D3 コンテキスト・知識 | 素材豊富・未精査 | understanding-llm の構造的問題・context 系 |
-| D4 プロンプト・対話 | 素材あり・未精査 | understanding-llm rules / always-loaded 等 |
-| D5 RAG | 素材あり・未精査 | primary-sources/rag-guidelines.md |
-| D6 エージェント | 指標ノート初版あり | 4本。ループ/Hooks/A2A はまだ薄い |
-| D7 Fine-tuning | 薄い | 後回し可 |
-| **D8 セキュリティ** | **指標ノート初版あり** | 脅威見取り図 / permission-authority / 多層ガードレール |
-| D9 運用・評価 | 素材あり・未着手 | hooks, discovery vs production |
-| X 横断制約 | 部分的 | when-to-agentize / permission に一部反映 |
+| D3 コンテキスト・知識 | 素材豊富・未精査 | understanding-llm 構造的問題・context |
+| D4 プロンプト・対話 | 素材あり・未精査 | rules / always-loaded |
+| D5 RAG | 素材あり・未精査 | rag-guidelines.md |
+| D6 エージェント | 指標ノート初版 | 4本 |
+| D7 Fine-tuning | 薄い | P2 |
+| D8 セキュリティ | 指標ノート初版 | 3本 |
+| **D9 運用・評価** | **指標ノート初版** | 発見/生産・Hooks・ループと評価 |
+| X 横断制約 | 部分的 | D6/D8/D9 に散在 |
 
-**次**: P0 残りは D9。D6 のループ/Hooks は D9 と同時に精査してよい。
+**P0（D6 / D8 / D9）は初版の指標が齊った。**  
+次の充足は P1（D3 コンテキスト・D4 プロンプト）、あるいは既存素材のある D1/D2/D5 の精査。
+
+スキルに使うには、未精査次元は「一般論のみ／情報不足」と明示する前提で、P0 だけでもエージェント化・権限・運用の推奨は出せる。
