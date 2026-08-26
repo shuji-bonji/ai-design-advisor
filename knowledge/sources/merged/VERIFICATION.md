@@ -1,15 +1,17 @@
 # 検証ログ
 
-## 2026-08-27 C01–C18
+## C01–C19
 
-C01–C18 は canonical に折り込み済み。
+既存の通り verified。
 
-## 2026-08-27 C19
+## 2026-08-27 C20–C24（一源のまま既存ノートへ）
 
-| ID | 結果 | 導入先 |
+| ID | 扱い | 導入先 |
 | --- | --- | --- |
-| C19 | verified（AWS GenAI Lens GENCOST01–05 + Agentic Lens cost principles。同一ベンダー内の複数ドキュメント + D1/D9 既存と一致） | d9-ops-eval/cost-decomposition.md |
+| C20 | 足し（一源 Fowler。推奨の本体にしないが失敗例にする） | d5-rag/when-and-how.md |
+| C21 | 足し（MCP 公式。passthrough と同ノート） | d8-security/guardrail-layers.md |
+| C22 | heuristic のまま。閾値禁止 | d6-agent/when-to-agentize.md |
+| C23 | 語彙・目次のみ | legal-actors.md / loop-eval-and-stop.md |
+| C24 | 語彙のみ | legal-actors.md |
 
-Bedrock intelligent routing などの機能名は vendor_practice のまま。
-
-次: C20–C24 は一源のまま厚くしない、またはスキルがこのノート群を引けるかの確認。
+スキルは C23/C24 を確定の推奨にしない。
