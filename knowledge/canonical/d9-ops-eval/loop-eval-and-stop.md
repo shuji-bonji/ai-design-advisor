@@ -1,20 +1,28 @@
 # ループ、評価、停止条件
 
 - status: canonical
-- dimensions: D9, D6, D5
+- dimensions: D9, D6, D5, D1
+- verified_clusters: C14, C15
 - sources:
   - ai-agent-architecture/docs/ja/strategy/loop-engineering.md
   - D6 quality-gate-and-objectivity.md
-  - primary-sources/rag-guidelines.md（Retrieval と Generation を分けて測る）
+  - primary-sources/rag-guidelines.md
   - Anthropic: Building effective agents
+  - OpenAI: 強いモデルで基準を出してから下げる
+  - Azure AI methodology: 内ループ（開発）と外ループ（生産）
+  - AWS Agentic Lens: 推論・ツール・メモ・引き渡しを一本の跡で
+  - Fowler: Evals
 
 ## 判断の問い
 
 - 回しているのは内側ループ（model→tool→context）か、外側ループ（次の指示を誰が書くか）か
 - 「完了」は自己申告か、機械的に検証できるか
 - 検索品質と回答品質を混ぜて採点していないか
+- エージェントの一手を事後に追えるか
 
 ## 推奨パターン
+
+**評価を先に置く。** 強いモデルで基準を出してからコスト向けて下げる。開発の内ループと生産監視の外ループを分ける（Azure）。
 
 **内側ループ**（ツールを回す while）は既知の型。競争領域ではない。
 **外側ループ**（起動・次指示・完了判定）を人からシステムに移すなら、次は MUST。
@@ -30,7 +38,10 @@
    書き込みは冪等（リトライで二重課金しない）。エラーは次の指示として読めること。
 
 4. **批評者**  
-   maker と checker を分ける。批評者のいないループは自分に頷くだけ。
+   maker と checker を分ける。批評者のいないループは自分に頭づくだけ。
+
+5. **跡**  
+   推論・ツール呼び出し・メモ・引き渡しを一本で追える。インフラ監視とは別物。信頼性は SLO（成功率・レイテンシ・有害出力率）で置く。数値自体は事例にしない。
 
 評価の分離:
 
@@ -54,6 +65,7 @@
 - 生成品質だけ見て検索が死んでいるのに気づかない
 - Judge モデルに全部採点させて評価セットを育てない
 - 探索用の長い対話を本番ループのコンテキストに残す
+- CPU / メモリの監視だけでエージェントが追えない
 
 ## 代替・例外
 

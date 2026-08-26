@@ -2,12 +2,16 @@
 
 - status: canonical
 - dimensions: D6, D3
+- verified_clusters: C11, C16
 - sources:
   - ai-agent-architecture/docs/ja/faq/agent-vs-subagent-vs-skill.md
   - ai-agent-architecture/docs/ja/agents/subagent-vs-skill.md
   - ai-agent-architecture/docs/ja/faq/mcp-vs-skills.md
   - understanding-llm-through-claude-code/docs/ja/05-on-demand-context/skill-vs-agent.md
-  - understanding-llm-through-claude-code/docs/ja/appendix/problem-countermeasure-map.md（独立コンテキストが Context Rot / Sycophancy 対策になる根拠）
+  - understanding-llm-through-claude-code/docs/ja/appendix/problem-countermeasure-map.md
+  - 12-Factor Factor 1 / 4: ツールは構造化出力
+  - OpenAI: ツールは Data / Action / Orchestration
+  - MCP Security Best Practices 2026-07-28: token passthrough 禁止
 
 ## 判断の問い
 
@@ -16,6 +20,7 @@
 - 中間のツール呼出が親コンテキストを汚すか
 - 並列実行や客観的な別人格が必要か
 - 既存 CLI で足りるか
+- MCP を選ぶなら認可モデルを一組で読んだか
 
 ## 推奨パターン
 
@@ -47,6 +52,10 @@ MCP vs Skill:
 - 知識・判断基準を教えたい → Skill
 - 両方必要なら両方使う（排他ではない）
 
+**ツールは構造化出力である。** LLM が JSON を出し、実行は決まり切れたコードが担う。Data（取得） / Action（書き込み） / Orchestration（他エージェント）に分ける。
+
+MCP を採用するなら認可モデル込みで選ぶ。**Token passthrough 禁止。** 下流には別トークン。audience を検証する。詳細は D8 guardrail-layers / threat-landscape。
+
 昇格シグナル（Skill → Sub-agent）:
 
 - 呼ぶたびに親コンテキストが膨らむ
@@ -62,6 +71,7 @@ MCP vs Skill:
 - Skill で足りる定型（規約・テンプレ）を Sub-agent 化する（起動コストが重い）
 - 探索・横断調査を Skill だけでやり、親コンテキストが爆発する
 - 何でも MCP にする（判断不要な処理や人間が叩く CLI まで）
+- MCP を接続协定だけで選び、クライアントトークンを下流に流す
 - 4つ全部を最初から揃える
 
 ## 代替・例外

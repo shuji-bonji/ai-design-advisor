@@ -2,12 +2,13 @@
 
 - status: canonical
 - dimensions: D8, D9, D6
-- verified_clusters: C05, C06
+- verified_clusters: C05, C06, C16
 - sources:
   - OWASP LLM / MCP Top 10
   - OpenAI Practical Guide: layered guardrails
   - Fowler: Guardrails
   - AWS Generative AI Lens: security pillar
+  - MCP Security Best Practices 2026-07-28
   - ai-agent-architecture/docs/ja/mcp/security.md
   - D6 quality-gate-and-objectivity.md
   - understanding-llm: Hooks はコンテキスト外の機械的検証
@@ -17,6 +18,7 @@
 - どの層で止めるか。プロンプト一文だけで止めるつもりになっていないか
 - 機械的に検証できることを LLM に任せていないか
 - コンシューマ向けか社内かで、層の厚みは足りるか
+- MCP を選ぶなら認可モデルを読んだか
 
 ## 推奨パターン
 
@@ -45,6 +47,9 @@ OpenAI が挙げる層の例（製品名ではない）: 関連性分類、安�
 MCP / ツール導入時:
 
 - 許可リスト（出所不明は禁止）
+- **Token passthrough 禁止。** MCP サーバは自分向けのトークン以外を受け入れない。下流には別トークン
+- セッション ID や state handle を認証にしない
+- スコープは最小から上げる
 - 秘密は環境変数 / シークレット管理。ログに出さない
 - 入力はスキーマで閉じる
 - Shadow MCP を棚卸しする
@@ -56,6 +61,7 @@ MCP / ツール導入時:
 - 入力サニタイズだけで Injection 対策完了とする
 - ツール説明文に秘密や過剰な権限を書く
 - 開発用 MCP を本番に流用する
+- クライアントのトークンを下流 API にそのまま流す
 - 監視がなく、壊れてから初めて権限の広さに気づく
 
 ## 代替・例外
