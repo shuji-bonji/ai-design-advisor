@@ -1,53 +1,35 @@
-# D6 エージェント — ソースマッピング（精査前）
+# D6 エージェント — ソースマッピング
 
-P0 の最初の作業用。ここに挙げた文書を REVIEW-CHECKLIST に通しながら、通った主張だけを同ディレクトリの指標ノートに落とす。
+## 精査済み（主張を指標ノートに採用）
 
-## ai-agent-architecture
+| パス | 採用先 |
+|------|--------|
+| ai-agent-architecture/.../part-2/layers.md | five-layers-and-placement.md |
+| ai-agent-architecture/.../part-2/placement.md | five-layers-and-placement.md |
+| ai-agent-architecture/.../faq/agent-vs-subagent-vs-skill.md | skill-vs-subagent-vs-mcp.md, when-to-agentize.md |
+| ai-agent-architecture/.../agents/subagent-vs-skill.md | skill-vs-subagent-vs-mcp.md |
+| ai-agent-architecture/.../faq/mcp-vs-skills.md | skill-vs-subagent-vs-mcp.md |
+| ai-agent-architecture/.../agents/subagent-quality-gate.md | quality-gate-and-objectivity.md |
+| ai-agent-architecture/.../strategy/composition-patterns.md | when-to-agentize.md |
+| understanding-llm/.../skill-vs-agent.md | skill-vs-subagent-vs-mcp.md, quality-gate |
+| understanding-llm/.../problem-countermeasure-map.md | 独立コンテキストが効く問題の根拠 |
 
-| パス | 想定する判断テーマ | 精査状況 |
-|------|-------------------|----------|
-| docs/ja/part-2/layers.md / docs/part-2/layers.md | 5層（Doctrine / Agent / Skills / Memory / MCP）の役割分担 | 未 |
-| docs/ja/part-2/placement.md | 何をどの層に置くか | 未 |
-| docs/ja/agents/agent-taxonomy.md | エージェント種別の整理 | 未 |
-| docs/ja/agents/what-is-subagent.md | Subagent の定義・使いどころ | 未 |
-| docs/ja/agents/subagent-vs-skill.md | Subagent vs Skill の選択 | 未 |
-| docs/ja/agents/agent-teams.md | Multi-agent / チーム | 未 |
-| docs/ja/agents/subagent-quality-gate.md | 品質ゲート・HITL 的な制御 | 未 |
-| docs/ja/strategy/composition-patterns.md | 合成パターン | 未 |
-| docs/ja/strategy/agent-loop-patterns.md | ループ設計 | 未 |
-| docs/ja/strategy/loop-engineering.md | ループ工学 | 未 |
-| docs/ja/strategy/hooks.md | Hooks（ランタイム制御） | 未 |
-| docs/ja/strategy/harness-engineering-mapping.md | Harness との対応 | 未 |
-| docs/ja/strategy/routing-vs-cascading.md | ルーティング vs カスケード | 未 |
-| docs/ja/strategy/discovery-vs-production.md | 探索期 vs 本番 | 未 |
-| docs/ja/strategy/permission-vs-authority.md | 権限と権威 | 未 |
-| docs/ja/faq/agent-vs-subagent-vs-skill.md | 用語の切り分け | 未 |
-| docs/ja/mcp/what-is-mcp.md 他 | MCP をエージェント設計にどう置くか | 未 |
-| docs/ja/skills/* | Skills の役割・アンチパターン | 未 |
+## 意図的に弱めた／ヒューリスティック扱い
 
-## understanding-llm-through-claude-code
+- 「親を 1,000 トークン以上汚さないなら Skill」→ 公式閾値ではない。目安と明記。
+- Sub-agent のネスト不可 → ホスト仕様。一般指標には「製品依存」と書いた。
+- Claude Code のパス（`.claude/skills` 等）→ 指標の本質ではないのでノート本文では一般化した。
 
-| パス | 想定する判断テーマ | 精査状況 |
-|------|-------------------|----------|
-| docs/ja/05-on-demand-context/skills.md | On-demand としての Skill | 未 |
-| docs/ja/05-on-demand-context/agents.md | On-demand としての Agent | 未 |
-| docs/ja/05-on-demand-context/skill-vs-agent.md | Skill vs Agent | 未 |
-| docs/ja/06-tool-context/* | Tool / MCP とコンテキストコスト | 未 |
-| docs/ja/07-runtime-layer/hooks.md | コンテキスト外の制御 | 未 |
-| docs/ja/10-multi-session/* | Multi-session / Agent teams | 未 |
-| docs/ja/appendix/problem-countermeasure-map.md | 問題→対策の対応（エージェント関連箇所） | 未 |
-| docs/ja/appendix/harness-and-llm-constraints.md | Harness と制約 | 未 |
+## 未精査（D6 残り / D8・D9 へ送る）
 
-## 一次情報・その他
-
-| ソース | 想定する判断テーマ | 精査状況 |
-|--------|-------------------|----------|
-| Anthropic: Building effective agents / Tool design 系 | 単純さ優先、Tool 説明の質 | 未（要約は primary-sources 収集時に一部あり） |
-| Zenn 第5部 AIエージェント用語 | 用語の共通言語 | 未 |
-
-## 次のアクション
-
-1. 上表を優先度順に読み、主張を抜き出す
-2. REVIEW-CHECKLIST で判定
-3. 通ったものを `d6-agent/` 配下の指標ノート（例: when-to-use-skill-vs-agent.md）に書く
-4. 不採用・保留も本ファイルに短く理由を残す
+| パス | 想定 |
+|------|------|
+| strategy/loop-engineering.md, agent-loop-patterns.md | ループ設計 → D6 追記 or D9 |
+| strategy/hooks.md, understanding-llm hooks | ランタイム制御 → D9 寄り |
+| strategy/harness-engineering-mapping.md | Harness |
+| strategy/routing-vs-cascading.md | ルーティング |
+| strategy/discovery-vs-production.md | 探索 vs 本番 → D9 |
+| strategy/permission-vs-authority.md | 権限 → D8 |
+| mcp/security.md | MCP セキュリティ → D8 |
+| agents/agent-taxonomy.md, agent-teams.md, what-is-a2a.md | 分類・チーム・A2A（必要なら追記） |
+| skills/anti-patterns.md | Skill の書き方アンチパターン |
