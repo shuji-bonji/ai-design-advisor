@@ -1,0 +1,25 @@
+{
+  "status": "clustered",
+  "clustered_at": "2026-08-27",
+  "note": "Not verified. Do not promote wholesale to canonical.",
+  "clusters": [
+    {"id": "C01", "claim": "単一・狭いエージェントが先。能力はツール足しで広げる。", "agreement": "複数準拠一致", "dimensions": ["D6"], "decision_points": ["multi_agent_topology", "agent_autonomy_scope"], "members": ["oai-ag-008", "oai-ag-010", "12f-010", "aws-agent-001"], "status": "clustered"},
+    {"id": "C02", "claim": "制御フローはコードが持つ。許可を LLM に任せない。", "agreement": "複数準拠一致", "dimensions": ["D6", "D8"], "decision_points": ["agent_autonomy_scope", "permission_and_audit"], "members": ["12f-008", "owasp-llm03-m", "aws-agent-005", "oai-ag-009"], "status": "clustered"},
+    {"id": "C03", "claim": "不可逆・高ステークは HITL。審査は操作本文を見せる。", "agreement": "複数準拠一致", "dimensions": ["D6", "D8"], "decision_points": ["human_oversight_level"], "members": ["oai-ag-017", "owasp-llm01-m", "owasp-asi09", "12f-007", "aws-agent-004", "mcp-sec-008"], "status": "clustered"},
+    {"id": "C04", "claim": "権限・機能・自律は最小。", "agreement": "複数準拠一致", "dimensions": ["D8"], "decision_points": ["permission_and_audit", "agent_autonomy_scope"], "members": ["owasp-llm03", "oai-ag-015", "mcp-sec-011", "aws-genai-002"], "status": "clustered"},
+    {"id": "C05", "claim": "プロンプト注入は着弾前提で守る。", "agreement": "複数準拠一致", "dimensions": ["D8"], "decision_points": ["prompt_injection_defense"], "members": ["owasp-llm01", "oai-ag-014", "owasp-asi01"], "status": "clustered"},
+    {"id": "C06", "claim": "ガードレールは層。LLM 一枚で足りとしない。", "agreement": "複数準拠一致", "dimensions": ["D8"], "decision_points": ["input_output_guardrails"], "members": ["oai-ag-013", "oai-ag-016", "fowler-006", "aws-genai-002"], "status": "clustered"},
+    {"id": "C07", "claim": "隠しコンテキストをセキュリティ境界にしない。", "agreement": "一源のみ", "dimensions": ["D4", "D8"], "decision_points": ["prompt_structure"], "members": ["owasp-llm08"], "status": "clustered", "note": "Official Top 10 so keep as verify-first despite single source"},
+    {"id": "C08", "claim": "誤りの内容（LLM07）と出力の生流し（LLM10）は別項。", "agreement": "一源のみ", "dimensions": ["D8", "D9"], "decision_points": ["hallucination_mitigation", "input_output_guardrails"], "members": ["owasp-llm07", "owasp-llm10"], "status": "clustered"},
+    {"id": "C09", "claim": "プロンプトと政策は自分で持ちバージョン管理する。", "agreement": "複数準拠一致", "dimensions": ["D4", "D9"], "decision_points": ["prompt_versioning"], "members": ["12f-002", "aws-agent-003", "oai-ag-007"], "status": "clustered"},
+    {"id": "C10", "claim": "コンテキストは自分で組む。エラーは圧縮して戻す。", "agreement": "複数準拠一致", "dimensions": ["D3"], "decision_points": ["context_management"], "members": ["12f-003", "12f-009"], "status": "clustered"},
+    {"id": "C11", "claim": "ツールは構造化出力。実行は決まり切れたコード。", "agreement": "複数準拠一致", "dimensions": ["D6"], "decision_points": ["tool_integration_design"], "members": ["12f-001", "12f-004", "oai-ag-006"], "status": "clustered"},
+    {"id": "C12", "claim": "Fine-tuning はプロンプトと RAG の後。", "agreement": "複数準拠一致", "dimensions": ["D7"], "decision_points": ["training_strategy"], "members": ["fowler-007", "aws-genai-001"], "status": "clustered"},
+    {"id": "C13", "claim": "RAG は固有・最新知識を足す形。hybrid / rewrite / rerank で育てる。", "agreement": "一源のみ", "dimensions": ["D5"], "decision_points": ["rag_architecture"], "members": ["fowler-001", "fowler-004", "fowler-005"], "status": "clustered"},
+    {"id": "C14", "claim": "評価を先に置く。内ループと外ループ。", "agreement": "複数準拠一致", "dimensions": ["D9", "D1"], "decision_points": ["evaluation_design"], "members": ["oai-ag-005", "az-ai-001", "fowler-002", "gcp-rel-002"], "status": "clustered"},
+    {"id": "C15", "claim": "エージェント行動は一本の跡で追える。SLO で置く。", "agreement": "複数準拠一致", "dimensions": ["D9"], "decision_points": ["observability_and_alerting"], "members": ["aws-agent-002", "gcp-rel-001", "12f-006", "az-ai-004"], "status": "clustered"},
+    {"id": "C16", "claim": "MCP は認可モデル込み。token passthrough 禁止。", "agreement": "複数準拠一致", "dimensions": ["D6", "D8"], "decision_points": ["connection_protocol_choice", "permission_and_audit"], "members": ["mcp-sec-001", "mcp-sec-004", "mcp-sec-005", "owasp-asi04"], "status": "clustered"},
+    {"id": "C17", "claim": "メモ書き込みは権限操作。", "agreement": "複数準拠一致", "dimensions": ["D3", "D5", "D8"], "decision_points": ["context_management"], "members": ["owasp-asi06", "owasp-llm01", "owasp-llm05"], "status": "clustered"},
+    {"id": "C18", "claim": "法務主体は開発者・提供者・利用者で分ける。", "agreement": "複数準拠一致", "dimensions": ["D8"], "decision_points": ["data_privacy_and_compliance"], "track": "legal", "members": ["meti-gl-003", "ds920-002"], "status": "clustered"}
+  ]
+}
