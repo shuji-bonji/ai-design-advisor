@@ -1,0 +1,147 @@
+{
+  "source_group": "twelve-factor-agents",
+  "retrieved_at": "2026-08-27",
+  "status": "raw",
+  "items": [
+    {
+      "id": "12f-000",
+      "claim": "生産向け LLM 軒み込みは、モデルが強くなっても残る工学手法を持つ。フレームワークに任せきりではない。",
+      "decision_points": ["agent_autonomy_scope"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D6"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "12f-001",
+      "claim": "Factor 1: 自然言語を構造化されたツール呼び出しに変え、実行は決まり切れたコードが担う。",
+      "decision_points": ["tool_integration_design"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D6"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "12f-002",
+      "claim": "Factor 2: プロンプトは自分で持つ。フレームワークの role/goal 黒箱に任せない。バージョン管理するコードとして扱う。",
+      "decision_points": ["prompt_structure", "prompt_versioning"],
+      "lifecycle_phases": ["design", "operation"],
+      "dimensions": ["D4", "D9"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "12f-003",
+      "claim": "Factor 3: コンテキストウィンドウは自分で組み立てる。標準メッセージ配列に限らない。一回の入力は「今までと次の一手」。",
+      "decision_points": ["context_management"],
+      "lifecycle_phases": ["design", "implementation"],
+      "dimensions": ["D3"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "12f-004",
+      "claim": "Factor 4: ツールは構造化出力である。LLM が JSON を出し、決まり切れたコードが走る。",
+      "decision_points": ["tool_integration_design"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D6", "D4"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "12f-005",
+      "claim": "Factor 5: 実行状態（歩数・待機・再試行）と業務状態（履歴・ツール結果）を分離しすぎない。可能なら一つにまとめる。",
+      "decision_points": ["observability_and_alerting"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D9", "D6"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "12f-006",
+      "claim": "Factor 6: 起動・一時停止・再開を簡単な API にする。長時間処理や webhook で中断・再開できる。",
+      "decision_points": ["agent_autonomy_scope"],
+      "lifecycle_phases": ["design", "implementation"],
+      "dimensions": ["D6", "D9"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "12f-007",
+      "claim": "Factor 7: 人への連絡もツール呼び出しにする（request_human_input / done_for_now）。平文と JSON の切り替えに任せない。",
+      "decision_points": ["human_oversight_level", "tool_integration_design"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D6", "D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "12f-008",
+      "claim": "Factor 8: 制御フローは自分で持つ。ツール選択と実行の間で止められる。ループを LLM に任せない。",
+      "decision_points": ["agent_autonomy_scope", "human_oversight_level"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D6", "D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "12f-009",
+      "claim": "Factor 9: エラーはコンテキストに圧縮して戻し、修復させる。同じ失敗の連続には上限を置く。",
+      "decision_points": ["context_management"],
+      "lifecycle_phases": ["implementation"],
+      "dimensions": ["D3", "D9"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "12f-010",
+      "claim": "Factor 10: 小さく狭いエージェントにする。歩数が増えるほどコンテキストで迷う。",
+      "decision_points": ["agent_autonomy_scope", "multi_agent_topology"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D6", "D3"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "12f-010b",
+      "claim": "目安の歩数は 3–10、多くても 20 歩左右。",
+      "decision_points": ["agent_autonomy_scope"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D6"],
+      "track": "product",
+      "kind": "heuristic",
+      "needs_verification": true
+    },
+    {
+      "id": "12f-011",
+      "claim": "Factor 11: Slack / メール / 事件 / cron などどこからでも起動できる。高ステーク操作は人を即座に呼べる前提で許可する。",
+      "decision_points": ["human_oversight_level"],
+      "lifecycle_phases": ["design", "operation"],
+      "dimensions": ["D6", "D9"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "12f-012",
+      "claim": "Factor 12: エージェントを状態なし reducer として考える（記事自体は補足的）。",
+      "decision_points": ["agent_autonomy_scope"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D6"],
+      "track": "product",
+      "kind": "heuristic",
+      "needs_verification": true
+    }
+  ]
+}
