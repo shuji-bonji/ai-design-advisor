@@ -1,0 +1,128 @@
+{
+  "source_group": "mcp-security-best-practices",
+  "spec_version": "2026-07-28",
+  "retrieved_at": "2026-08-27",
+  "status": "raw",
+  "items": [
+    {
+      "id": "mcp-sec-001",
+      "claim": "MCP を採用するなら、Authorization spec とこの Best Practices を一組で読む。接続协定だけ選ばない。",
+      "decision_points": ["connection_protocol_choice"],
+      "lifecycle_phases": ["design", "planning"],
+      "dimensions": ["D6", "D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "mcp-sec-002",
+      "claim": "下流 API の代理になる MCP サーバは confused deputy になる。静的 client_id で第三者 OAuth に繋ぐときは、動的登録された客先ごとに同意が必須。",
+      "decision_points": ["connection_protocol_choice", "permission_and_audit"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D8", "D6"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "mcp-sec-003",
+      "claim": "同意画面は客先名、スコープ、redirect_uri を見せる。フレーム合めを禁止する。同意前に state クッキーを置かない。",
+      "decision_points": ["human_oversight_level", "permission_and_audit"],
+      "lifecycle_phases": ["implementation"],
+      "dimensions": ["D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "mcp-sec-004",
+      "claim": "Token passthrough は禁止。MCP サーバは自分向けに発行されたトークン以外を受け入れない。下流へは別トークンを使う。",
+      "decision_points": ["permission_and_audit", "connection_protocol_choice"],
+      "lifecycle_phases": ["design", "implementation"],
+      "dimensions": ["D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "mcp-sec-005",
+      "claim": "クライアントは RFC 8707 の resource 指定を付ける。サーバは audience を検証する。",
+      "decision_points": ["permission_and_audit"],
+      "lifecycle_phases": ["implementation"],
+      "dimensions": ["D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "mcp-sec-006",
+      "claim": "OAuth メタデータ URL の取得は SSRF 面になる。内部 IP ・クラウドメタデータ・localhost への追いを塞ぐ。生産では HTTPS。",
+      "decision_points": ["connection_protocol_choice", "input_output_guardrails"],
+      "lifecycle_phases": ["implementation", "design"],
+      "dimensions": ["D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "mcp-sec-007",
+      "claim": "state handle やセッション ID を持っていることを認証にしない。要求ごとに認証し、ハンドルはユーザに紊る。",
+      "decision_points": ["permission_and_audit"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "mcp-sec-008",
+      "claim": "本機 MCP サーバの起動コマンドは危険操作。実際のコマンド全文を見せて承認させる。sudo や故障ディレクトリを警告する。",
+      "decision_points": ["human_oversight_level", "connection_protocol_choice"],
+      "lifecycle_phases": ["implementation", "design"],
+      "dimensions": ["D8", "D6"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "mcp-sec-009",
+      "claim": "本機向けは stdio でクライアントだけに閉じる。HTTP で開くなら認証が必要。",
+      "decision_points": ["connection_protocol_choice"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D6", "D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "mcp-sec-010",
+      "claim": "OAuth の授権 URL は http/https のみ。javascript: や file: を拒否する。シェルで URL を開かない。",
+      "decision_points": ["input_output_guardrails"],
+      "lifecycle_phases": ["implementation"],
+      "dimensions": ["D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "mcp-sec-011",
+      "claim": "スコープは最小から始め、必要なときだけ上げる。最初から files:* や admin:* を与えない。",
+      "decision_points": ["permission_and_audit"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "mcp-sec-012",
+      "claim": "混同攻撃（mix-up）を避けるため、授権応答を iss で元の認証サーバに紊る。PKCE だけでは足りない。",
+      "decision_points": ["permission_and_audit"],
+      "lifecycle_phases": ["implementation"],
+      "dimensions": ["D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    }
+  ]
+}
