@@ -1,0 +1,57 @@
+{
+  "source_group": "gcp-architecture-framework-ai-ml",
+  "retrieved_at": "2026-08-27",
+  "status": "raw",
+  "items": [
+    {
+      "id": "gcp-rel-001",
+      "claim": "信頼性は SLO で定める（成功率、推論レイテンシ、TTFT、有害出力率）。数値自体は事例。",
+      "decision_points": ["latency_target_and_ux", "observability_and_alerting"],
+      "lifecycle_phases": ["design", "operation"],
+      "dimensions": ["D9", "X"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "gcp-rel-002",
+      "claim": "モデルはバージョン管理し、カナリー・A/B・自動ロールバックを組む。",
+      "decision_points": ["release_and_rollout"],
+      "lifecycle_phases": ["operation"],
+      "dimensions": ["D9"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "gcp-rel-003",
+      "claim": "入力分布のドリフトを監視し、再学習や知識更新のトリガにする。",
+      "decision_points": ["knowledge_freshness", "observability_and_alerting"],
+      "lifecycle_phases": ["operation"],
+      "dimensions": ["D9", "D5"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "gcp-perf-001",
+      "claim": "バッチ推論とオンライン推論は基盤が違う。反復のある入力はコンテキストキャッシュを検討する。",
+      "decision_points": ["inference_optimization", "latency_target_and_ux"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["X", "D1"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "gcp-perf-002",
+      "claim": "モデルサイズは量子化で落とせる。数値目安は GCP の例であり転記しない。",
+      "decision_points": ["inference_optimization", "model_selection"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D1", "X"],
+      "track": "product",
+      "kind": "vendor_practice",
+      "needs_verification": true
+    }
+  ]
+}

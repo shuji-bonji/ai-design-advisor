@@ -1,0 +1,67 @@
+{
+  "source_group": "jp-governance",
+  "retrieved_at": "2026-08-27",
+  "status": "raw",
+  "items": [
+    {
+      "id": "meti-gl-001",
+      "claim": "国内の軒み手は事業者ガイドライン 1.2（2026-03-31）の軒み。法的拘束ではないソフトロー。",
+      "decision_points": ["data_privacy_and_compliance"],
+      "lifecycle_phases": ["planning"],
+      "dimensions": ["D8"],
+      "track": "legal",
+      "kind": "legal",
+      "needs_verification": false
+    },
+    {
+      "id": "meti-gl-002",
+      "claim": "共通指針 10: 人間中心 / 安全 / 公正 / プライバシー / セキュリティ / 透明性 / 説明責任 / 教育リテラシー / 公正競争 / イノベーション。",
+      "decision_points": ["data_privacy_and_compliance"],
+      "lifecycle_phases": ["planning"],
+      "dimensions": ["D8"],
+      "track": "legal",
+      "kind": "legal",
+      "needs_verification": false
+    },
+    {
+      "id": "meti-gl-003",
+      "claim": "主体は開発者・提供者・事業利用者で責務が違う。ベンダー委託時はどの主体かを明示する。",
+      "decision_points": ["data_privacy_and_compliance"],
+      "lifecycle_phases": ["planning", "design"],
+      "dimensions": ["D8"],
+      "track": "legal",
+      "kind": "legal",
+      "needs_verification": false
+    },
+    {
+      "id": "ds920-001",
+      "claim": "DS-920 2.0（2026-06-12、本体は 2026-09-01 施行）は行政の調達・利活用手引。民間でも調達チェックの型は使える。",
+      "decision_points": ["data_privacy_and_compliance"],
+      "lifecycle_phases": ["planning"],
+      "dimensions": ["D8"],
+      "track": "legal",
+      "kind": "legal",
+      "needs_verification": false
+    },
+    {
+      "id": "ds920-002",
+      "claim": "役割は CAIO / 企画者 / 提供者 / 利用者で分ける。仕様と契約にチェックシートの項を選んで載せる。",
+      "decision_points": ["data_privacy_and_compliance"],
+      "lifecycle_phases": ["planning"],
+      "dimensions": ["D8"],
+      "track": "legal",
+      "kind": "legal",
+      "needs_verification": false
+    },
+    {
+      "id": "aisi-001",
+      "claim": "国内の安全評価観点の目次は AISI「AI セーフティに関する評価観点ガイド」を先に見る。本 raw で観点一覧は未展開。",
+      "decision_points": ["evaluation_design"],
+      "lifecycle_phases": ["evaluation"],
+      "dimensions": ["D9"],
+      "track": "legal",
+      "kind": "legal",
+      "needs_verification": true
+    }
+  ]
+}

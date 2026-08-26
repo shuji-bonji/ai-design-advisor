@@ -1,0 +1,87 @@
+{
+  "source_group": "aws-well-architected-lenses",
+  "retrieved_at": "2026-08-27",
+  "status": "raw",
+  "items": [
+    {
+      "id": "aws-genai-001",
+      "claim": "生成AI の運用では出力品質の一貫、追跡、ライフサイクル自動化、カスタマイズの要否を運用枠として見る。",
+      "decision_points": ["observability_and_alerting", "training_strategy"],
+      "lifecycle_phases": ["operation", "design"],
+      "dimensions": ["D9", "D7"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "aws-genai-002",
+      "claim": "セキュリティ枠はエンドポイント保護、有害出力、過剩な自律、プロンプト保護、毒の打開を含む。",
+      "decision_points": ["input_output_guardrails", "agent_autonomy_scope"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "aws-genai-003",
+      "claim": "コスト枠はモデル選定、推論のバランス、プロンプトの工夫、ベクトルストアとエージェント流れを別々に見る。",
+      "decision_points": ["token_budget_and_cost", "model_selection"],
+      "lifecycle_phases": ["design", "operation"],
+      "dimensions": ["D9", "D1"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "aws-agent-001",
+      "claim": "エージェント仕事は範囲の明確な専門エージェントに分解する。",
+      "decision_points": ["multi_agent_topology", "agent_autonomy_scope"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D6"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "aws-agent-002",
+      "claim": "推論・ツール・メモ・引き渡しを一本の跡で追える。インフラ監視とは別物。",
+      "decision_points": ["observability_and_alerting"],
+      "lifecycle_phases": ["operation", "design"],
+      "dimensions": ["D9"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "aws-agent-003",
+      "claim": "プロンプト・ツール目録・役割・モデル選定・ポリシーをコードとしてバージョン管理する。",
+      "decision_points": ["prompt_versioning", "release_and_rollout"],
+      "lifecycle_phases": ["operation"],
+      "dimensions": ["D9", "D4"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "aws-agent-004",
+      "claim": "自律度（observer / assistant / autonomous / orchestrator）とエスカレーションを事前に決める。審査の深さは影響に比例させる。",
+      "decision_points": ["human_oversight_level", "agent_autonomy_scope"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D6", "D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "aws-agent-005",
+      "claim": "自律動作はスキーマ・登録・成功基準・信頼度の契約に置く。プロンプトだけに任せない。",
+      "decision_points": ["tool_integration_design"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D6", "D4"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    }
+  ]
+}

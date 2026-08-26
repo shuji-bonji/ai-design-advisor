@@ -1,0 +1,27 @@
+{
+  "source_group": "nist-ai-600-1",
+  "retrieved_at": "2026-08-27",
+  "status": "raw",
+  "items": [
+    {
+      "id": "nist-600-001",
+      "claim": "生成AI 固有または増幅するリスクを AI RMF のプロファイルとして管理する。",
+      "decision_points": ["evaluation_design"],
+      "lifecycle_phases": ["planning", "design"],
+      "dimensions": ["D8", "D9"],
+      "track": "legal",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "nist-600-002",
+      "claim": "リスク区分の例: Confabulation / Information Integrity / Data Privacy / Information Security / Harmful Bias / Human-AI Configuration / IP / Value Chain / CBRN / 有害コンテンツ / Environmental。",
+      "decision_points": ["evaluation_design", "data_privacy_and_compliance"],
+      "lifecycle_phases": ["planning"],
+      "dimensions": ["D8"],
+      "track": "legal",
+      "kind": "principle",
+      "needs_verification": false
+    }
+  ]
+}

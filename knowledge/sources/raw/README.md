@@ -1,13 +1,18 @@
 # raw 抽出
 
-ソースごと。まだマージしない。`status: raw`。
+ソースごと。まだマージしない。
 
-P0 の指定5本は raw 済み。次はクラスタまたは P1。
+## P0 済み
+
+anthropic-agents / owasp-2026 / openai-agents-guide / mcp-security / twelve-factor-agents
+
+## P1 初版（概要・原則のみ。Lens 全設問は未読）
 
 | ディレクトリ | ソース |
 | --- | --- |
-| [anthropic-agents/](./anthropic-agents/) | Building effective agents + context + tools |
-| [owasp-2026/](./owasp-2026/) | LLM Top 10 2026 + Agentic ASI01–10 |
-| [openai-agents-guide/](./openai-agents-guide/) | A practical guide to building agents |
-| [mcp-security/](./mcp-security/) | MCP Security Best Practices 2026-07-28 |
-| [twelve-factor-agents/](./twelve-factor-agents/) | 12-Factor Agents (HumanLayer) |
+| [aws-lenses/](./aws-lenses/) | GenAI Lens 概要 + Agentic Lens 設計原則 |
+| [azure-ai-wa/](./azure-ai-wa/) | Azure AI design methodology |
+| [gcp-ai-ml/](./gcp-ai-ml/) | Google AF AI/ML reliability + performance |
+| [fowler-genai-patterns/](./fowler-genai-patterns/) | Emerging Patterns in Building GenAI Products |
+| [nist-ai-600-1/](./nist-ai-600-1/) | NIST AI 600-1 risk categories |
+| [jp-governance/](./jp-governance/) | 事業者GL 1.2 / DS-920 2.0 / AISI ポインタ |

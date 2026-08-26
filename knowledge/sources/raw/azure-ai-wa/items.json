@@ -1,0 +1,47 @@
+{
+  "source_group": "azure-well-architected-ai",
+  "retrieved_at": "2026-08-27",
+  "status": "raw",
+  "items": [
+    {
+      "id": "az-ai-001",
+      "claim": "品質は実験ループで出す。開発の内側ループと生産の外側ループを分ける。",
+      "decision_points": ["evaluation_design", "observability_and_alerting"],
+      "lifecycle_phases": ["poc", "operation"],
+      "dimensions": ["D9"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "az-ai-002",
+      "claim": "責任ある設計（有害出力、偏見、個人情報の使用有無）をライフサイクル全体に入れる。",
+      "decision_points": ["data_privacy_and_compliance", "input_output_guardrails"],
+      "lifecycle_phases": ["design", "operation"],
+      "dimensions": ["D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "az-ai-003",
+      "claim": "説明可能性—データの出所から推論まで追える。",
+      "decision_points": ["grounding_and_citation"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D5", "D9"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "az-ai-004",
+      "claim": "モデル衰退（データや外界の変化）を監視し、自動評価とフィードバックで直す。",
+      "decision_points": ["observability_and_alerting", "knowledge_freshness"],
+      "lifecycle_phases": ["operation"],
+      "dimensions": ["D9", "D5"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    }
+  ]
+}

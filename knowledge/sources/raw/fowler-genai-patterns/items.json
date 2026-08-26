@@ -1,0 +1,77 @@
+{
+  "source_group": "fowler-genai-patterns",
+  "retrieved_at": "2026-08-27",
+  "status": "raw",
+  "items": [
+    {
+      "id": "fowler-001",
+      "claim": "Direct Prompting は基本形だが知識カットオフと幻覚が残る。",
+      "decision_points": ["knowledge_injection_strategy"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D4", "D5"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "fowler-002",
+      "claim": "Evals を仕事単位で置く（閾値・人・Judge）。非決定的な出力の前提。",
+      "decision_points": ["evaluation_design"],
+      "lifecycle_phases": ["design", "evaluation"],
+      "dimensions": ["D9"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "fowler-003",
+      "claim": "Embeddings は非構造データの近さ用。関係データには使わない。",
+      "decision_points": ["rag_architecture"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D5"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "fowler-004",
+      "claim": "RAG は固有・最新知識をプロンプトに足す形。",
+      "decision_points": ["rag_architecture", "knowledge_injection_strategy"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D5"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "fowler-005",
+      "claim": "検索は hybrid（ベクトル + キーワード）、query rewrite、rerank で育てる。",
+      "decision_points": ["rag_architecture"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D5"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "fowler-006",
+      "claim": "Guardrails は入力または出力を別呼び出し・規則・埋め込みで守る。対外システムでは必須に近い。",
+      "decision_points": ["input_output_guardrails"],
+      "lifecycle_phases": ["design"],
+      "dimensions": ["D8"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    },
+    {
+      "id": "fowler-007",
+      "claim": "Fine-tuning はプロンプトと RAG で足りないときの後。",
+      "decision_points": ["training_strategy", "knowledge_injection_strategy"],
+      "lifecycle_phases": ["planning", "design"],
+      "dimensions": ["D7", "D5"],
+      "track": "product",
+      "kind": "principle",
+      "needs_verification": false
+    }
+  ]
+}
