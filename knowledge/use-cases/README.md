@@ -1,20 +1,12 @@
-# Representative Use Cases
+# ユースケース
 
-ここに代表的な生成AIのユースケースを洗い出します。
+スキル出力と同じ型で、canonical が足りるかを見る。
 
-各ユースケースについて、以下を簡潔に記録する予定です：
+| ID | ファイル | 何を試すか |
+| --- | --- | --- |
+| UC01 | [uc01-consumer-faq.md](./uc01-consumer-faq.md) | 段を上げない、RAG と参照ツール |
+| UC02 | [uc02-internal-write-agent.md](./uc02-internal-write-agent.md) | HITL、permission、単一ループ |
 
-- 概要
-- 主な制約（レイテンシ・コスト・プライバシー・知識の鮮度など）
-- 典型的な判断ポイント
-- よくある失敗パターン
+穴: [GAPS-from-uc01-uc02.md](./GAPS-from-uc01-uc02.md)
 
-## カバーしたいカテゴリ（案）
-
-- コンシューマ向け対話（チャットボット）
-- 社内ナレッジ活用（RAG）
-- コンテンツ生成・創作支援
-- 分類・抽出・定型処理
-- エージェント的自動化（Tool Calling）
-- オンデバイス / エッジ / 高プライバシー
-- 高リスク・高説明責任が求められる領域
+一覧案: [starter-list.md](./starter-list.md)
