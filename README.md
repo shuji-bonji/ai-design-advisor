@@ -31,11 +31,11 @@
 
 ## 知識の流れ
 
-入力は 4 系統ではなく、2 経路。スキルが読むのは canonical だけ。
+入力は 2 経路。スキルが読むのは canonical だけ。
 
 ```
 一次情報（公式・標準・公的。更新する）
-安定コーパス（Zenn / understanding-llm / ai-agent-architecture。原則凍結）
+安定コーパス（Zenn / understanding-llm / ai-agent-architecture）
         ↓ 精査
    knowledge/canonical/
         ↓
@@ -43,7 +43,7 @@
 ```
 
 - 一次情報: [`knowledge/primary-sources/`](./knowledge/primary-sources/) と [`knowledge/sources/`](./knowledge/sources/)
-- 安定コーパス: すでに canonical へ折込み済み。再抽出は大きな改訂があったときだけ
+- 安定コーパス: [`knowledge/stable-corpus/`](./knowledge/stable-corpus/)（索引と取込手順）
 - 体系: [`knowledge/SYSTEMATIC-FRAMEWORK.md`](./knowledge/SYSTEMATIC-FRAMEWORK.md)
 - 指標: [`knowledge/canonical/`](./knowledge/canonical/)
 - 出力契約: [`skills/ai-design-advisor/OUTPUT-SKELETON.md`](./skills/ai-design-advisor/OUTPUT-SKELETON.md)
