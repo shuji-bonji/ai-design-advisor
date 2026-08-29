@@ -1,20 +1,21 @@
 # Primary Sources
 
-公式ドキュメントや信頼できる一次情報を整理したディレクトリです。
+**更新する経路**。公式ドキュメントと公的資料の手書きノート。
+
+系統的な抽出・集約・検証は [`../sources/`](../sources/) 。ここは早期に書いた D1 / D2 / D5 向けの要約が残っている。
 
 ## 現在のファイル
 
-- [reasoning-effort.md](./reasoning-effort.md) … OpenAI / Anthropic / Google の Reasoning Effort / Thinking / Effort 制御
-- [temperature.md](./temperature.md) … Temperature の用途別指針とプロバイダ注意点
+- [reasoning-effort.md](./reasoning-effort.md) … OpenAI / Anthropic / Google の Reasoning Effort / Thinking / Effort
+- [temperature.md](./temperature.md) … Temperature の用途別指針
+- [slm-vs-llm.md](./slm-vs-llm.md) … モデルクラス選定
+- [rag-guidelines.md](./rag-guidelines.md) … RAG の要否と成熟度
 
 ## 収集方針
 
-- 可能な限り公式ドキュメントを優先
-- モデル世代によってサポート値・デフォルトが変わるため、収集日を明記
-- 実務的な「いつどの値を使うか」の指針を抽出して記載
+- 公式ドキュメントを優先
+- モデル世代でサポート値・デフォルトが変わるため、収集日を明記
+- 「いつどの値を使うか」を抽く
+- 追加・更新・削除はこの経路と `../sources/` で行う
 
-## 今後追加したいもの
-
-- SLM vs LLM の公式・準公式な選定ガイド
-- RAG / Agent 設計の公式ベストプラクティス
-- Guardrails / Evaluation 関連の一次情報
+Zenn ・understanding-llm ・ai-agent-architecture はここに足さない。安定コーパスとして原則凍結。
