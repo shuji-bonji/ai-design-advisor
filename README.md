@@ -26,7 +26,8 @@
 
 - [x] canonical（D1–D9 + X。D7 は要否のみ。手法・運用は未精査）
 - [x] スキルの出力スケルトン
-- [ ] 実ユースケースでスキルを回して調整
+- [x] スターター 7 本でスキルを回した（UC01–UC07）
+- [ ] 実案件で調整
 - [ ] Web アプリ
 
 ## 知識の流れ
@@ -45,6 +46,7 @@ flowchart LR
 - 一次情報: [`knowledge/primary-sources/`](./knowledge/primary-sources/) と [`knowledge/sources/`](./knowledge/sources/)
 - 安定コーパス: [`knowledge/stable-corpus/`](./knowledge/stable-corpus/)
 - 次元: [`knowledge/SYSTEMATIC-FRAMEWORK.md`](./knowledge/SYSTEMATIC-FRAMEWORK.md)
+- ユースケース: [`knowledge/use-cases/`](./knowledge/use-cases/)
 - 出力契約: [`skills/ai-design-advisor/OUTPUT-SKELETON.md`](./skills/ai-design-advisor/OUTPUT-SKELETON.md)
 
 ## 関連
