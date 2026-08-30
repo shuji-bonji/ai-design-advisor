@@ -31,21 +31,20 @@
 
 ## 知識の流れ
 
-入力は 2 経路。スキルが読むのは canonical だけ。
+```mermaid
+flowchart LR
+  P["一次情報（更新する）"] --> C[canonical]
+  S["安定コーパス（都度確認）"] --> C
+  C --> K[skills]
+  K --> U[use-cases]
+  K --> W["Web 未着手"]
+```
 
-```
-一次情報（公式・標準・公的。更新する）
-安定コーパス（Zenn / understanding-llm / ai-agent-architecture）
-        ↓ 精査
-   knowledge/canonical/
-        ↓
-   skills/ai-design-advisor/   ← 今ここ
-```
+スキルが読むのは canonical だけ。図と一次情報の追加・更新・削除は [`knowledge/LIFECYCLE.md`](./knowledge/LIFECYCLE.md)。
 
 - 一次情報: [`knowledge/primary-sources/`](./knowledge/primary-sources/) と [`knowledge/sources/`](./knowledge/sources/)
-- 安定コーパス: [`knowledge/stable-corpus/`](./knowledge/stable-corpus/)（索引と取込手順）
-- 体系: [`knowledge/SYSTEMATIC-FRAMEWORK.md`](./knowledge/SYSTEMATIC-FRAMEWORK.md)
-- 指標: [`knowledge/canonical/`](./knowledge/canonical/)
+- 安定コーパス: [`knowledge/stable-corpus/`](./knowledge/stable-corpus/)
+- 次元: [`knowledge/SYSTEMATIC-FRAMEWORK.md`](./knowledge/SYSTEMATIC-FRAMEWORK.md)
 - 出力契約: [`skills/ai-design-advisor/OUTPUT-SKELETON.md`](./skills/ai-design-advisor/OUTPUT-SKELETON.md)
 
 ## 関連
