@@ -1,12 +1,12 @@
 # 安定コーパス
 
-一次情報以外をここに集約する。スキルの根拠にはしない。
+一次情報以外の索引。スキルの根拠にはしない。原文は置かない。
 
 ## 何が入るか
 
 | 元 | 本リポ内 |
 | --- | --- |
-| Zenn『サクッと始める生成AI用語集』 | [`../zenn-glossary/`](../zenn-glossary/) |
+| Zenn『サクッと始める生成AI用語集』 | 折込済み。ファイルは持たない。項目は [INDEX.md](./INDEX.md) |
 | [understanding-llm-through-claude-code](https://github.com/shuji-bonji/understanding-llm-through-claude-code) | 全文は持たない。採用パスは [INDEX.md](./INDEX.md) |
 | [ai-agent-architecture](https://github.com/shuji-bonji/ai-agent-architecture) | 同上 |
 
