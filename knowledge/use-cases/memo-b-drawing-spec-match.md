@@ -3,7 +3,8 @@
 - 日付: 2026-08-31
 - 出所: 他社事例（プレスリリース）
 - 出所番号: https://news.panasonic.com/jp/press/jn260219-1
-- 状態: raw
+- 状態: ready
+- 昇格: [uc14-drawing-spec-match.md](./uc14-drawing-spec-match.md)
 
 ## 対象
 
