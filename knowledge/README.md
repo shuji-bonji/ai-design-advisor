@@ -10,7 +10,7 @@
 - `primary-sources/` / `sources/` … **一次情報**。公式・標準・公的。更新する
 - `stable-corpus/` … **一次情報以外の索引**（Zenn ・understanding-llm ・ai-agent-architecture）
 - `use-cases/` … スキル出力の検証とメモ
-- `decision-axes/` … チェック項目への落とし（未作成）
+- `decision-axes/` … チェック項目への投影（first-pass）。スキルは読まない
 
 自著 2 リポの全文も Zenn 原文もコピーしない。取込済みと見送りは [`stable-corpus/INDEX.md`](./stable-corpus/INDEX.md)。
 
@@ -20,3 +20,4 @@
 2. 自著に追加があったら [`stable-corpus/INTAKE.md`](./stable-corpus/INTAKE.md) で都度確認してから取り込む
 3. 抽出の型は [`sources/PIPELINE.md`](./sources/PIPELINE.md)
 4. ユースケースで canonical を調整する
+5. チェック項目は [`decision-axes/`](./decision-axes/) へ投影する。ここへ判断文を書かない
