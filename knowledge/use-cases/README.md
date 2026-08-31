@@ -38,6 +38,19 @@
 | UC16 | [uc16-contract-review-legal.md](./uc16-contract-review-legal.md) | 出力そのものが規制対象になりうる | [memo-d](./memo-d-contract-review-legal.md) |
 | UC17 | [uc17-closed-network-multitenant.md](./uc17-closed-network-multitenant.md) | 閉域だが多テナント | [memo-e](./memo-e-closed-network-multitenant.md) |
 
+## 未昇格のメモ（raw）
+
+被覆の空欄に寄せて起こしたメモ。`未確認` は残す。埋まったら `uc18` 以降へ昇格。
+
+| メモ | 突く軸 | 空欄 |
+| --- | --- | --- |
+| [memo-f-realtime-voice-intake.md](./memo-f-realtime-voice-intake.md) | 双方向リアルタイム音声 | X / D2 レイテンシ予算、D6 引き際 |
+| [memo-g-bulk-generation.md](./memo-g-bulk-generation.md) | 人が全件を見ない生成 | D9 合否、X バッチのコスト |
+| [memo-h-domain-pretraining.md](./memo-h-domain-pretraining.md) | 継続事前学習を「する」 | D7（全 UC が「しない」） |
+| [memo-i-student-learning-support.md](./memo-i-student-learning-support.md) | 未成年が使う | D8 同意、D4 答えを出さない |
+| [memo-j-publish-with-known-errors.md](./memo-j-publish-with-known-errors.md) | 誤り前提で先に出す | D9 合格線を下げる判断 |
+| [memo-k-ugc-moderation.md](./memo-k-ugc-moderation.md) | 判定が第三者に作用する | D8 異議申立、D9 非対称 |
+
 穴: [GAPS.md](./GAPS.md)
 
 一覧: [starter-list.md](./starter-list.md)
