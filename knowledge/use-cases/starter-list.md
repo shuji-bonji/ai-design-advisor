@@ -31,8 +31,14 @@
 | 15 | 融資票議ドラフト | [UC15](./uc15-loan-review-draft.md) |
 | 16 | 契約書レビュー支援 | [UC16](./uc16-contract-review-legal.md) |
 | 17 | 閉域上の共同利用 | [UC17](./uc17-closed-network-multitenant.md) |
+| 18 | 電話の一次受け（双方向音声） | [UC18](./uc18-realtime-voice-intake.md) |
+| 19 | 全件生成（人が全件を見ない） | [UC19](./uc19-bulk-generation.md) |
+| 20 | ドメイン特化の継続事前学習 | [UC20](./uc20-domain-pretraining.md) |
+| 21 | 児童生徒の学習支援 | [UC21](./uc21-student-learning-support.md) |
+| 22 | 誤りを含みうると明示して出す | [UC22](./uc22-publish-with-known-errors.md) |
+| 23 | 投稿・レビューの判定 | [UC23](./uc23-ugc-moderation.md) |
 
 ## 次
 
-- 追加メモが ready になったら UC18 以降
+- 追加メモが ready になったら UC24 以降
 - または decision-axes へ落とす
