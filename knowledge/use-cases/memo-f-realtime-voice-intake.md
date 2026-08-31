@@ -3,7 +3,8 @@
 - 日付: 2026-08-31
 - 出所: 他社事例（ベンダーのプレスリリース）
 - 出所番号: https://prtimes.jp/main/html/rd/p/000000100.000032561.html
-- 状態: raw
+- 状態: ready
+- 昇格: [uc18-realtime-voice-intake.md](./uc18-realtime-voice-intake.md)
 
 ## 対象
 
