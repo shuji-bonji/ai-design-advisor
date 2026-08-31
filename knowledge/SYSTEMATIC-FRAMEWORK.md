@@ -52,11 +52,11 @@ Zennの9グループを、**設計時に実際に選ぶ判断軸**に再配置�
 
 ## 充足ロードマップ
 
-first-pass と UC01–12 は済み（D7 は要否のみ）。
+first-pass と UC01–17 は済み（D7 は要否のみ）。
 
 | 優先度 | 対象 | 理由 |
 |--------|------|------|
-| 今 | メモ / 実案件 | [`use-cases/MEMO.md`](./use-cases/MEMO.md) |
+| 今 | 追加メモ / 実案件 | [`use-cases/MEMO.md`](./use-cases/MEMO.md) |
 | 次 | decision-axes | チェック項目への落とし |
 | 穴が出たとき | 該当 canonical ノート | 安定コーパスの再読みはしない |
 | 継続 | 一次情報の追加・更新・削除 | [`LIFECYCLE.md`](./LIFECYCLE.md) |
