@@ -55,8 +55,7 @@ description: >
 
 パスの接頭辞は `knowledge/canonical/`。
 D7 の `methods-unreviewed.md` / `ops-unreviewed.md` は推奨に使わない。
-
-例やアンチパターンが欲しいときだけ `knowledge/zenn-glossary/GUIDELINES-MAP.md` と索引を見る。`needs_verification` の数値は使わない。AIDD / Vibe / SDD は本ツールの範囲外（DEV トラック）。
+安定コーパスと raw は読まない。AIDD / Vibe / SDD は本ツールの範囲外（DEV トラック）。
 
 ### Step 3: 衝突を解消する
 
@@ -66,7 +65,7 @@ D7 の `methods-unreviewed.md` / `ops-unreviewed.md` は推奨に使わない。
 - 体感が厳しい → Effort を上げない。Agentic RAG に進まない
 - コストが支配的 → `cost-decomposition.md` の5層。最大モデルで全件予約しない
 - MCP を採用 → token passthrough 禁止
-- プロンプトを短くする前 → 軸が空なら `optimization-techniques.md` の A が先
+- プロンプトを短くする前 → 軸が空なら writing。埋まったら placement
 
 ### Step 4: 出力する
 
