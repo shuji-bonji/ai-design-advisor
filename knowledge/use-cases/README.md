@@ -26,17 +26,17 @@
 | UC11 | [uc11-discovery-to-production.md](./uc11-discovery-to-production.md) | 探索履歴を本番に残さない |
 | UC12 | [uc12-procurement.md](./uc12-procurement.md) | 主体を契約に書く |
 
-## メモ（未昇格・raw）
+## 事例メモ（UC13–17）
 
-公表事例から起こしたメモ。`未確認` が残る。埋まったら `ucNN` に昇格。
+公表事例から起こしたメモを昇格。`未確認` は残し、推測で埋めない。
 
-| メモ | 何を突くか |
-| --- | --- |
-| [memo-a-clinical-note-draft.md](./memo-a-clinical-note-draft.md) | 起案者と承認者が同一人物 |
-| [memo-b-drawing-spec-match.md](./memo-b-drawing-spec-match.md) | 文書間の一致判定。合格線が書ける |
-| [memo-c-loan-review-draft.md](./memo-c-loan-review-draft.md) | 過去の判断を知識にする。提供側に回る |
-| [memo-d-contract-review-legal.md](./memo-d-contract-review-legal.md) | 出力そのものが規制の対象になりうる |
-| [memo-e-closed-network-multitenant.md](./memo-e-closed-network-multitenant.md) | 閉域だが多テナント。ACL の共同利用版 |
+| ID | ファイル | 何を突くか | 元 |
+| --- | --- | --- | --- |
+| UC13 | [uc13-clinical-note-draft.md](./uc13-clinical-note-draft.md) | 起案者と承認者が同一人 | [memo-a](./memo-a-clinical-note-draft.md) |
+| UC14 | [uc14-drawing-spec-match.md](./uc14-drawing-spec-match.md) | 文書間の一致判定。取れない項目 | [memo-b](./memo-b-drawing-spec-match.md) |
+| UC15 | [uc15-loan-review-draft.md](./uc15-loan-review-draft.md) | 過去の判断を知識にする。提供側 | [memo-c](./memo-c-loan-review-draft.md) |
+| UC16 | [uc16-contract-review-legal.md](./uc16-contract-review-legal.md) | 出力そのものが規制対象になりうる | [memo-d](./memo-d-contract-review-legal.md) |
+| UC17 | [uc17-closed-network-multitenant.md](./uc17-closed-network-multitenant.md) | 閉域だが多テナント | [memo-e](./memo-e-closed-network-multitenant.md) |
 
 穴: [GAPS.md](./GAPS.md)
 
