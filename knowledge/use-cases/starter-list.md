@@ -40,5 +40,5 @@
 
 ## 次
 
-- 追加メモが ready になったら UC24 以降
-- チェック項目: [`../decision-axes/`](../decision-axes/) first-pass 済み
+手元メモは尽きた。UC24 以降は新しいメモ / Issue が ready になってから。
+チェック項目: [`../decision-axes/`](../decision-axes/) first-pass 済み。
