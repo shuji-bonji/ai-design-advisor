@@ -55,10 +55,11 @@ Zennの9グループを、**設計時に実際に選ぶ判断軸**に再配置�
 ## 充足ロードマップ
 
 first-pass と UC01–23、decision-axes first-pass は済み（D7 は要否のみ）。
+手元のメモ・事例は UC23 まで尽きた。案件は作らない。
 
 | 優先度 | 対象 | 理由 |
 |--------|------|------|
-| 今 | 追加メモ / 実案件 | [`use-cases/MEMO.md`](./use-cases/MEMO.md) |
+| 再開 | 新しいメモ / Issue | [`use-cases/MEMO.md`](./use-cases/MEMO.md) |
 | 穴が出たとき | 該当 canonical ノート | 安定コーパスの再読みはしない |
 | 分岐が増えたとき | decision-axes/BRANCHES.md | 問いが足りないときだけ CHECKLIST |
 | 継続 | 一次情報の追加・更新・削除 | [`LIFECYCLE.md`](./LIFECYCLE.md) |
