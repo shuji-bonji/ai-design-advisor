@@ -3,7 +3,8 @@
 - 日付: 2026-08-31
 - 出所: 他社事例（報道）
 - 出所番号: https://it.impress.co.jp/articles/-/28877
-- 状態: raw
+- 状態: ready
+- 昇格: [uc13-clinical-note-draft.md](./uc13-clinical-note-draft.md)
 
 ## 対象
 
