@@ -41,10 +41,10 @@ Zennの9グループを、**設計時に実際に選ぶ判断軸**に再配置�
 
 スキルにユースケースを投げたとき、出力は概ね次の構造を取る（詳しい型は `skills/ai-design-advisor/OUTPUT-SKELETON.md`）。
 
-1. **要件の要約**（入力から抽出した制約と目標）
-2. **各次元ごとの推奨**（D1〜D9 + X）
-3. **推奨構成のまとめ**
-4. **不確実な点・追加で確認すべきこと**
+1. **要件の要約**（入力から抽出した制約と目標。未確認は未確認）
+2. **決まっていないこと**（情報不足を先に）
+3. **確認してほしい論点**（決定として読ませない）
+4. **各次元ごとの、いま言えること**（D1〜D9 + X、確度つき）
 
 各次元について「推奨」「根拠（canonical ファイル名）」「確度」を返す。
 
@@ -54,16 +54,17 @@ Zennの9グループを、**設計時に実際に選ぶ判断軸**に再配置�
 
 ## 充足ロードマップ
 
-first-pass と UC01–23、decision-axes first-pass は済み（D7 は要否のみ）。
+first-pass と UC01–23、decision-axes（QUESTIONS 含む）は済み（D7 は要否のみ）。
 手元のメモ・事例は UC23 まで尽きた。案件は作らない。
 
 | 優先度 | 対象 | 理由 |
 |--------|------|------|
+| 次 | 素のモデルとの比較 | [`use-cases/COMPARE.md`](./use-cases/COMPARE.md) |
 | 再開 | 新しいメモ / Issue | [`use-cases/MEMO.md`](./use-cases/MEMO.md) |
 | 穴が出たとき | 該当 canonical ノート | 安定コーパスの再読みはしない |
-| 分岐が増えたとき | decision-axes/BRANCHES.md | 問いが足りないときだけ CHECKLIST |
+| 分岐が増えたとき | decision-axes/BRANCHES.md | 問いが足りないときだけ CHECKLIST / QUESTIONS |
 | 継続 | 一次情報の追加・更新・削除 | [`LIFECYCLE.md`](./LIFECYCLE.md) |
-| 後回し | D7 手法・運用、Web | 手法は未精査のまま |
+| 後回し | D7 手法・運用、持って行ける一枚 | 手法は未精査のまま。Web はスキル HTML 化をしない |
 
 ---
 
@@ -74,4 +75,4 @@ first-pass と UC01–23、decision-axes first-pass は済み（D7 は要否の�
 - `primary-sources/` / `sources/` … 一次情報（更新する）
 - `stable-corpus/` … 一次情報以外の集約
 - `use-cases/` … スキル出力の検証とメモ
-- `decision-axes/` … チェック項目への投影（first-pass）
+- `decision-axes/` … チェック項目への投影（設問セット含む）
