@@ -26,6 +26,6 @@
 | UC11 | [uc11-discovery-to-production.md](./uc11-discovery-to-production.md) | 探索履歴を本番に残さない |
 | UC12 | [uc12-procurement.md](./uc12-procurement.md) | 主体を契約に書く |
 
-穴: [GAPS-from-uc01-uc02.md](./GAPS-from-uc01-uc02.md) / [GAPS-from-uc03-uc07.md](./GAPS-from-uc03-uc07.md) / [GAPS-from-uc08-uc12.md](./GAPS-from-uc08-uc12.md)
+穴: [GAPS.md](./GAPS.md)
 
 一覧: [starter-list.md](./starter-list.md)
