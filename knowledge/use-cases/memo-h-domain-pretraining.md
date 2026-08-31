@@ -3,7 +3,8 @@
 - 日付: 2026-08-31
 - 出所: その他（開発元の技術報告）
 - 出所番号: https://tech.preferred.jp/ja/blog/qfin-llm-continual-pretraining/
-- 状態: raw
+- 状態: ready
+- 昇格: [uc20-domain-pretraining.md](./uc20-domain-pretraining.md)
 
 ## 対象
 
