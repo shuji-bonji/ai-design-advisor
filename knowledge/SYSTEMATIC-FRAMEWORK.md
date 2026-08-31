@@ -48,17 +48,19 @@ Zennの9グループを、**設計時に実際に選ぶ判断軸**に再配置�
 
 各次元について「推奨」「根拠（canonical ファイル名）」「確度」を返す。
 
+チェック項目と典型分岐は [`decision-axes/`](./decision-axes/)。スキルは読まない。
+
 ---
 
 ## 充足ロードマップ
 
-first-pass と UC01–17 は済み（D7 は要否のみ）。
+first-pass と UC01–23、decision-axes first-pass は済み（D7 は要否のみ）。
 
 | 優先度 | 対象 | 理由 |
 |--------|------|------|
 | 今 | 追加メモ / 実案件 | [`use-cases/MEMO.md`](./use-cases/MEMO.md) |
-| 次 | decision-axes | チェック項目への落とし |
 | 穴が出たとき | 該当 canonical ノート | 安定コーパスの再読みはしない |
+| 分岐が増えたとき | decision-axes/BRANCHES.md | 問いが足りないときだけ CHECKLIST |
 | 継続 | 一次情報の追加・更新・削除 | [`LIFECYCLE.md`](./LIFECYCLE.md) |
 | 後回し | D7 手法・運用、Web | 手法は未精査のまま |
 
@@ -71,4 +73,4 @@ first-pass と UC01–17 は済み（D7 は要否のみ）。
 - `primary-sources/` / `sources/` … 一次情報（更新する）
 - `stable-corpus/` … 一次情報以外の集約
 - `use-cases/` … スキル出力の検証とメモ
-- `decision-axes/` … チェック項目への落とし（未作成）
+- `decision-axes/` … チェック項目への投影（first-pass）
