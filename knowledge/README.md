@@ -8,12 +8,11 @@
 
 - `canonical/` … 精査済みの指標（正本）
 - `primary-sources/` / `sources/` … **一次情報**。公式・標準・公的。更新する
-- `stable-corpus/` … **一次情報以外の集約**（Zenn ・understanding-llm ・ai-agent-architecture）
-- `zenn-glossary/` … 安定コーパスの実体（用語・穴探し）
-- `use-cases/` … スキル出力の検証
+- `stable-corpus/` … **一次情報以外の索引**（Zenn ・understanding-llm ・ai-agent-architecture）
+- `use-cases/` … スキル出力の検証とメモ
 - `decision-axes/` … チェック項目への落とし（未作成）
 
-自著 2 リポの全文はコピーしない。取込済みと見送りは [`stable-corpus/INDEX.md`](./stable-corpus/INDEX.md)。
+自著 2 リポの全文も Zenn 原文もコピーしない。取込済みと見送りは [`stable-corpus/INDEX.md`](./stable-corpus/INDEX.md)。
 
 ## 収集方針
 
