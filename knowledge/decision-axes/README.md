@@ -10,11 +10,12 @@
 
 | ファイル | 中身 |
 | --- | --- |
+| [QUESTIONS.md](./QUESTIONS.md) | GAPS の両表を設問に起こした（なぜ聞くか＋canonical） |
 | [CHECKLIST.md](./CHECKLIST.md) | 問い、空欄時の返し、参照ノート |
 | [BRANCHES.md](./BRANCHES.md) | UC01–23 とスキル Step 3 の典型分岐 |
 
-Web は後続。項目表は CHECKLIST を使う。
+Web は後続。作るなら「持って行ける一枚」（決まっている／いない／確認すること）。スキル出力の HTML 化はしない。項目表は QUESTIONS と CHECKLIST。
 
 ## 現状
 
-first-pass（2026-08-31）。追加メモで分岐が増えたら BRANCHES だけ足す。問いそのものが足りないときだけ CHECKLIST を足し、先に canonical を見る。
+設問セット（2026-09-01）。追加メモで分岐が増えたら BRANCHES だけ足す。問いそのものが足りないときだけ CHECKLIST / QUESTIONS を足し、先に canonical を見る。
