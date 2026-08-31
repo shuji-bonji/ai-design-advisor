@@ -26,6 +26,18 @@
 | UC11 | [uc11-discovery-to-production.md](./uc11-discovery-to-production.md) | 探索履歴を本番に残さない |
 | UC12 | [uc12-procurement.md](./uc12-procurement.md) | 主体を契約に書く |
 
+## メモ（未昇格・raw）
+
+公表事例から起こしたメモ。`未確認` が残る。埋まったら `ucNN` に昇格。
+
+| メモ | 何を突くか |
+| --- | --- |
+| [memo-a-clinical-note-draft.md](./memo-a-clinical-note-draft.md) | 起案者と承認者が同一人物 |
+| [memo-b-drawing-spec-match.md](./memo-b-drawing-spec-match.md) | 文書間の一致判定。合格線が書ける |
+| [memo-c-loan-review-draft.md](./memo-c-loan-review-draft.md) | 過去の判断を知識にする。提供側に回る |
+| [memo-d-contract-review-legal.md](./memo-d-contract-review-legal.md) | 出力そのものが規制の対象になりうる |
+| [memo-e-closed-network-multitenant.md](./memo-e-closed-network-multitenant.md) | 閉域だが多テナント。ACL の共同利用版 |
+
 穴: [GAPS.md](./GAPS.md)
 
 一覧: [starter-list.md](./starter-list.md)
