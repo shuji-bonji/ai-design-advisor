@@ -3,7 +3,8 @@
 - 日付: 2026-08-31
 - 出所: その他（所管省庁のガイドブック）
 - 出所番号: https://www.soumu.go.jp/main_content/000820109.pdf
-- 状態: raw
+- 状態: ready
+- 昇格: [uc22-publish-with-known-errors.md](./uc22-publish-with-known-errors.md)
 
 ## 対象
 
