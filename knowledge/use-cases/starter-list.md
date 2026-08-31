@@ -22,7 +22,17 @@
 | 11 | 発見から生産 | [UC11](./uc11-discovery-to-production.md) |
 | 12 | 調達・ベンダー選定 | [UC12](./uc12-procurement.md) |
 
+## 事例メモから
+
+| # | パターン | レポート |
+| --- | --- | --- |
+| 13 | 診察会話からのカルテ下書き | [UC13](./uc13-clinical-note-draft.md) |
+| 14 | 図面・仕様書の項目照合 | [UC14](./uc14-drawing-spec-match.md) |
+| 15 | 融資票議ドラフト | [UC15](./uc15-loan-review-draft.md) |
+| 16 | 契約書レビュー支援 | [UC16](./uc16-contract-review-legal.md) |
+| 17 | 閉域上の共同利用 | [UC17](./uc17-closed-network-multitenant.md) |
+
 ## 次
 
-- 実案件で UC13 以降
+- 追加メモが ready になったら UC18 以降
 - または decision-axes へ落とす
