@@ -27,7 +27,7 @@ flowchart TB
   CAN["canonical/ D1–D9 + X"]
   SK["skills/ai-design-advisor/"]
   UC["use-cases/"]
-  WEB["チェックリスト Web（未着手）"]
+  WEB["持って行ける一枚（未着手）"]
 
   CAT --> RAW --> MER --> CAN
   PS --> CAN
@@ -60,7 +60,7 @@ flowchart TB
 ### 更新
 
 1. 公式の日付・版を見る（Effort / OWASP 年次 / 事業者GL など）
-2. 墜分だけ再抽出する。raw の `retrieved` を書き換える
+2. 墟分だけ再抽出する。raw の `retrieved` を書き換える
 3. 既存 claim と比べる
    - 判断が変わった → クラスタと canonical を直す
    - モデル名や機器名だけ → 倉庫だけ更新。推奨に乗せない
