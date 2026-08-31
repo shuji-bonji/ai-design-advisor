@@ -1,19 +1,20 @@
-# 取込索引（2026-08-30）
+# 取込索引（2026-08-31）
 
 状態: `in` = canonical に折込み済み / `hold` = 見送り / `out` = 範囲外
 
 ## Zenn
 
-| パス | 状態 | 先 |
+原文は置かない。用語と次元の骨だけ折込み済み。
+
+| 部 | 状態 | 先 |
 | --- | --- | --- |
-| zenn-glossary/concept-map-summary.md | in | 次元の骨
-| zenn-glossary/model-classes.md | in | D1
-| zenn-glossary/parameters.md | in | D2
-| zenn-glossary/GUIDELINES-MAP.md | in | 穴探しの目次（推奨に使わない） |
-| 用語集第3部詳細 | hold | D4 |
-| 用語集第6部手法・運用 | hold | D7 methods/ops |
-| 用語集第7部 AIDD / Vibe / SDD | out | DEV |
-| 用語集第9部 LLMOps 詳細 | hold | D9 |
+| 第1部 全体像 | in | D1 |
+| 第2部 仕組み | in | D2 |
+| 概念マップ | in | 次元の骨 |
+| 第3部 詳細 | hold | D4 |
+| 第6部 手法・運用 | hold | D7 methods/ops |
+| 第7部 AIDD / Vibe / SDD | out | DEV |
+| 第9部 LLMOps 詳細 | hold | D9 |
 
 ## understanding-llm
 
@@ -60,4 +61,4 @@
 | agents/agent-taxonomy.md ・ agent-teams.md ・ what-is-a2a.md | hold | UC で必要になったとき |
 | skills/anti-patterns.md | hold | D6 |
 | workflows/* | out | DEV |
-| strategy/local-llm-workspace-mapping.md | out | 別リポ
+| strategy/local-llm-workspace-mapping.md | out | 別リポ |
