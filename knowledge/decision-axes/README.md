@@ -1,11 +1,20 @@
 # Decision Axes
 
-`SYSTEMATIC-FRAMEWORK.md` で定義した意思決定の次元を、  
-実際のチェック項目・スキルの出力スキーマに落とし込む場所です。
+`SYSTEMATIC-FRAMEWORK.md` の次元を、チェック項目へ落とす場所。
 
-現状: フレームワーク定義後に作成予定。
+**正本ではない。** スキルはここを読まない。根拠は `canonical/`。出力の型は [`skills/ai-design-advisor/OUTPUT-SKELETON.md`](../../skills/ai-design-advisor/OUTPUT-SKELETON.md)。
 
-想定する成果物:
-- チェック項目一覧（fact-checklist型Webアプリ用）
-- スキルの出力テンプレート（各次元の推奨・根拠・代替案・リスク）
-- ユースケース別の典型的な分岐例
+ここに判断文・数値・製品名・法令を足さない。穴は [`../use-cases/GAPS.md`](../use-cases/GAPS.md) の「置かない」。
+
+## ファイル
+
+| ファイル | 中身 |
+| --- | --- |
+| [CHECKLIST.md](./CHECKLIST.md) | 問い、空欄時の返し、参照ノート |
+| [BRANCHES.md](./BRANCHES.md) | UC01–23 とスキル Step 3 の典型分岐 |
+
+Web は後続。項目表は CHECKLIST を使う。
+
+## 現状
+
+first-pass（2026-08-31）。追加メモで分岐が増えたら BRANCHES だけ足す。問いそのものが足りないときだけ CHECKLIST を足し、先に canonical を見る。
