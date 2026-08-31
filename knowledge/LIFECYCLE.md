@@ -19,9 +19,9 @@ flowchart TB
 
   subgraph stable ["安定コーパス（都度確認）"]
     IDX["stable-corpus/INDEX.md"]
-    ZEN["zenn-glossary/"]
     ULLM["understanding-llm（外部）"]
     AAA["ai-agent-architecture（外部）"]
+    ZEN["Zenn 用語集（折込済み・本文は持たない）"]
   end
 
   CAN["canonical/ D1–D9 + X"]
@@ -81,4 +81,4 @@ flowchart TB
 
 - 一次情報の更新を契機に安定コーパスを再読みしない
 - 515 件や Lens 全設問を canonical にしない
-- スキルが raw / merged / Zenn 索引を直接読まない
+- スキルが raw / merged / 安定コーパスを直接読まない
