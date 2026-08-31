@@ -3,11 +3,13 @@
 **Generative AI Tool to Support Design Decisions**
 
 生成AIシステムの設計判断を支援するツール。  
-ドメイン知識が豊富な業務側の人が、ある程度の指針を揢んだ上でベンダーに依頼できるようにすることを目指す。
+ドメイン知識が豊富な業務側の人が、決まっていないことを名指したうえでベンダーに依頼できるようにすることを目指す。
+
+価値の中心は推奨スタックではなく、**入力が足りないときに発明しないこと**。
 
 ## 目的
 
-- ユースケースを入力すると、推奨される設計構成を提示する
+- ユースケースを入力すると、言えること / 言えないこと / 確認してほしいことを返す
 - 判断軸を共通言語とする
 - 用語の理解から意思決定支援へ
 
@@ -20,17 +22,19 @@
 ## 提供形態
 
 1. **スキル版**（優先）— [`skills/ai-design-advisor/SKILL.md`](./skills/ai-design-advisor/SKILL.md)
-2. **構造化チェックリスト Web**（後続）— 出力型はスキルと同一。項目は [`knowledge/decision-axes/`](./knowledge/decision-axes/)
+2. **設問セット** — [`knowledge/decision-axes/QUESTIONS.md`](./knowledge/decision-axes/QUESTIONS.md)
+3. **持って行ける一枚**（後続）— 決まっていること／決まっていないこと／確認すること。スキル出力の HTML 化はしない
 
 ## 現状
 
 - [x] canonical（D1–D9 + X。D7 は要否のみ。手法・運用は未精査）
-- [x] スキルの出力スケルトン
-- [x] UC01–23（スターター + 組成 + 事例メモ）
+- [x] スキルの出力スケルトン（確認論点を先に）
+- [x] UC01–23（スターター + 組成 + 事例メモ）。一貫性チェックであり成否検証ではない
 - [x] ユースケースメモと Issue 型
-- [x] decision-axes（チェック項目 first-pass）
+- [x] decision-axes（CHECKLIST / BRANCHES / QUESTIONS）
 - [x] 手元メモは UC23 まで（再開は MEMO / Issue）
-- [ ] Web アプリ
+- [ ] 素のモデルとの比較（手順は [`knowledge/use-cases/COMPARE.md`](./knowledge/use-cases/COMPARE.md)）
+- [ ] 持って行ける一枚
 
 ## 知識の流れ
 
@@ -41,7 +45,7 @@ flowchart LR
   C --> K[skills]
   C --> A[decision-axes]
   K --> U[use-cases]
-  A --> W["Web 未着手"]
+  A --> W["一枚 未着手"]
 ```
 
 スキルが読むのは canonical だけ。図と一次情報の追加・更新・削除は [`knowledge/LIFECYCLE.md`](./knowledge/LIFECYCLE.md)。
