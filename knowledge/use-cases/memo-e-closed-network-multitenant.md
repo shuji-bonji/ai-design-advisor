@@ -3,7 +3,8 @@
 - 日付: 2026-08-31
 - 出所: 他社事例（ベンダーのプレスリリース）
 - 出所番号: https://prtimes.jp/main/html/rd/p/000000196.000056138.html
-- 状態: raw
+- 状態: ready
+- 昇格: [uc17-closed-network-multitenant.md](./uc17-closed-network-multitenant.md)
 
 ## 対象
 
