@@ -3,7 +3,8 @@
 - 日付: 2026-08-31
 - 出所: その他（所管省庁の指針とパイロット事業）
 - 出所番号: https://www.mext.go.jp/a_menu/other/mext_02412.html
-- 状態: raw
+- 状態: ready
+- 昇格: [uc21-student-learning-support.md](./uc21-student-learning-support.md)
 
 ## 対象
 
