@@ -12,7 +12,7 @@ Issue は [.github/ISSUE_TEMPLATE/use-case.md](../../.github/ISSUE_TEMPLATE/use-
 # メモ: (一行)
 
 - 日付:
-- 出所: 求人 / ウェビナー / Issue / 実案件 / その他
+- 出所: 求人 / 他社事例（ウェビナー） / Issue / 実案件 / その他
 - 出所番号: URL または Issue #（会社名は書かない）
 - 状態: raw / ready / duplicate
 
@@ -30,7 +30,7 @@ Issue は [.github/ISSUE_TEMPLATE/use-case.md](../../.github/ISSUE_TEMPLATE/use-
 
 ## 問われている問い
 
-- 
+-
 
 ## 近い既存 UC
 
