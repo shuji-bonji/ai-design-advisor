@@ -41,4 +41,4 @@
 ## 次
 
 - 追加メモが ready になったら UC24 以降
-- または decision-axes へ落とす
+- チェック項目: [`../decision-axes/`](../decision-axes/) first-pass 済み
