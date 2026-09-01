@@ -21,13 +21,16 @@ description: >
 
 ## ノートの場所
 
-根拠は canonical のみ。作業ディレクトリの `knowledge/canonical/` は見ない。
+根拠は、この `SKILL.md` と同じフォルダの `canonical/` のみ。
+Desktop はスキルフォルダだけをマウントする。リポジトリ根の `knowledge/canonical/` はここには無い。
 
-1. `${CLAUDE_PLUGIN_ROOT}/knowledge/canonical/`
-2. プラグイン変数が使えないときだけ、このスキルファイルから `../../knowledge/canonical/`
+読む順:
 
-どちらも無ければノートを発明しない。確定を付けない。制限を一文書く。
-安定コーパスと raw は読まない。
+1. `canonical/`（同梱。`${CLAUDE_SKILL_DIR}/canonical/` が使えるならそれ）
+2. 無ければノートを発明しない。確定を付けない。制限を一文書く
+
+作業ディレクトリの同名パスは見ない。安定コーパスと raw は読まない。
+編集の正本はリポジトリの `knowledge/canonical/`。同梱を更新してからプラグインを配る。
 
 ## いつ使うか
 
@@ -53,7 +56,7 @@ description: >
 
 先にその次元の `README.md` を読み、表のファイルから必要なノートだけ開く。ノートに無いことは書かない。
 
-| 順 | 次元 | 読む先（README が目次。接頭辞の下） |
+| 順 | 次元 | 読む先（`canonical/` 下。README が目次） |
 | --- | --- | --- |
 | D1 | モデルクラス | `d1-model-class/selection.md` |
 | D2 | Temperature / Effort | `d2-parameters/temperature-and-effort.md` |
@@ -120,7 +123,7 @@ AIDD / Vibe / SDD は本ツールの範囲外（DEV トラック）。
 ### 詳細
 ```
 
-完全な型は `${CLAUDE_SKILL_DIR}/OUTPUT-SKELETON.md`。同梱に無ければ `OUTPUT-SKELETON.md`。
+完全な型は `OUTPUT-SKELETON.md`（このファイルと同じフォルダ）。
 
 ## やってはいけないこと
 
@@ -134,5 +137,5 @@ AIDD / Vibe / SDD は本ツールの範囲外（DEV トラック）。
 ## チェックリスト型
 
 同じ表と「決まっていないこと」を最終出力にする。空の次元は情報不足。
-深掘り問: 接頭辞下の `_field-questions.md`。
-設問の種: `${CLAUDE_PLUGIN_ROOT}/knowledge/decision-axes/QUESTIONS.md`（読まなくてよい。投影）。
+深掘り問: `canonical/_field-questions.md`。
+設問の種は読まなくてよい（投影）。
