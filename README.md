@@ -27,11 +27,13 @@
 
 ### Claude Code で使う
 
+カタログは [`shuji-bonji/claude-plugins`](https://github.com/shuji-bonji/claude-plugins)。このリポジトリに `marketplace.json` は置かない。
+
 スキルは `knowledge/canonical/` を読む。作業ディレクトリはこのリポジトリのルート。
 
 ```
-/plugin marketplace add .
-/plugin install ai-design-advisor@ai-design-advisor
+/plugin marketplace add shuji-bonji/claude-plugins
+/plugin install ai-design-advisor@shuji-bonji
 ```
 
 クローン済みなら:
@@ -50,7 +52,7 @@ claude --plugin-dir .
 - [x] ユースケースメモと Issue 型
 - [x] decision-axes（CHECKLIST / BRANCHES / QUESTIONS）
 - [x] 手元メモは UC23 まで（再開は MEMO / Issue）
-- [x] Claude Code プラグイン定義（`.claude-plugin/`）
+- [x] Claude Code プラグイン定義（`.claude-plugin/plugin.json`）
 - [ ] 素のモデルとの比較（手順は [`knowledge/use-cases/COMPARE.md`](./knowledge/use-cases/COMPARE.md)）
 - [ ] 持って行ける一枚
 
@@ -79,4 +81,5 @@ flowchart LR
 
 - [understanding-llm-through-claude-code](https://github.com/shuji-bonji/understanding-llm-through-claude-code)
 - [ai-agent-architecture](https://github.com/shuji-bonji/ai-agent-architecture)
+- [claude-plugins](https://github.com/shuji-bonji/claude-plugins)
 - [factcheck-skill](https://github.com/shuji-bonji/factcheck-skill) / [fact-checklist](https://github.com/shuji-bonji/fact-checklist)
