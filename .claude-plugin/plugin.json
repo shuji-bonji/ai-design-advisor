@@ -1,14 +1,21 @@
 {
+  "$schema": "https://raw.githubusercontent.com/anthropics/claude-code/main/.claude-plugin/plugin.schema.json",
   "name": "ai-design-advisor",
-  "displayName": "AI Design Advisor",
   "version": "0.1.0",
-  "description": "生成AIシステムの設計判断を支援する。決まっていないことを名指し、canonical の範囲だけ返す。",
+  "description": "生成AIシステムの設計判断を支援する Skill。決まっていないことを名指し、canonical の範囲だけ返す。入力が足りないときに発明しない。",
   "author": {
-    "name": "Shuji Narumi",
+    "name": "shuji-bonji",
+    "email": "bonji@mikuro.jp",
     "url": "https://github.com/shuji-bonji"
   },
   "homepage": "https://github.com/shuji-bonji/ai-design-advisor",
   "repository": "https://github.com/shuji-bonji/ai-design-advisor",
   "license": "MIT",
-  "keywords": ["genai", "architecture", "design-decision"]
+  "keywords": [
+    "genai",
+    "architecture",
+    "design-decision",
+    "skill",
+    "vendor"
+  ]
 }
