@@ -23,7 +23,7 @@ description: >
 
 根拠は canonical のみ。作業ディレクトリの `knowledge/canonical/` は見ない。
 
-1. `␛CLAUDE_PLUGIN_ROOT}/knowledge/canonical/`
+1. `${CLAUDE_PLUGIN_ROOT}/knowledge/canonical/`
 2. プラグイン変数が使えないときだけ、このスキルファイルから `../../knowledge/canonical/`
 
 どちらも無ければノートを発明しない。確定を付けない。制限を一文書く。
@@ -120,7 +120,7 @@ AIDD / Vibe / SDD は本ツールの範囲外（DEV トラック）。
 ### 詳細
 ```
 
-完全な型は `␛CLAUDE_SKILL_DIR}/OUTPUT-SKELETON.md`。同折に無ければ `OUTPUT-SKELETON.md`。
+完全な型は `${CLAUDE_SKILL_DIR}/OUTPUT-SKELETON.md`。同梱に無ければ `OUTPUT-SKELETON.md`。
 
 ## やってはいけないこと
 
@@ -135,4 +135,4 @@ AIDD / Vibe / SDD は本ツールの範囲外（DEV トラック）。
 
 同じ表と「決まっていないこと」を最終出力にする。空の次元は情報不足。
 深掘り問: 接頭辞下の `_field-questions.md`。
-設問の種: `␛CLAUDE_PLUGIN_ROOT}/knowledge/decision-axes/QUESTIONS.md`（読まなくてよい。投影）。
+設問の種: `${CLAUDE_PLUGIN_ROOT}/knowledge/decision-axes/QUESTIONS.md`（読まなくてよい。投影）。
