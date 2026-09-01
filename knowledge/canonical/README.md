@@ -2,6 +2,8 @@
 
 設計判断の**指標（indicators）**として精査済みの知識を置く場所です。
 
+編集の正本はここ。Claude Desktop は `skills/ai-design-advisor/` しかマウントしないので、配布時は同内容を `skills/ai-design-advisor/canonical/` へ渡す。
+
 ## 方針
 
 1. 判断に足りる情報が揃うまで、収集と精査を優先する
