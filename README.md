@@ -25,6 +25,23 @@
 2. **設問セット** — [`knowledge/decision-axes/QUESTIONS.md`](./knowledge/decision-axes/QUESTIONS.md)
 3. **持って行ける一枚**（後続）— 決まっていること／決まっていないこと／確認すること。スキル出力の HTML 化はしない
 
+### Claude Code で使う
+
+スキルは `knowledge/canonical/` を読む。作業ディレクトリはこのリポジトリのルート。
+
+```
+/plugin marketplace add .
+/plugin install ai-design-advisor@ai-design-advisor
+```
+
+クローン済みなら:
+
+```
+claude --plugin-dir .
+```
+
+入力は対象と前提だけ。UC ファイルの「いま言えること」以降は渡さない。
+
 ## 現状
 
 - [x] canonical（D1–D9 + X。D7 は要否のみ。手法・運用は未精査）
@@ -33,6 +50,7 @@
 - [x] ユースケースメモと Issue 型
 - [x] decision-axes（CHECKLIST / BRANCHES / QUESTIONS）
 - [x] 手元メモは UC23 まで（再開は MEMO / Issue）
+- [x] Claude Code プラグイン定義（`.claude-plugin/`）
 - [ ] 素のモデルとの比較（手順は [`knowledge/use-cases/COMPARE.md`](./knowledge/use-cases/COMPARE.md)）
 - [ ] 持って行ける一枚
 
