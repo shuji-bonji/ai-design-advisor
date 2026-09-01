@@ -2,7 +2,7 @@
 name: ai-design-advisor
 description: >
   生成AIシステムの設計判断を支援するスキル。ユースケースや要件を入力すると、
-  決まっていないことを名指しし、モデルクラス・生成パラメータ・コンテキスト・
+  決まっていないことを名指し、モデルクラス・生成パラメータ・コンテキスト・
   プロンプト・RAG・エージェント化・Fine-tuning・セキュリティ・運用の9次元で
   言える範囲だけ返す。「設計判断して」「このボットの構成を見て」「SLMかLLMか」
   「RAGは要るか」「エージェント化すべきか」「ベンダー提案を点検して」
@@ -14,10 +14,20 @@ description: >
 
 生成AIの設計を、用語の説明ではなく **選ぶ判断** として返す。
 主役は推奨スタックではなく、**決まっていないことの名指し**。
-根拠は `knowledge/canonical/` のみ。未精査の項目は推奨を確定しない。
+未精査の項目は推奨を確定しない。
 
 想定読者は、ベンダーに依頼する業務側と、構成を素早く切りたいエンジニア。
 出力は「決定」ではなく「確認してほしい論点」として読ませる。
+
+## ノートの場所
+
+根拠は canonical のみ。作業ディレクトリの `knowledge/canonical/` は見ない。
+
+1. `␛CLAUDE_PLUGIN_ROOT}/knowledge/canonical/`
+2. プラグイン変数が使えないときだけ、このスキルファイルから `../../knowledge/canonical/`
+
+どちらも無ければノートを発明しない。確定を付けない。制限を一文書く。
+安定コーパスと raw は読まない。
 
 ## いつ使うか
 
@@ -43,7 +53,7 @@ description: >
 
 先にその次元の `README.md` を読み、表のファイルから必要なノートだけ開く。ノートに無いことは書かない。
 
-| 順 | 次元 | 読む先（README が目次） |
+| 順 | 次元 | 読む先（README が目次。接頭辞の下） |
 | --- | --- | --- |
 | D1 | モデルクラス | `d1-model-class/selection.md` |
 | D2 | Temperature / Effort | `d2-parameters/temperature-and-effort.md` |
@@ -56,9 +66,8 @@ description: >
 | D9 | 運用・評価・コスト | `d9-ops-eval/`（ループ・コスト分解を含む） |
 | X | キャッシュ・レイテンシ | `x-cross-constraints/serving-and-cache.md` |
 
-パスの接頭辞は `knowledge/canonical/`。
 D7 の `methods-unreviewed.md` / `ops-unreviewed.md` は推奨に使わない。
-安定コーパスと raw は読まない。AIDD / Vibe / SDD は本ツールの範囲外（DEV トラック）。
+AIDD / Vibe / SDD は本ツールの範囲外（DEV トラック）。
 
 ### Step 3: 衝突を解消する
 
@@ -111,7 +120,7 @@ D7 の `methods-unreviewed.md` / `ops-unreviewed.md` は推奨に使わない。
 ### 詳細
 ```
 
-完全な型は `OUTPUT-SKELETON.md`。
+完全な型は `␛CLAUDE_SKILL_DIR}/OUTPUT-SKELETON.md`。同折に無ければ `OUTPUT-SKELETON.md`。
 
 ## やってはいけないこと
 
@@ -120,9 +129,10 @@ D7 の `methods-unreviewed.md` / `ops-unreviewed.md` は推奨に使わない。
 - 要件が曖昧なまま一意に決めたように見せる
 - CLAUDE.md を他環境の必須手順にする
 - リポジトリ内の語彙を、ベンダーへの要件文にする
+- 作業ディレクトリの同名パスを canonical の代替にする
 
 ## チェックリスト型
 
 同じ表と「決まっていないこと」を最終出力にする。空の次元は情報不足。
-深掘り問: `knowledge/canonical/_field-questions.md`。
-設問の種: `knowledge/decision-axes/QUESTIONS.md`（読まなくてよい。投影）。
+深掘り問: 接頭辞下の `_field-questions.md`。
+設問の種: `␛CLAUDE_PLUGIN_ROOT}/knowledge/decision-axes/QUESTIONS.md`（読まなくてよい。投影）。
