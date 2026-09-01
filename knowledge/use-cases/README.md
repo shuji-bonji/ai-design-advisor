@@ -4,9 +4,11 @@
 **一貫性の検証**であり、推奨が実案件で良かったかの検証ではない。
 
 新規: [メモの型](./MEMO.md) または GitHub Issue「ユースケースメモ」。埋まったら `ucNN` に昇格。canonical には直さない。
-既存 UC を新しい出力契約で書き直すのは、素のモデル比較のあとでよい。
 
-比較の手順: [COMPARE.md](./COMPARE.md)
+出力契約: [`skills/ai-design-advisor/OUTPUT-SKELETON.md`](../../skills/ai-design-advisor/OUTPUT-SKELETON.md)。
+新契約へ書き直し済み: UC01, UC02, UC06, UC18, UC20。他は旧スケルトンのまま（次）。
+
+比較: [COMPARE.md](./COMPARE.md) / [実行 2026-09-01](./COMPARE-RUN-2026-09-01.md)
 
 ## スターター（UC01–07）
 
