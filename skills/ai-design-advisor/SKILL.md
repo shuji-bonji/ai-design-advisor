@@ -56,18 +56,18 @@ Desktop のスキル画面に載るのは、この `SKILL.md` と同じフォル
 
 先にその次元の `README.md` を読み、表のファイルから必要なノートだけ開く。ノートに無いことは書かない。
 
-| 順 | 次元 | 読む先（`canonical/` 下。README が目次） |
-| --- | --- | --- |
-| D1 | モデルクラス | `d1-model-class/selection.md` |
-| D2 | Temperature / Effort | `d2-parameters/temperature-and-effort.md` |
-| D3 | コンテキスト・知識 | `d3-context-knowledge/`（制約・予算・Memory） |
-| D4 | プロンプト | `d4-prompt-dialogue/`（住所・書き方・所有・最適化） |
-| D5 | RAG | `d5-rag/when-and-how.md` |
-| D6 | エージェント化 | `d6-agent/`（要否・単位・層・ゲート） |
-| D7 | Fine-tune の要否 | `d7-finetune/when-to-finetune.md` のみ |
-| D8 | セキュリティ | `d8-security/`（脅威・許可・層・法務主体） |
-| D9 | 運用・評価・コスト | `d9-ops-eval/`（ループ・コスト分解を含む） |
-| X | キャッシュ・レイテンシ | `x-cross-constraints/serving-and-cache.md` |
+| 順  | 次元                   | 読む先（`canonical/` 下。README が目次）            |
+| --- | ---------------------- | --------------------------------------------------- |
+| D1  | モデルクラス           | `d1-model-class/selection.md`                       |
+| D2  | Temperature / Effort   | `d2-parameters/temperature-and-effort.md`           |
+| D3  | コンテキスト・知識     | `d3-context-knowledge/`（制約・予算・Memory）       |
+| D4  | プロンプト             | `d4-prompt-dialogue/`（住所・書き方・所有・最適化） |
+| D5  | RAG                    | `d5-rag/when-and-how.md`                            |
+| D6  | エージェント化         | `d6-agent/`（要否・単位・層・ゲート）               |
+| D7  | Fine-tune の要否       | `d7-finetune/when-to-finetune.md` のみ              |
+| D8  | セキュリティ           | `d8-security/`（脅威・許可・層・法務主体）          |
+| D9  | 運用・評価・コスト     | `d9-ops-eval/`（ループ・コスト分解を含む）          |
+| X   | キャッシュ・レイテンシ | `x-cross-constraints/serving-and-cache.md`          |
 
 D7 の `methods-unreviewed.md` / `ops-unreviewed.md` は推奨に使わない。
 AIDD / Vibe / SDD は本ツールの範囲外（DEV トラック）。
@@ -116,9 +116,9 @@ AIDD / Vibe / SDD は本ツールの範囲外（DEV トラック）。
 
 ### 次元別
 
-| 次元 | 推奨 | 根拠 | 確度 |
-| --- | --- | --- | --- |
-| D1–D9 + X | | canonical ファイル名 | 確定 / 条件付き / 情報不足 |
+| 次元      | 推奨 | 根拠                 | 確度                       |
+| --------- | ---- | -------------------- | -------------------------- |
+| D1–D9 + X |      | canonical ファイル名 | 確定 / 条件付き / 情報不足 |
 
 ### 詳細
 ```
