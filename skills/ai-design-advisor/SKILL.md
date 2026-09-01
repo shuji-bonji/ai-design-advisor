@@ -21,16 +21,16 @@ description: >
 
 ## ノートの場所
 
-根拠は、この `SKILL.md` と同じフォルダの `canonical/` のみ。
-Desktop はスキルフォルダだけをマウントする。リポジトリ根の `knowledge/canonical/` はここには無い。
+編集の正本はリポジトリの `knowledge/canonical/`。
+Desktop のスキル画面に載るのは、この `SKILL.md` と同じフォルダの `canonical/` だけのことがある。
 
 読む順:
 
-1. `canonical/`（同梱。`${CLAUDE_SKILL_DIR}/canonical/` が使えるならそれ）
-2. 無ければノートを発明しない。確定を付けない。制限を一文書く
+1. 同梱の `canonical/`（`${CLAUDE_SKILL_DIR}/canonical/` が使えるならそれ）
+2. 同梱に無い次元だけ、**プラグイン同期先**（`SKILL.md` から `../../knowledge/canonical/`）を読む。作業ディレクトリではない
+3. どちらも無ければノートを発明しない。確定を付けない。制限を一文書く
 
 作業ディレクトリの同名パスは見ない。安定コーパスと raw は読まない。
-編集の正本はリポジトリの `knowledge/canonical/`。同梱を更新してからプラグインを配る。
 
 ## いつ使うか
 
