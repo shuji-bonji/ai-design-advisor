@@ -5,10 +5,11 @@
 
 新規: [メモの型](./MEMO.md) または GitHub Issue「ユースケースメモ」。埋まったら `ucNN` に昇格。canonical には直さない。
 
-出力契約: [`skills/ai-design-advisor/OUTPUT-SKELETON.md`](../../skills/ai-design-advisor/OUTPUT-SKELETON.md)。
+出力契約: [`../../skills/ai-design-advisor/OUTPUT-SKELETON.md`](../../skills/ai-design-advisor/OUTPUT-SKELETON.md)。
 UC01–23 は 2026-09-01 に新契約へ書き直し済み（判断は変えていない）。
 
 比較: [COMPARE.md](./COMPARE.md) / [実行 2026-09-01](./COMPARE-RUN-2026-09-01.md)
+一枚: [`../one-pager/`](../one-pager/)（UC 本文から落とす。新しい判断は足さない）
 
 ## スターター（UC01–07）
 
