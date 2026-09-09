@@ -1,5 +1,6 @@
 # モデルクラスの選定（SLM / LLM / Reasoning / Multimodal）
 
+- id: D1-001
 - status: canonical
 - dimensions: D1, X
 - sources:

@@ -1,5 +1,6 @@
 # LLM の構造的制約（コンテキスト設計の前提）
 
+- id: D3-003
 - status: canonical
 - dimensions: D3, D4, D9
 - sources:

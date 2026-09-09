@@ -1,5 +1,6 @@
 # プロンプトは痩せる（寿命と住所）
 
+- id: D4-003
 - status: canonical
 - dimensions: D4, D3, D6
 - sources:

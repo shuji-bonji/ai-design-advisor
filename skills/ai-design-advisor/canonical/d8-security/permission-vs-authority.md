@@ -1,5 +1,6 @@
 # Permission と Authority（自律性の渡し方）
 
+- id: D8-003
 - status: canonical
 - dimensions: D8, D6, X
 - verified_clusters: C02, C04

@@ -1,5 +1,6 @@
 # 手法の選択（未精査）
 
+- id: D7-001
 - status: unreviewed
 - dimensions: D7
 - 種: Zenn 第6部の抽出指針 ch47–50（`knowledge/zenn-glossary/guidelines-index.json`）

@@ -34,16 +34,16 @@
 
 | 次元 | 推奨 | 根拠 | 確度 |
 | --- | --- | --- | --- |
-| D1 | 小さい側。外出未確認なら条件付き | selection.md | 条件付き |
-| D2 | Temperature 低め | temperature-and-effort.md | 確定 |
-| D3 | 元文を残す。Memory 不要 | knowledge-and-memory | 確定 |
-| D4 | 明示文の軸を先に書く | writing.md | 確定 |
-| D5 | 入力が元文なら RAG 不要 | when-and-how.md | 確定 |
-| D6 | 一回生成で止める | when-to-agentize.md | 確定 |
-| D7 | しない | when-to-finetune.md | 確定 |
-| D8 | 明示は免責ではない。金額・期限・権利義務はこの判断を使わない | legal-actors / permission-vs-authority | 条件付き |
-| D9 | 指摘の受け口と修正の跡 | loop-eval-and-stop | 条件付き |
-| X | 特になし | serving-and-cache.md | 情報不足 |
+| D1 | 小さい側。外出未確認なら条件付き | D1-001 | 条件付き |
+| D2 | Temperature 低め | D2-001 | 確定 |
+| D3 | 元文を残す。Memory 不要 | D3-002 | 確定 |
+| D4 | 明示文の軸を先に書く | D4-004 | 確定 |
+| D5 | 入力が元文なら RAG 不要 | D5-001 | 確定 |
+| D6 | 一回生成で止める | D6-004 | 確定 |
+| D7 | しない | D7-003 | 確定 |
+| D8 | 明示は免責ではない。金額・期限・権利義務はこの判断を使わない | D8-002 / D8-003 | 条件付き |
+| D9 | 指摘の受け口と修正の跡 | D9-004 | 条件付き |
+| X | 特になし | X-001 | 情報不足 |
 
 ### 詳細
 

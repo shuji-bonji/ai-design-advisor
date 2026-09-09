@@ -35,16 +35,16 @@
 
 | 次元 | 推奨 | 根拠 | 確度 |
 | --- | --- | --- | --- |
-| D1 | 計画は LLM / Reasoning。分類は SLM 可 | selection.md | 条件付き |
-| D2 | Effort は計画ターンだけ上げる。CoT を重ねない | temperature-and-effort.md | 確定 |
-| D3 | 窓は自分で組む。エラーは圧縮して戻す。メモ書き込みは特権 | context-as-budget / knowledge-and-memory | 確定 |
-| D4 | プロンプトとツール目録はリポで持つ。常駐は痩せる | ownership / placement / optimization-techniques | 確定 |
-| D5 | 社内文書は RAG。チケット・権限はツール | when-and-how.md | 確定 |
-| D6 | 単一エージェント + ツール。書き込みは HITL | when-to-agentize / skill-vs-subagent / quality-gate | 確定 |
-| D7 | しない | when-to-finetune.md | 確定 |
-| D8 | permission 反復。承認 UI は操作本文。passthrough 禁止 | permission-vs-authority / guardrail-layers / quality-gate | 確定 |
-| D9 | 回数・トークン・時間の上限。跡。書き込みは冪等 | loop-eval-and-stop / cost-decomposition | 条件付き |
-| X | 安定な system / ツール定義をキャッシュ | serving-and-cache.md | 確定 |
+| D1 | 計画は LLM / Reasoning。分類は SLM 可 | D1-001 | 条件付き |
+| D2 | Effort は計画ターンだけ上げる。CoT を重ねない | D2-001 | 確定 |
+| D3 | 窓は自分で組む。エラーは圧縮して戻す。メモ書き込みは特権 | D3-001 / D3-002 | 確定 |
+| D4 | プロンプトとツール目録はリポで持つ。常駐は痩せる | D4-002 / D4-003 / D4-001 | 確定 |
+| D5 | 社内文書は RAG。チケット・権限はツール | D5-001 | 確定 |
+| D6 | 単一エージェント + ツール。書き込みは HITL | D6-004 / D6-003 / D6-002 | 確定 |
+| D7 | しない | D7-003 | 確定 |
+| D8 | permission 反復。承認 UI は操作本文。passthrough 禁止 | D8-003 / D8-001 / D6-002 | 確定 |
+| D9 | 回数・トークン・時間の上限。跡。書き込みは冪等 | D9-004 / D9-001 | 条件付き |
+| X | 安定な system / ツール定義をキャッシュ | X-001 | 確定 |
 
 D1 が条件付きなのは、社外モデル可否が未確認だから。D9 は上限の数字を canonical が持たないから。
 

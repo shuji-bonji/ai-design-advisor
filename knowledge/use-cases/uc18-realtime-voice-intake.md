@@ -38,16 +38,16 @@
 
 | 次元 | 推奨 | 根拠 | 確度 |
 | --- | --- | --- | --- |
-| D1 | 小さい側。音声は入力。外出未確認なら条件付き | selection.md | 条件付き |
-| D2 | Temperature 低め。Effort 禁止 | temperature-and-effort.md | 確定 |
-| D3 | 常駐は短い。有人引継は関係だけ | context-as-budget / knowledge-and-memory | 確定 |
-| D4 | 応対規約と禁止を軸にする | writing.md | 確定 |
-| D5 | 変わる事実は RAG ではなくツール | when-and-how.md | 確定 |
-| D6 | ツールまで。引き際はコードの条件 | when-to-agentize.md | 確定 |
-| D7 | しない | when-to-finetune.md | 確定 |
-| D8 | 音声も入力。書き込みは permission。告知・本人確認は情報不足 | threat-landscape / permission-vs-authority | 条件付き |
-| D9 | ASR と生成を分ける。待機数値は持たない | loop-eval-and-stop | 情報不足 |
-| X | 待たせられないなら D1・D2 が先。Effort / 自律ループを上げない | serving-and-cache.md | 確定 |
+| D1 | 小さい側。音声は入力。外出未確認なら条件付き | D1-001 | 条件付き |
+| D2 | Temperature 低め。Effort 禁止 | D2-001 | 確定 |
+| D3 | 常駐は短い。有人引継は関係だけ | D3-001 / D3-002 | 確定 |
+| D4 | 応対規約と禁止を軸にする | D4-004 | 確定 |
+| D5 | 変わる事実は RAG ではなくツール | D5-001 | 確定 |
+| D6 | ツールまで。引き際はコードの条件 | D6-004 | 確定 |
+| D7 | しない | D7-003 | 確定 |
+| D8 | 音声も入力。書き込みは permission。告知・本人確認は情報不足 | D8-004 / D8-003 | 条件付き |
+| D9 | ASR と生成を分ける。待機数値は持たない | D9-004 | 情報不足 |
+| X | 待たせられないなら D1・D2 が先。Effort / 自律ループを上げない | X-001 | 確定 |
 
 ### 詳細
 

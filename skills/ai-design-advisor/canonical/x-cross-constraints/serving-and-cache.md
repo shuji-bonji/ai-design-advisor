@@ -1,5 +1,6 @@
 # 横断: 提供形態・キャッシュ・レイテンシの切り分け
 
+- id: X-001
 - status: canonical
 - dimensions: X, D1, D3, D9
 - sources:

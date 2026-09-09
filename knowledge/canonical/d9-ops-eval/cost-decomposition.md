@@ -1,5 +1,6 @@
 # コストは層で分解する
 
+- id: D9-001
 - status: canonical
 - dimensions: D9, D1, D3, D4, D5, D6
 - verified_clusters: C19

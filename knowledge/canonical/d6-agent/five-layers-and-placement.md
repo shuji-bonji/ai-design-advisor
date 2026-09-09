@@ -1,5 +1,6 @@
 # 五層と配置基準
 
+- id: D6-001
 - status: canonical
 - dimensions: D6, D3, D4, D5
 - sources:

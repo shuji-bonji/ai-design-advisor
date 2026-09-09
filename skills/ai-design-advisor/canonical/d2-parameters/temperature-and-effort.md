@@ -1,5 +1,6 @@
 # Temperature と Reasoning Effort
 
+- id: D2-001
 - status: canonical
 - dimensions: D2, D1, D4
 - sources:

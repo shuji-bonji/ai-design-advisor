@@ -1,5 +1,6 @@
 # 知識カットオフと Memory
 
+- id: D3-002
 - status: canonical
 - dimensions: D3, D5, D6, D8
 - verified_clusters: C17

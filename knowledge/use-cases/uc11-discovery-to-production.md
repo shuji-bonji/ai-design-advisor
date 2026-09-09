@@ -34,16 +34,16 @@
 
 | 次元 | 推奨 | 根拠 | 確度 |
 | --- | --- | --- | --- |
-| D1 | 生産は小さい側。発見だけ大きい | selection.md | 確定 |
-| D2 | 生産は低 Temperature / 低 Effort | temperature-and-effort.md | 確定 |
-| D3 | 探索履歴を本番コンテキストに残さない | context-as-budget / discovery-vs-production | 確定 |
-| D4 | 指示書をファイルに外在化。他人の指示書を理解済みにしない | ownership / writing / discovery-vs-production | 確定 |
-| D5 | 社内文書は RAG。探索メモは索引にしない | when-and-how.md | 確定 |
-| D6 | 生産は段を上げない。破緋したら発見へ戻す | when-to-agentize / discovery-vs-production | 確定 |
-| D7 | しない | when-to-finetune.md | 確定 |
-| D8 | 本番の操作は permission | permission-vs-authority | 確定 |
-| D9 | 圧縮レディネスでモードを分ける。機械線は Hooks | discovery-vs-production / hooks-and-runtime | 確定 |
-| X | 生産の system を固定してキャッシュ | serving-and-cache.md | 確定 |
+| D1 | 生産は小さい側。発見だけ大きい | D1-001 | 確定 |
+| D2 | 生産は低 Temperature / 低 Effort | D2-001 | 確定 |
+| D3 | 探索履歴を本番コンテキストに残さない | D3-001 / D9-002 | 確定 |
+| D4 | 指示書をファイルに外在化。他人の指示書を理解済みにしない | D4-002 / D4-004 / D9-002 | 確定 |
+| D5 | 社内文書は RAG。探索メモは索引にしない | D5-001 | 確定 |
+| D6 | 生産は段を上げない。破緋したら発見へ戻す | D6-004 / D9-002 | 確定 |
+| D7 | しない | D7-003 | 確定 |
+| D8 | 本番の操作は permission | D8-003 | 確定 |
+| D9 | 圧縮レディネスでモードを分ける。機械線は Hooks | D9-002 / D9-003 | 確定 |
+| X | 生産の system を固定してキャッシュ | X-001 | 確定 |
 
 ### 詳細
 

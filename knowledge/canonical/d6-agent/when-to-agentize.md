@@ -1,5 +1,6 @@
 # いつエージェント化するか（Plain / Tool / Agent / Multi-agent）
 
+- id: D6-004
 - status: canonical
 - dimensions: D6, X
 - verified_clusters: C01, C22

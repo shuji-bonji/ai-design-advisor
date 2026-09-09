@@ -54,6 +54,7 @@ claude --plugin-dir .
 - [x] 手元メモは UC23 まで（再開は MEMO / Issue）
 - [x] Claude Code プラグイン定義（`.claude-plugin/plugin.json`）
 - [x] 持って行ける一枚（型 + UC01 / UC06 見本。Web はしない）
+- [x] 根拠 ID（canonical の安定 ID）と、出力の検算（`scripts/check-output.mjs`）
 - [ ] 素のモデルとの比較（手順と 2026-09-01 実行あり。他モデルは任意）
 
 ## 知識の流れ
@@ -78,6 +79,20 @@ flowchart LR
 - チェック項目: [`knowledge/decision-axes/`](./knowledge/decision-axes/)
 - 一枚: [`knowledge/one-pager/`](./knowledge/one-pager/)
 - 出力契約: [`skills/ai-design-advisor/OUTPUT-SKELETON.md`](./skills/ai-design-advisor/OUTPUT-SKELETON.md)
+- ノート ID: [`knowledge/canonical/_ids.md`](./knowledge/canonical/_ids.md)
+
+## 出力の検算
+
+スキルの出力は、次元表の「根拠」列に canonical の**ノート ID** を書きます。ID が実在するかはコードで突合します。
+
+```sh
+node scripts/check-output.mjs knowledge/use-cases/uc01-consumer-faq.md
+node scripts/check-output.mjs --list          # ID 一覧
+node scripts/check-output.mjs --strict <file> # 警告も失敗にする
+```
+
+終了コードは 0（エラーなし）/ 1（存在しない ID・語彙外の確度・根拠のない「確定」）/ 2（canonical を読めず判定不能）です。
+2 を 1 と分けているのは、**測れなかったことを「一致」に混ぜない**ためです。
 
 ## 関連
 

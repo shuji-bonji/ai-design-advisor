@@ -35,16 +35,16 @@
 
 | 次元 | 推奨 | 根拠 | 確度 |
 | --- | --- | --- | --- |
-| D1 | 定型は小さい側。社外不可なら D1 が勝つ | selection.md | 条件付き |
-| D2 | Temperature 低め。Effort 最小 | temperature-and-effort.md | 確定 |
-| D3 | 常駐は短く | context-as-budget.md | 確定 |
-| D4 | 提示の所有は委託先に書く | ownership-and-versioning.md | 確定 |
-| D5 | Hybrid + Rerank、ACL、引用を仕様項にする | when-and-how.md | 確定 |
-| D6 | 検索 + 回答までを仕様上限にする | when-to-agentize.md | 確定 |
-| D7 | しない。手法名から入らせない | when-to-finetune.md | 確定 |
-| D8 | 開発者 / 提供者 / 事業利用者を契約で空にしない | legal-actors / permission-vs-authority | 条件付き |
-| D9 | 検索と回答の別評価を置く | loop-eval-and-stop | 条件付き |
-| X | キャッシュと縮退を仕様に書く | serving-and-cache.md | 確定 |
+| D1 | 定型は小さい側。社外不可なら D1 が勝つ | D1-001 | 条件付き |
+| D2 | Temperature 低め。Effort 最小 | D2-001 | 確定 |
+| D3 | 常駐は短く | D3-001 | 確定 |
+| D4 | 提示の所有は委託先に書く | D4-002 | 確定 |
+| D5 | Hybrid + Rerank、ACL、引用を仕様項にする | D5-001 | 確定 |
+| D6 | 検索 + 回答までを仕様上限にする | D6-004 | 確定 |
+| D7 | しない。手法名から入らせない | D7-003 | 確定 |
+| D8 | 開発者 / 提供者 / 事業利用者を契約で空にしない | D8-002 / D8-003 | 条件付き |
+| D9 | 検索と回答の別評価を置く | D9-004 | 条件付き |
+| X | キャッシュと縮退を仕様に書く | X-001 | 確定 |
 
 D8 が条件付きなのは、法規名前とガイドライン表を確定推奨にしないから。
 

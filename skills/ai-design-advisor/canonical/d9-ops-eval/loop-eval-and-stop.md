@@ -1,5 +1,6 @@
 # ループ、評価、停止条件
 
+- id: D9-004
 - status: canonical
 - dimensions: D9, D6, D5, D1
 - verified_clusters: C14, C15, C23

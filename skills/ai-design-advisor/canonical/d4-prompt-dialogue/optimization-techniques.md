@@ -1,5 +1,6 @@
 # プロンプト最適化の手法
 
+- id: D4-001
 - status: canonical
 - dimensions: D4, D2, D3, D9
 - verified_clusters: C09, C19

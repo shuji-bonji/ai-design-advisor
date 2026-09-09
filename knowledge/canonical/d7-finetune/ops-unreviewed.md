@@ -1,5 +1,6 @@
 # データ・評価・再学習（未精査）
 
+- id: D7-002
 - status: unreviewed
 - dimensions: D7, D9
 - 種: Zenn ch47–50（件数・費用の数値は needs_verification）

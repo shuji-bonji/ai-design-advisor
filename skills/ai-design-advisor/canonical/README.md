@@ -26,6 +26,22 @@
 - 自リポの精査済み記述 … 判断文の種にできる（一次情報と突き合わせ済みのもの）
 - Zenn … 用語と穴探し。数値・モデル名は転記しない
 
+## ノート ID
+
+各ノートの冒頭に `- id: D5-001` の形で **安定 ID** を持たせています。スキル出力の「根拠」列に書くのはこの ID です。
+
+- ファイル名ではなく ID で参照するので、ノートを分割・改名しても出力側の参照が切れません
+- `README.md`（各次元の目次）と `sources.md`（ソースマッピング）には ID を振りません。根拠として引くものではないからです
+- 対応表は [`_ids.md`](./_ids.md)。生成は `node scripts/check-output.mjs --list`
+
+出力に書いた ID が実在するかは、リポジトリのルートで次を実行して確かめます。
+
+```sh
+node scripts/check-output.mjs knowledge/use-cases/uc01-consumer-faq.md
+```
+
+実在しない ID があれば exit 1、canonical を読めなければ exit 2（判定不能）です。**読めなかったことを「一致」に混ぜません。**
+
 ## ディレクトリ構成
 
 ```
@@ -33,6 +49,7 @@ canonical/
 ├── README.md                 # 本ファイル
 ├── REVIEW-CHECKLIST.md       # 精査チェックリスト
 ├── _index.md                 # 次元別の充足状況サマリ
+├── _ids.md                   # ノート ID 一覧（生成物）
 ├── d1-model-class/           # モデルクラス選定
 ├── d2-parameters/            # Temperature / Reasoning Effort
 ├── d3-context-knowledge/     # コンテキスト・知識

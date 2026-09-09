@@ -35,16 +35,16 @@
 
 | 次元 | 推奨 | 根拠 | 確度 |
 | --- | --- | --- | --- |
-| D1 | 比較は LLM。相手方文書を外に出せないなら D1 が勝つ | selection.md | 条件付き |
-| D2 | Temperature 低め | temperature-and-effort.md | 確定 |
-| D3 | 雛形は原文へ。Memory は急がない | knowledge-and-memory | 確定 |
-| D4 | 指摘の軸（条項・リスク種・引用）を先に書く | writing.md | 確定 |
-| D5 | RAG + Grounding。根拠なし指摘を出さない | when-and-how.md | 確定 |
-| D6 | 品質ゲートを早めてよい | when-to-agentize / quality-gate | 確定 |
-| D7 | しない | when-to-finetune.md | 確定 |
-| D8 | 出力が業法の対象になりうる。適法断定しない。主体を分ける | legal-actors / permission-vs-authority | 条件付き |
-| D9 | 引用の有無を測る。法令名は合格線にしない | loop-eval-and-stop | 情報不足 |
-| X | 特になし | serving-and-cache.md | 情報不足 |
+| D1 | 比較は LLM。相手方文書を外に出せないなら D1 が勝つ | D1-001 | 条件付き |
+| D2 | Temperature 低め | D2-001 | 確定 |
+| D3 | 雛形は原文へ。Memory は急がない | D3-002 | 確定 |
+| D4 | 指摘の軸（条項・リスク種・引用）を先に書く | D4-004 | 確定 |
+| D5 | RAG + Grounding。根拠なし指摘を出さない | D5-001 | 確定 |
+| D6 | 品質ゲートを早めてよい | D6-004 / D6-002 | 確定 |
+| D7 | しない | D7-003 | 確定 |
+| D8 | 出力が業法の対象になりうる。適法断定しない。主体を分ける | D8-002 / D8-003 | 条件付き |
+| D9 | 引用の有無を測る。法令名は合格線にしない | D9-004 | 情報不足 |
+| X | 特になし | X-001 | 情報不足 |
 
 D8 が条件付きなのは、使用主体と出力の端（指摘までか修正案までか）で判断が変わるから。
 

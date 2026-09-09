@@ -34,16 +34,16 @@
 
 | 次元 | 推奨 | 根拠 | 確度 |
 | --- | --- | --- | --- |
-| D1 | 画像が本質なら Multimodal。社外不可ならオンプレ / テキスト化 | selection.md | 条件付き |
-| D2 | Temperature 0.0–0.3。Effort 最小 | temperature-and-effort.md | 確定 |
-| D3 | 写真の生トークンを残さない。要約して残す | context-as-budget / structural-constraints | 確定 |
-| D4 | 常駐は禁止 + 形式。写真から何を読むかを明示 | writing / placement | 確定 |
-| D5 | 仕様・規約は RAG。写真を embedding しない | when-and-how.md | 確定 |
-| D6 | 読み取り + RAG で止める | when-to-agentize.md | 確定 |
-| D7 | しない | when-to-finetune.md | 確定 |
-| D8 | 写真の PII。注入着弾前提 | threat-landscape / guardrail-layers | 条件付き |
-| D9 | 経路別評価。TTFT は画像 prefill が先に壊れる | loop-eval-and-stop / serving-and-cache | 条件付き |
-| X | 定型 system だけキャッシュ。写真回答を意味キャッシュしない | serving-and-cache.md | 確定 |
+| D1 | 画像が本質なら Multimodal。社外不可ならオンプレ / テキスト化 | D1-001 | 条件付き |
+| D2 | Temperature 0.0–0.3。Effort 最小 | D2-001 | 確定 |
+| D3 | 写真の生トークンを残さない。要約して残す | D3-001 / D3-003 | 確定 |
+| D4 | 常駐は禁止 + 形式。写真から何を読むかを明示 | D4-004 / D4-003 | 確定 |
+| D5 | 仕様・規約は RAG。写真を embedding しない | D5-001 | 確定 |
+| D6 | 読み取り + RAG で止める | D6-004 | 確定 |
+| D7 | しない | D7-003 | 確定 |
+| D8 | 写真の PII。注入着弾前提 | D8-004 / D8-001 | 条件付き |
+| D9 | 経路別評価。TTFT は画像 prefill が先に壊れる | D9-004 / X-001 | 条件付き |
+| X | 定型 system だけキャッシュ。写真回答を意味キャッシュしない | X-001 | 確定 |
 
 D1 / D8 が条件付きなのは、視覚 API の社外出力が未確認だから。
 

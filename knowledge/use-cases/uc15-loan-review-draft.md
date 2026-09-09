@@ -36,16 +36,16 @@
 
 | 次元 | 推奨 | 根拠 | 確度 |
 | --- | --- | --- | --- |
-| D1 | 整理は LLM。外出未確認ならオンプレ作業を残す | selection.md | 条件付き |
-| D2 | Temperature 低め。Effort は論点整理だけ | temperature-and-effort.md | 確定 |
-| D3 | マニュアルは原文へ。過去事例は偏りを疑う | knowledge-and-memory | 確定 |
-| D4 | 論点・禁止・引用必須を軸にする | writing.md | 確定 |
-| D5 | RAG + Grounding。根拠が無ければ書かない | when-and-how.md | 確定 |
-| D6 | 承認位置で切る。初手 Multi-agent にしない | when-to-agentize / quality-gate | 確定 |
-| D7 | しない | when-to-finetune.md | 確定 |
-| D8 | 判定権を渡さない。提供側に回るなら主体が変わる | permission-vs-authority / legal-actors | 条件付き |
-| D9 | 跡。Judge は抽き取り。数値目標は持たない | loop-eval-and-stop | 情報不足 |
-| X | 権限付き回答を意味キャッシュしない | serving-and-cache.md | 確定 |
+| D1 | 整理は LLM。外出未確認ならオンプレ作業を残す | D1-001 | 条件付き |
+| D2 | Temperature 低め。Effort は論点整理だけ | D2-001 | 確定 |
+| D3 | マニュアルは原文へ。過去事例は偏りを疑う | D3-002 | 確定 |
+| D4 | 論点・禁止・引用必須を軸にする | D4-004 | 確定 |
+| D5 | RAG + Grounding。根拠が無ければ書かない | D5-001 | 確定 |
+| D6 | 承認位置で切る。初手 Multi-agent にしない | D6-004 / D6-002 | 確定 |
+| D7 | しない | D7-003 | 確定 |
+| D8 | 判定権を渡さない。提供側に回るなら主体が変わる | D8-003 / D8-002 | 条件付き |
+| D9 | 跡。Judge は抽き取り。数値目標は持たない | D9-004 | 情報不足 |
+| X | 権限付き回答を意味キャッシュしない | X-001 | 確定 |
 
 ### 詳細
 

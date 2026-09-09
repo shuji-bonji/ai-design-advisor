@@ -36,16 +36,16 @@
 
 | 次元 | 推奨 | 根拠 | 確度 |
 | --- | --- | --- | --- |
-| D1 | 定型は SLM。外出未確認なら条件付き | selection.md | 条件付き |
-| D2 | 再現が要るなら Temperature 低め | temperature-and-effort.md | 条件付き |
-| D3 | マスタは入力。Memory 不要 | knowledge-and-memory | 確定 |
-| D4 | 書式・禁止を軸にする | writing.md | 確定 |
-| D5 | RAG とは限らない。マスタはツール | when-and-how.md | 確定 |
-| D6 | 全件を理由に段を上げない | when-to-agentize.md | 確定 |
-| D7 | しない | when-to-finetune.md | 確定 |
-| D8 | 公開は permission。誤りの巻き戻し | permission-vs-authority | 条件付き |
-| D9 | 人が全件を見ないなら抽き取りまたは先落とし | loop-eval-and-stop | 確定 |
-| X | バッチ。全件を最大モデルで予約しない | cost-decomposition / serving-and-cache | 確定 |
+| D1 | 定型は SLM。外出未確認なら条件付き | D1-001 | 条件付き |
+| D2 | 再現が要るなら Temperature 低め | D2-001 | 条件付き |
+| D3 | マスタは入力。Memory 不要 | D3-002 | 確定 |
+| D4 | 書式・禁止を軸にする | D4-004 | 確定 |
+| D5 | RAG とは限らない。マスタはツール | D5-001 | 確定 |
+| D6 | 全件を理由に段を上げない | D6-004 | 確定 |
+| D7 | しない | D7-003 | 確定 |
+| D8 | 公開は permission。誤りの巻き戻し | D8-003 | 条件付き |
+| D9 | 人が全件を見ないなら抽き取りまたは先落とし | D9-004 | 確定 |
+| X | バッチ。全件を最大モデルで予約しない | D9-001 / X-001 | 確定 |
 
 ### 詳細
 

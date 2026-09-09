@@ -35,16 +35,16 @@
 
 | 次元 | 推奨 | 根拠 | 確度 |
 | --- | --- | --- | --- |
-| D1 | 分類は SLM。外出未確認なら条件付き | selection.md | 条件付き |
-| D2 | Temperature 低め | temperature-and-effort.md | 確定 |
-| D3 | ラベル定義は Skill。Memory 不要 | knowledge-and-memory | 確定 |
-| D4 | ラベルと禁止を軸にする | writing.md | 確定 |
-| D5 | ガイドライン本文を RAG にしない | when-and-how.md | 確定 |
-| D6 | 処分をエージェントにしない | when-to-agentize.md | 確定 |
-| D7 | デフォルトはしない。ラベルが稳なら疑う | when-to-finetune.md | 条件付き |
-| D8 | 投稿は注入面。判定は第三者に作用する。異議経路 | threat-landscape / permission-vs-authority | 確定 |
-| D9 | 見逃しと過副検出を分ける。数値は持たない | loop-eval-and-stop | 情報不足 |
-| X | 特になし | serving-and-cache.md | 情報不足 |
+| D1 | 分類は SLM。外出未確認なら条件付き | D1-001 | 条件付き |
+| D2 | Temperature 低め | D2-001 | 確定 |
+| D3 | ラベル定義は Skill。Memory 不要 | D3-002 | 確定 |
+| D4 | ラベルと禁止を軸にする | D4-004 | 確定 |
+| D5 | ガイドライン本文を RAG にしない | D5-001 | 確定 |
+| D6 | 処分をエージェントにしない | D6-004 | 確定 |
+| D7 | デフォルトはしない。ラベルが稳なら疑う | D7-003 | 条件付き |
+| D8 | 投稿は注入面。判定は第三者に作用する。異議経路 | D8-004 / D8-003 | 確定 |
+| D9 | 見逃しと過副検出を分ける。数値は持たない | D9-004 | 情報不足 |
+| X | 特になし | X-001 | 情報不足 |
 
 ### 詳細
 

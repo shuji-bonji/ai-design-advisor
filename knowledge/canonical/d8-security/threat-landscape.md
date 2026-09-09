@@ -1,5 +1,6 @@
 # 脅威の見取り図（設計判断用）
 
+- id: D8-004
 - status: canonical
 - dimensions: D8, D6, D5
 - verified_clusters: C05, C07, C08

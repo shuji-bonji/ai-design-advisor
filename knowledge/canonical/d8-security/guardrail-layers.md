@@ -1,5 +1,6 @@
 # ガードレールは多層（入力・モデル・ツール・出力・運用）
 
+- id: D8-001
 - status: canonical
 - dimensions: D8, D9, D6
 - verified_clusters: C05, C06, C16, C21

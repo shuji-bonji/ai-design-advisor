@@ -1,5 +1,6 @@
 # コンテキストは容量ではなく予算
 
+- id: D3-001
 - status: canonical
 - dimensions: D3, D5, D6
 - verified_clusters: C10

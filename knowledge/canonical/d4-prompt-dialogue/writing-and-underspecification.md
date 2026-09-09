@@ -1,5 +1,6 @@
 # 書き方と指定欠落
 
+- id: D4-004
 - status: canonical
 - dimensions: D4, D2
 - sources:

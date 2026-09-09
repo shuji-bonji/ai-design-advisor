@@ -1,5 +1,6 @@
 # 発見モードと生産モード
 
+- id: D9-002
 - status: canonical
 - dimensions: D9, D4, D6, X
 - sources:

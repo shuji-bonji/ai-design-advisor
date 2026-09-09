@@ -35,16 +35,16 @@
 
 | 次元 | 推奨 | 根拠 | 確度 |
 | --- | --- | --- | --- |
-| D1 | 整理は LLM。定型応答は SLM 可 | selection.md | 条件付き |
-| D2 | Temperature 低め。Effort は整理だけ | temperature-and-effort.md | 確定 |
-| D3 | 関係は Memory。履歴だけを Memory にしない | knowledge-and-memory / context-as-budget | 確定 |
-| D4 | 常駐は短く。関係はプロンプトに書かない | placement / optimization-techniques | 確定 |
-| D5 | 規約・製品は RAG。顧客マスタはツール | when-and-how.md | 確定 |
-| D6 | Memory 書き込み前に止める | when-to-agentize / permission-vs-authority | 確定 |
-| D7 | しない | when-to-finetune.md | 確定 |
-| D8 | メモ書き込みは承認。注入の延長面 | knowledge-and-memory / threat-landscape | 確定 |
-| D9 | 出所と書き込み成否を跡に残す | loop-eval-and-stop / hooks-and-runtime | 確定 |
-| X | 定型 system をキャッシュ。個人 Memory を共有キャッシュしない | serving-and-cache.md | 確定 |
+| D1 | 整理は LLM。定型応答は SLM 可 | D1-001 | 条件付き |
+| D2 | Temperature 低め。Effort は整理だけ | D2-001 | 確定 |
+| D3 | 関係は Memory。履歴だけを Memory にしない | D3-002 / D3-001 | 確定 |
+| D4 | 常駐は短く。関係はプロンプトに書かない | D4-003 / D4-001 | 確定 |
+| D5 | 規約・製品は RAG。顧客マスタはツール | D5-001 | 確定 |
+| D6 | Memory 書き込み前に止める | D6-004 / D8-003 | 確定 |
+| D7 | しない | D7-003 | 確定 |
+| D8 | メモ書き込みは承認。注入の延長面 | D3-002 / D8-004 | 確定 |
+| D9 | 出所と書き込み成否を跡に残す | D9-004 / D9-003 | 確定 |
+| X | 定型 system をキャッシュ。個人 Memory を共有キャッシュしない | X-001 | 確定 |
 
 ### 詳細
 

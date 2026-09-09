@@ -36,16 +36,16 @@
 
 | 次元 | 推奨 | 根拠 | 確度 |
 | --- | --- | --- | --- |
-| D1 | 外に出せないならオンプレ / SLM が勝つ。音声は入力。テキスト化で足りるなら一本の Multimodal にしない | selection.md | 確定 |
-| D2 | Temperature 低め。Effort は上げない | temperature-and-effort.md | 確定 |
-| D3 | 書式は常駐に軸だけ。生音声を窓に残さない | context-as-budget / knowledge-and-memory | 確定 |
-| D4 | 書式・禁止・空欄の軸が先。「きれいに」は使わない | writing / placement | 確定 |
-| D5 | 最新性は不要。定型書式に RAG を足さない | when-and-how.md | 確定 |
-| D6 | 電子カルテ書き込みはツールでも承認後 | when-to-agentize.md | 確定 |
-| D7 | しない | when-to-finetune.md | 確定 |
-| D8 | 音声も入力。PII。起案＝承認なら制約を残す。同意は情報不足 | threat-landscape / permission-vs-authority / legal-actors | 条件付き |
-| D9 | ASR と生成を分けて測る。時間数値は持たない | loop-eval-and-stop | 情報不足 |
-| X | 診察中の体感が先。Effort / Agentic に進まない | serving-and-cache.md | 条件付き |
+| D1 | 外に出せないならオンプレ / SLM が勝つ。音声は入力。テキスト化で足りるなら一本の Multimodal にしない | D1-001 | 確定 |
+| D2 | Temperature 低め。Effort は上げない | D2-001 | 確定 |
+| D3 | 書式は常駐に軸だけ。生音声を窓に残さない | D3-001 / D3-002 | 確定 |
+| D4 | 書式・禁止・空欄の軸が先。「きれいに」は使わない | D4-004 / D4-003 | 確定 |
+| D5 | 最新性は不要。定型書式に RAG を足さない | D5-001 | 確定 |
+| D6 | 電子カルテ書き込みはツールでも承認後 | D6-004 | 確定 |
+| D7 | しない | D7-003 | 確定 |
+| D8 | 音声も入力。PII。起案＝承認なら制約を残す。同意は情報不足 | D8-004 / D8-003 / D8-002 | 条件付き |
+| D9 | ASR と生成を分けて測る。時間数値は持たない | D9-004 | 情報不足 |
+| X | 診察中の体感が先。Effort / Agentic に進まない | X-001 | 条件付き |
 
 D8 が条件付きなのは、同意・保持期限・第三者発話を法令名で決めないから。
 

@@ -1,5 +1,6 @@
 # RAG の要否と成熟度
 
+- id: D5-001
 - status: canonical
 - dimensions: D5, D3, D7, D8, D9
 - verified_clusters: C13, C20

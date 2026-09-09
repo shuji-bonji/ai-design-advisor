@@ -34,16 +34,16 @@
 
 | 次元 | 推奨 | 根拠 | 確度 |
 | --- | --- | --- | --- |
-| D1 | 親は LLM。ゲートは小さい側可 | selection.md | 確定 |
-| D2 | Effort は計画だけ。ゲートに高 Effort を重ねない | temperature-and-effort.md | 確定 |
-| D3 | 中間呼出を親に流さない | context-as-budget / skill-vs-subagent | 確定 |
-| D4 | 手順は Skill ファイル。常駐に書かない | ownership / placement | 確定 |
-| D5 | 検索はツール / Sub-agent。Agentic RAG にしない | when-and-how.md | 確定 |
-| D6 | Skill から。汚染・客観・並列で Sub-agent。MCP は接続が要るとき | skill-vs-subagent / when-to-agentize | 確定 |
-| D7 | しない | when-to-finetune.md | 確定 |
-| D8 | passthrough 禁止。ゲートは別会話 | permission-vs-authority / quality-gate | 条件付き |
-| D9 | 機械線は Hooks。ゲート中で LLM 判定しない | hooks-and-runtime / quality-gate | 確定 |
-| X | ツール定義をキャッシュ。定義が肥ると TTFT が壊れる | serving-and-cache.md | 確定 |
+| D1 | 親は LLM。ゲートは小さい側可 | D1-001 | 確定 |
+| D2 | Effort は計画だけ。ゲートに高 Effort を重ねない | D2-001 | 確定 |
+| D3 | 中間呼出を親に流さない | D3-001 / D6-003 | 確定 |
+| D4 | 手順は Skill ファイル。常駐に書かない | D4-002 / D4-003 | 確定 |
+| D5 | 検索はツール / Sub-agent。Agentic RAG にしない | D5-001 | 確定 |
+| D6 | Skill から。汚染・客観・並列で Sub-agent。MCP は接続が要るとき | D6-003 / D6-004 | 確定 |
+| D7 | しない | D7-003 | 確定 |
+| D8 | passthrough 禁止。ゲートは別会話 | D8-003 / D6-002 | 条件付き |
+| D9 | 機械線は Hooks。ゲート中で LLM 判定しない | D9-003 / D6-002 | 確定 |
+| X | ツール定義をキャッシュ。定義が肥ると TTFT が壊れる | X-001 | 確定 |
 
 D8 が条件付きなのは、MCP 認可が未確認だから。
 

@@ -34,16 +34,16 @@
 
 | 次元 | 推奨 | 根拠 | 確度 |
 | --- | --- | --- | --- |
-| D1 | SLM / オンデバイス。量子化はクラス変更ではない | selection.md | 確定 |
-| D2 | Temperature 低め。Effort を上げない | temperature-and-effort.md | 確定 |
-| D3 | 常駐を極小に。窓が短い | context-as-budget / structural-constraints | 確定 |
-| D4 | 常駐は禁止 + 形式だけ | placement / optimization-techniques | 確定 |
-| D5 | 小さい本地インデックスまで。Agentic にしない | when-and-how.md | 条件付き |
-| D6 | ツールまで。マルチはレイテンシが先に壊れる | when-to-agentize.md | 確定 |
-| D7 | しない。蒸留は型固定後に疑う | when-to-finetune.md | 条件付き |
-| D8 | 通信を持たない。ログに本文を残さない | threat-landscape / permission-vs-authority | 確定 |
-| D9 | 現場で測る。雲の SLO を持ち込まない | loop-eval-and-stop | 条件付き |
-| X | キャッシュは本地の定型 system だけ | serving-and-cache.md | 確定 |
+| D1 | SLM / オンデバイス。量子化はクラス変更ではない | D1-001 | 確定 |
+| D2 | Temperature 低め。Effort を上げない | D2-001 | 確定 |
+| D3 | 常駐を極小に。窓が短い | D3-001 / D3-003 | 確定 |
+| D4 | 常駐は禁止 + 形式だけ | D4-003 / D4-001 | 確定 |
+| D5 | 小さい本地インデックスまで。Agentic にしない | D5-001 | 条件付き |
+| D6 | ツールまで。マルチはレイテンシが先に壊れる | D6-004 | 確定 |
+| D7 | しない。蒸留は型固定後に疑う | D7-003 | 条件付き |
+| D8 | 通信を持たない。ログに本文を残さない | D8-004 / D8-003 | 確定 |
+| D9 | 現場で測る。雲の SLO を持ち込まない | D9-004 | 条件付き |
+| X | キャッシュは本地の定型 system だけ | X-001 | 確定 |
 
 D5 / D7 / D9 が条件付きなのは、端末容量と機能セットが未確認だから。
 

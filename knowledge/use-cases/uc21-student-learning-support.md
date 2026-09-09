@@ -35,16 +35,16 @@
 
 | 次元 | 推奨 | 根拠 | 確度 |
 | --- | --- | --- | --- |
-| D1 | 小さい側。外出未確認なら D1 が勝つ | selection.md | 条件付き |
-| D2 | Temperature 低め。Effort なし | temperature-and-effort.md | 確定 |
-| D3 | 学習ログを Memory にしない。残すなら承認 | knowledge-and-memory | 条件付き |
-| D4 | 答えを出さない軸を先に書く | writing.md | 確定 |
-| D5 | 教材が固定なら RAG を急がない | when-and-how.md | 条件付き |
-| D6 | ツールなし | when-to-agentize.md | 確定 |
-| D7 | しない | when-to-finetune.md | 確定 |
-| D8 | 未成年の同意は情報不足。条番号は持たない | legal-actors / threat-landscape | 情報不足 |
-| D9 | 効率で測らない | loop-eval-and-stop | 情報不足 |
-| X | 学習ログを共有キャッシュしない | serving-and-cache.md | 確定 |
+| D1 | 小さい側。外出未確認なら D1 が勝つ | D1-001 | 条件付き |
+| D2 | Temperature 低め。Effort なし | D2-001 | 確定 |
+| D3 | 学習ログを Memory にしない。残すなら承認 | D3-002 | 条件付き |
+| D4 | 答えを出さない軸を先に書く | D4-004 | 確定 |
+| D5 | 教材が固定なら RAG を急がない | D5-001 | 条件付き |
+| D6 | ツールなし | D6-004 | 確定 |
+| D7 | しない | D7-003 | 確定 |
+| D8 | 未成年の同意は情報不足。条番号は持たない | D8-002 / D8-004 | 情報不足 |
+| D9 | 効率で測らない | D9-004 | 情報不足 |
+| X | 学習ログを共有キャッシュしない | X-001 | 確定 |
 
 ### 詳細
 

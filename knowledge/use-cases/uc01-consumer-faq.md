@@ -36,16 +36,16 @@
 
 | 次元 | 推奨 | 根拠 | 確度 |
 | --- | --- | --- | --- |
-| D1 | 定型は小さい LLM / SLM。難しい問い合わせだけ上げる | selection.md | 確定 |
-| D2 | Temperature 低め。Effort は最小 | temperature-and-effort.md | 確定 |
-| D3 | 常駐は短く。履歴は要約かスライド。Memory は急がない | context-as-budget.md / knowledge-and-memory.md | 確定 |
-| D4 | 常駐は方針 + 禁止 + 形式。FAQ は例より検索 | placement / writing / optimization-techniques | 確定 |
-| D5 | Hybrid + Rerank。在庫は embedding しない | when-and-how.md | 確定 |
-| D6 | ツール呼び出しで止める。ループにしない | when-to-agentize.md | 確定 |
-| D7 | しない | when-to-finetune.md | 確定 |
-| D8 | 読み取りツール。注入着弾前提。PII 非投入 | threat-landscape / guardrail-layers / permission-vs-authority | 確定 |
-| D9 | 検索と回答を分けて測る。コストは層1・3が先 | loop-eval-and-stop / cost-decomposition | 条件付き |
-| X | system 接頭辞をキャッシュ。FAQ の意味キャッシュは権限付き回答に使わない | serving-and-cache.md | 確定 |
+| D1 | 定型は小さい LLM / SLM。難しい問い合わせだけ上げる | D1-001 | 確定 |
+| D2 | Temperature 低め。Effort は最小 | D2-001 | 確定 |
+| D3 | 常駐は短く。履歴は要約かスライド。Memory は急がない | D3-001 / D3-002 | 確定 |
+| D4 | 常駐は方針 + 禁止 + 形式。FAQ は例より検索 | D4-003 / D4-004 / D4-001 | 確定 |
+| D5 | Hybrid + Rerank。在庫は embedding しない | D5-001 | 確定 |
+| D6 | ツール呼び出しで止める。ループにしない | D6-004 | 確定 |
+| D7 | しない | D7-003 | 確定 |
+| D8 | 読み取りツール。注入着弾前提。PII 非投入 | D8-004 / D8-001 / D8-003 | 確定 |
+| D9 | 検索と回答を分けて測る。コストは層1・3が先 | D9-004 / D9-001 | 条件付き |
+| X | system 接頭辞をキャッシュ。FAQ の意味キャッシュは権限付き回答に使わない | X-001 | 確定 |
 
 D9 が条件付きなのは、レイテンシ / コストの数値目標が未確認だから。
 

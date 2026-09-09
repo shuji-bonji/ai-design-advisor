@@ -1,5 +1,6 @@
 # Fine-tuning / 蒸留の要否
 
+- id: D7-003
 - status: canonical
 - dimensions: D7, D1, D4, D5
 - verified_clusters: C12

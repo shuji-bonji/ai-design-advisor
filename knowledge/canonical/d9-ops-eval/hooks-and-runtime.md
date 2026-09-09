@@ -1,5 +1,6 @@
 # Hooks とランタイム強制
 
+- id: D9-003
 - status: canonical
 - dimensions: D9, D8, D6
 - sources:

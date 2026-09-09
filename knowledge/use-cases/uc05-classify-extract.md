@@ -34,16 +34,16 @@
 
 | 次元 | 推奨 | 根拠 | 確度 |
 | --- | --- | --- | --- |
-| D1 | SLM 優先。難件だけ LLM | selection.md | 条件付き |
-| D2 | Temperature 0.0–0.2。Effort 低 | temperature-and-effort.md | 確定 |
-| D3 | 定義と入力だけ。履歴を残さない | context-as-budget.md | 確定 |
-| D4 | スキーマを明示。暴力な Few-shot は要らない | writing / placement | 確定 |
-| D5 | ラベル定義のための RAG は不要。参照マスタだけツール | when-and-how.md | 確定 |
-| D6 | 構造化出力で止める。エージェント化しない | when-to-agentize.md | 確定 |
-| D7 | デフォルトはしない。型が固まり件数が支配的なら疑う | when-to-finetune.md | 条件付き |
-| D8 | 出力をスキーマ検証。落とし先はコード | guardrail-layers / permission-vs-authority | 確定 |
-| D9 | 機械メトリクスが先。Judge は抽き取り | loop-eval-and-stop / cost-decomposition | 条件付き |
-| X | 定型提示をキャッシュ。全件を最大モデルにしない | serving-and-cache / cost-decomposition | 確定 |
+| D1 | SLM 優先。難件だけ LLM | D1-001 | 条件付き |
+| D2 | Temperature 0.0–0.2。Effort 低 | D2-001 | 確定 |
+| D3 | 定義と入力だけ。履歴を残さない | D3-001 | 確定 |
+| D4 | スキーマを明示。暴力な Few-shot は要らない | D4-004 / D4-003 | 確定 |
+| D5 | ラベル定義のための RAG は不要。参照マスタだけツール | D5-001 | 確定 |
+| D6 | 構造化出力で止める。エージェント化しない | D6-004 | 確定 |
+| D7 | デフォルトはしない。型が固まり件数が支配的なら疑う | D7-003 | 条件付き |
+| D8 | 出力をスキーマ検証。落とし先はコード | D8-001 / D8-003 | 確定 |
+| D9 | 機械メトリクスが先。Judge は抽き取り | D9-004 / D9-001 | 条件付き |
+| X | 定型提示をキャッシュ。全件を最大モデルにしない | X-001 / D9-001 | 確定 |
 
 D1 / D7 が条件付きなのは、社外出力と件数が未確認だから。手法名は決めない。
 

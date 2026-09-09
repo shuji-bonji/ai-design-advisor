@@ -1,5 +1,6 @@
 # Skill / Sub-agent / MCP / Agent の選び方
 
+- id: D6-003
 - status: canonical
 - dimensions: D6, D3
 - verified_clusters: C11, C16

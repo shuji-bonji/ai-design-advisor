@@ -34,16 +34,16 @@
 
 | 次元 | 推奨 | 根拠 | 確度 |
 | --- | --- | --- | --- |
-| D1 | 比較・計画は LLM / Reasoning。社外不可ならオンプレ | selection.md | 条件付き |
-| D2 | Temperature 低め。Effort は計画だけ | temperature-and-effort.md | 確定 |
-| D3 | 窓は自分で組む。要約して残す | context-as-budget / knowledge-and-memory | 確定 |
-| D4 | 観点と合格線を明示。「しっかり」は使わない | writing / ownership | 確定 |
-| D5 | RAG + Grounding。出典が要件なら FT しない | when-and-how.md | 確定 |
-| D6 | 品質ゲートを早める。初手 Multi-agent にしない | when-to-agentize / quality-gate | 確定 |
-| D7 | しない | when-to-finetune.md | 確定 |
-| D8 | permission。承認は本文。主体は開発者 / 提供者 / 利用者 | permission-vs-authority / quality-gate / legal-actors | 条件付き |
-| D9 | 跡を残す。Judge は抽き取り。人が最終 | loop-eval-and-stop | 条件付き |
-| X | 安定提示をキャッシュ。意味キャッシュは権限付き回答に使わない | serving-and-cache.md | 確定 |
+| D1 | 比較・計画は LLM / Reasoning。社外不可ならオンプレ | D1-001 | 条件付き |
+| D2 | Temperature 低め。Effort は計画だけ | D2-001 | 確定 |
+| D3 | 窓は自分で組む。要約して残す | D3-001 / D3-002 | 確定 |
+| D4 | 観点と合格線を明示。「しっかり」は使わない | D4-004 / D4-002 | 確定 |
+| D5 | RAG + Grounding。出典が要件なら FT しない | D5-001 | 確定 |
+| D6 | 品質ゲートを早める。初手 Multi-agent にしない | D6-004 / D6-002 | 確定 |
+| D7 | しない | D7-003 | 確定 |
+| D8 | permission。承認は本文。主体は開発者 / 提供者 / 利用者 | D8-003 / D6-002 / D8-002 | 条件付き |
+| D9 | 跡を残す。Judge は抽き取り。人が最終 | D9-004 | 条件付き |
+| X | 安定提示をキャッシュ。意味キャッシュは権限付き回答に使わない | X-001 | 確定 |
 
 D8 が条件付きなのは、法規名前と AISI / NIST を確定推奨にしないから。
 

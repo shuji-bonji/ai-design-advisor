@@ -35,16 +35,16 @@
 
 | 次元 | 推奨 | 根拠 | 確度 |
 | --- | --- | --- | --- |
-| D1 | 定型 Q&A は小さい LLM / SLM。社外不可ならオンプレ / オンデバイス | selection.md | 条件付き |
-| D2 | Temperature 低め。Effort は最小 | temperature-and-effort.md | 確定 |
-| D3 | 常駐は短く。文書全量を窓に載せない | context-as-budget / knowledge-and-memory | 確定 |
-| D4 | 常駐は方針 + 禁止 + 引用形式。例より検索 | placement / writing / optimization-techniques | 確定 |
-| D5 | Hybrid + Rerank。Grounding。更新・削除をインデックスへ | when-and-how.md | 確定 |
-| D6 | 検索 + 回答で止める。検索をループにしない | when-to-agentize.md | 確定 |
-| D7 | しない。変わる知識と出典 | when-to-finetune.md | 確定 |
-| D8 | ACL を検索前に。注入着弾前提 | threat-landscape / guardrail-layers | 確定 |
-| D9 | 検索と回答を別評価。Judge は後 | loop-eval-and-stop | 条件付き |
-| X | system / クエリ型をキャッシュ | serving-and-cache.md | 確定 |
+| D1 | 定型 Q&A は小さい LLM / SLM。社外不可ならオンプレ / オンデバイス | D1-001 | 条件付き |
+| D2 | Temperature 低め。Effort は最小 | D2-001 | 確定 |
+| D3 | 常駐は短く。文書全量を窓に載せない | D3-001 / D3-002 | 確定 |
+| D4 | 常駐は方針 + 禁止 + 引用形式。例より検索 | D4-003 / D4-004 / D4-001 | 確定 |
+| D5 | Hybrid + Rerank。Grounding。更新・削除をインデックスへ | D5-001 | 確定 |
+| D6 | 検索 + 回答で止める。検索をループにしない | D6-004 | 確定 |
+| D7 | しない。変わる知識と出典 | D7-003 | 確定 |
+| D8 | ACL を検索前に。注入着弾前提 | D8-004 / D8-001 | 確定 |
+| D9 | 検索と回答を別評価。Judge は後 | D9-004 | 条件付き |
+| X | system / クエリ型をキャッシュ | X-001 | 確定 |
 
 D1 が条件付きなのは社外出力可否が未確認だから。D9 は数値目標がノートに無いから。
 

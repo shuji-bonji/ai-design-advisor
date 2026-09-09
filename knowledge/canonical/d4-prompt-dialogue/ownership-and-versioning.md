@@ -1,5 +1,6 @@
 # プロンプトは自分で持ち、バージョン管理する
 
+- id: D4-002
 - status: canonical
 - dimensions: D4, D9
 - verified_clusters: C09

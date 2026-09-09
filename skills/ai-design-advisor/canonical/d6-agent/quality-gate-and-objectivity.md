@@ -1,5 +1,6 @@
 # 品質ゲートと客観性（HITL / 独立コンテキスト）
 
+- id: D6-002
 - status: canonical
 - dimensions: D6, D8, D9
 - verified_clusters: C03

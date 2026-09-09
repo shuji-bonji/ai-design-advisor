@@ -1,5 +1,6 @@
 # 法務主体は分ける
 
+- id: D8-002
 - status: canonical
 - dimensions: D8
 - track: legal
