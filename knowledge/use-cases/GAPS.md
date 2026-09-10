@@ -32,7 +32,7 @@ UC01–23 の穴を一枚にした。
 | 出力が規制対象 | D8 | legal-actors.md。適法断定しない |
 | 閉域は安全ではない | D8 | threat-landscape.md。注入とテナント越権 |
 | 待たせられない | X | serving-and-cache.md。D1・D2 が先 |
-| 人が全件を見ない | D9 | loop-eval-and-stop.md。抽き取りまたは先落とし |
+| 人が全件を見ない | D9 | loop-eval-and-stop.md。抜き取りまたは先落とし |
 | 答えを出さない | D4 | writing.md。出さない軸を先に |
 | 明示は免責ではない | D8 | legal-actors.md |
 | 判定が第三者に作用 | D8 | permission-vs-authority.md。異議経路 |
