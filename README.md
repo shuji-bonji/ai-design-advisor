@@ -94,6 +94,8 @@ node scripts/check-output.mjs --strict <file> # 警告も失敗にする
 終了コードは 0（エラーなし）/ 1（存在しない ID・語彙外の確度・根拠のない「確定」）/ 2（canonical を読めず判定不能）です。
 2 を 1 と分けているのは、**測れなかったことを「一致」に混ぜない**ためです。
 
+`knowledge/use-cases/` は `--strict` で通る状態を保ちます。確度が「条件付き」「情報不足」の行は、表の直後にその次元の理由を一文書く決まりだからです。既定を `--strict` にはしていません。スキルが生成した直後の出力は理由がまだ埋まっていないことがあり、そこで止めたくないためです。
+
 ## 関連
 
 - [understanding-llm-through-claude-code](https://github.com/shuji-bonji/understanding-llm-through-claude-code)
